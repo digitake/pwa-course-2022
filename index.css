@@ -1,3 +1,8 @@
 body {
   background-color: lightblue;
 }
+
+.box {
+  border: 2px solid silver;
+  background-color: lavender;
+}
