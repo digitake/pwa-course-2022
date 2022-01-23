@@ -1,14 +1,32 @@
 import './App.css';
 
+function Userlist () {
+  return (
+    <div className="userlist">
+    </div>
+  )
+}
+
+function Chat () {
+  return (
+    <div className="chat">
+    </div>
+  )
+}
+
+function Inputbox () {
+  return (
+    <div className="inputbox">
+    </div>
+  )
+}
+
 function App() {
   return (
     <div className="App">
-      <div className="userlist">
-      </div>
-      <div className="chat">
-      </div>
-      <div className="inputbox">
-      </div>
+      <Userlist/>
+      <Chat/>
+      <Inputbox/>
     </div>
   );
 }
