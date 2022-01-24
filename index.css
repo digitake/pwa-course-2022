@@ -1,8 +1,8 @@
 body {
-  background-color: lightblue;
+  background-color: rgb(39, 176, 221);
 }
 
 .box {
-  border: 2px solid silver;
-  background-color: lavender;
+  border: 2px solid rgb(202, 64, 64);
+  background-color: rgb(65, 65, 211);
 }
