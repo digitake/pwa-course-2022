@@ -11,7 +11,8 @@ We are now want to change the web to the chat app interface.
 ** Make sure you clean up the current branch by running the following commands:
 
 
-```git checkout main --force
+```
+git checkout main --force
 git branch -D class/03/ex03
 git checkout -b class/03/ex03
 git merge class-origin/class/03/ex03
