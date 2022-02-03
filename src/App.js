@@ -19,7 +19,7 @@ function Chat () {
 function Inputbox () {
   return (
     <div className="inputbox">
-      <h2>หวัดดี</h2>
+      <h2>Send</h2>
     </div>
   )
 }
