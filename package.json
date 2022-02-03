@@ -3,7 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+<<<<<<< HEAD
     "@testing-library/jest-dom": "^5.16.2",
+=======
+    "@testing-library/jest-dom": "^5.16.1",
+>>>>>>> e1d0bbf0005856d192235b1a926385c0f1ea84a6
     "@testing-library/react": "^12.1.2",
     "@testing-library/user-event": "^13.5.0",
     "react": "^17.0.2",
