@@ -22,5 +22,3 @@ You will need to fill in you group's members username into file and setup the gr
 5. Add all file to git `git add *`
 
 5. Run `git commit`
-
-6. Run `git push`
