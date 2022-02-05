@@ -1,7 +1,4 @@
 # pwa-course-2022
-<<<<<<< HEAD
-Course for Progressive Web Apps 2022
-=======
 
 ### Course for Progressive Web Apps 2022
 
@@ -27,4 +24,3 @@ You will need to fill in you group's members username into file and setup the gr
 5. Run `git commit`
 
 6. Run `git push`
->>>>>>> class-origin/class/229J/groupwork
