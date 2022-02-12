@@ -1,0 +1,29 @@
+.App {
+  background-color: #ddffdd;
+  width: 400px;
+  height: 100%;;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 768px) {
+  .App {
+    border: red 5px solid;
+  }
+}
+
+.userlist {
+  flex: 1;
+  background-color: #331a12;
+}
+
+.chat {
+  flex: 12;
+  background-color: silver;
+}
+
+.inputbox {
+  flex: 1;
+  background-color: gray;
+}
