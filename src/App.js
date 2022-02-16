@@ -1,25 +1,7 @@
 import './App.css';
-
-function Userlist () {
-  return (
-    <div className="userlist">
-    </div>
-  )
-}
-
-function Chat () {
-  return (
-    <div className="chat">
-    </div>
-  )
-}
-
-function Inputbox () {
-  return (
-    <div className="inputbox">
-    </div>
-  )
-}
+import { Chat } from'./components/Chat.js';
+import { Userlist } from'./components/Userlist.js';
+import { Inputbox } from'./components/Inputbox.js';
 
 function App() {
   return (
