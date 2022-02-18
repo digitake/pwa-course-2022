@@ -10,7 +10,14 @@ function Profile() {
   return (
     <div className="Profile">
       <Avatar name={name}/>
-      <Inputbox label="Name:" onChange={setName}/>
+      <label className="label1" for="displayname"/>
+      <input 
+        id="displayname"
+        type="text" 
+        className="text" 
+        value={name}
+        onChange={e => setName(e.target.value)}
+      />
     </div>
   );
 }
