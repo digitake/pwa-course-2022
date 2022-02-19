@@ -1,0 +1,22 @@
+
+.TextSetting {
+    margin: auto;
+    width: 50%;
+    border: 3px solid rgb(255, 255, 255);
+    padding: 10px;
+}
+
+.Text1 {
+    background-color: red;
+    color: white;
+}
+
+.Text2 {
+    background-color: green;
+    color: white;
+}
+
+.Text3 {
+    background-color: blue;
+    color: white;
+}
