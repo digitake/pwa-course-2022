@@ -1,24 +1,23 @@
-import {useState} from "react";
-import './Profile.css';
-import { Avatar } from './components/Avatar.js';
+import './css/Profile.css'
 
-function Profile() {
-  const [name, setName] = useState("Unknown");
-
-
-  return (
-    <div className="Profile">
-      <Avatar name={name}/>
-      <label className="label1" for="displayname"/>
-      <input 
-        id="displayname"
-        type="text" 
-        className="text" 
-        value={name}
-        onChange={e => setName(e.target.value)}
-      />
+function Profile(){
+  return(
+    <div>
+      <div className='BorderSetting01 MenuTitle'>TextApp</div>
+      <div className='BorderSetting01 Your'>
+        <div className='YourPicture'></div>
+      </div>
+      <div className='BorderSetting01 Friends'>Friends</div>
+      <div className='BorderSetting01 List'>
+        <div className='FriendsPicture'></div>
+        <div className='FriendsPicture'></div>
+        <div className='FriendsPicture'></div>
+        <div className='FriendsPicture'></div>
+      
+      </div>
+      <div className='BorderSetting01 TextBorder03'></div>
     </div>
-  );
+  )
 }
 
-export default Profile;
+export default Profile
