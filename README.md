@@ -1,8 +1,3 @@
-# pwa-course-2022
-
-### Course for Progressive Web Apps 2022
-
----------------------------
 Instructions:
 
 You will need to fill in you group's members username into file and setup the groupname.
