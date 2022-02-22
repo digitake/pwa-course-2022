@@ -1,0 +1,13 @@
+div {
+    background-color: rgb(231, 220, 204);
+}
+
+.UserName{
+    background-color: rgb(231, 161, 161);
+    width: 500px;
+    height: 40px;
+    margin: 8px;
+    font-size: 30px;
+    font-weight: bold;
+    color: rgb(252, 252, 252);
+}
