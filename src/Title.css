@@ -1,0 +1,19 @@
+div {
+    background-color: rgb(231, 215, 191);
+}
+
+.text{
+    margin: 8px;
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+    position:absolute;
+    left:45%;
+    top:50%;
+}
+
+.image{
+    position: absolute;
+    left:35%;
+    top:40%;
+}

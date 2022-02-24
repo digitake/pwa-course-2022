@@ -11,3 +11,29 @@ div {
     font-weight: bold;
     color: rgb(252, 252, 252);
 }
+
+img{
+    position: absolute;
+    right: 0%;
+}
+
+button {
+    background: #2e2a49;
+    color: #fff;
+    width: 1100px;
+    height: 80px;
+    padding: 0.6rem;
+    position:relative;
+    left: 120px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  button:hover {
+    cursor: pointer;
+    background: #27233f;
+  }

@@ -10,7 +10,19 @@
 
 .userlist {
   flex: 1;
-  background-color: #331a12;
+  background-color: #f0cec3;
+  font-weight: bold;
+  text-align: center;
+}
+
+.imageLeft{
+  float: left; 
+  margin-left: 10px;
+}
+
+.imagePlus{
+  float: right; 
+  margin-right: 10px;
 }
 
 .chat {

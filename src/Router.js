@@ -1,14 +1,14 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import App from "./App";
-import Profile from './Profile.js';
 import Userlist from "./Userlist";
+import Title from "./Title";
 
 function Router(){
 return (
     <BrowserRouter>
      <Routes>
-       <Route path="/" element={ <App/>} />
-       <Route path="/Profile" element={ <Profile/> } />
+       <Route path="/" element={ <Title/>} />
+       <Route path="/Chat" element={ <App/>} />
        <Route path="/Userlist" element={ <Userlist/> } />
      </Routes>
     </BrowserRouter>
