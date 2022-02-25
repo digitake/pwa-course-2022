@@ -10,17 +10,17 @@
 
 .userlist {
   flex: 1;
-  background-color: #331a12;
+  background-color: #F79356;
 }
 
 .chat {
   flex: 12;
-  background-color: silver;
+  background-color: #1E4E8A;
 }
 
 .inputbox {
-  flex: 1;
-  background-color: gray;
+  flex: 1.5;
+  background-color: #F79356;
   display: flex;
 }
 
@@ -30,13 +30,19 @@
 }
 
 .inputbox .text {
+  background-color: #F9D1A2;
+  border-radius: 50px / 50px ;
   font-size: 1em;
-  padding-left: 8px;
-  padding-right: 8px;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin: 10px;
   flex: 1;
 }
 
 .inputbox .button {
+  background-color: #F79356;
+  border-radius: 50% ;
   font-size: 1em;
-  min-width: 40px;
+  min-width: 55px;
+  margin: 10px;
 }
