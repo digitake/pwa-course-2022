@@ -1,0 +1,16 @@
+.chatbox-item.left{
+  text-align: left;
+}
+
+.chatbox-item.right{
+  text-align: right;
+}
+
+.chatbox-item .avatar{
+  display: inline-block;
+}
+
+.chatbox-item .chatbox-item-text{
+  margin-left: 24px;
+  margin-right: 24px;
+}
