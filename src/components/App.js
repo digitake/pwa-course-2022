@@ -1,12 +1,11 @@
-import './App.css';
-import Chat from './Chat.js';
-import Tabbar from './components/Tabbar.js';
+import '../css/App.css';
+import Tabbar from './Tabbar.js';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
       <div className="content">
-        <Chat/>
+        {props.children}
       </div>
       <Tabbar/>
     </div>

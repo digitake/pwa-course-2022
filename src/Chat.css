@@ -1,23 +1,13 @@
-.App {
-  background-color: #ddffdd;
+.chat {
+  position: relative;
   width: 100%;
-  height: 100%;;
-  margin: auto;
+  height: 100%;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
 }
 
-.App .content {
-  flex: 1;
-}
-
-
-.userlist {
-  flex: 1;
-  background-color: #331a12;
-}
-
-.chat {
+.chatbox {
   flex: 12;
   background-color: silver;
 }

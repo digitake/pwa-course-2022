@@ -1,6 +1,6 @@
 function Chatbox () {
   return (
-    <div className="chat">
+    <div className="chatbox">
     </div>
   )
 }
