@@ -2,10 +2,10 @@ import './Chat.css';
 
 function Chat () {
     return (
-        <div className='body'>
-            <div className="head">Chat</div>
-            <div className="middle"></div>
-            <div className="bottom"></div>
+        <div className='body-chat'>
+            <div className="chat">Chat</div>
+            <div className="list-chat"></div>
+            <div className="icon-chat"></div>
         </div>
     )
 }

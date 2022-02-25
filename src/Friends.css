@@ -1,4 +1,4 @@
-.body {
+.body-friends {
     background-color: #1E4E8A;
     width: 100%;
     height: 100%;;
@@ -7,7 +7,7 @@
     flex-direction: column;
 }
 
-.head {
+.friends {
     background-color: #F79356;
     text-align: center;
     font-size: 2em;
@@ -15,14 +15,14 @@
     color: white;
 }
 
-.middle {
+.list-friends {
     background-color: #1E4E8A;
     text-align: center;
     color: white;
     flex: 12;
 }
 
-.bottom {
+.icon-friends {
     background-color: #F79356;
     text-align: center;
     color: white;
