@@ -11,17 +11,20 @@
 .userlist {
   flex: 1.5;
   background-color: #F79356;
+  color: white;
 }
 
 .chat {
   flex: 12;
   background-color: #1E4E8A;
+  color: white;
 }
 
 .inputbox {
   flex: 1.5;
   background-color: #F79356;
   display: flex;
+  color: white;
 }
 
 .inputbox .label1 {
@@ -45,4 +48,5 @@
   font-size: 1em;
   min-width: 55px;
   margin: 10px;
+  color: white;
 }
