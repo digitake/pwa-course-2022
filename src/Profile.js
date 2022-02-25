@@ -1,5 +1,5 @@
 import {useState} from "react";
-import './css/Profile.css';
+import './Profile.css';
 import Avatar from './components/Avatar.js';
 
 function Profile() {
