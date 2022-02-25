@@ -9,11 +9,11 @@ function Router(){
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={ <App /> } />
+                <Route path="/" element={ <App/> } />
                 <Route path="/profile" element={ <Profile/> } />
-                <Route path="/chat" element={ <Chat /> } />
-                <Route path="/friends" element={ <Friends /> } />
-                <Route path="/add-friends" element={ <AddFriends /> } />
+                <Route path="/chat" element={ <Chat/> } />
+                <Route path="/friends" element={ <Friends/> } />
+                <Route path="/add-friends" element={ <AddFriends/> } />
             </Routes>
         </BrowserRouter>
     )
