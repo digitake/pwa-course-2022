@@ -21,7 +21,7 @@ div {
 
 .imagePlus img{
     margin: auto 5px;
-    float: left; 
+    float: right; 
     top:5%;
     
 }
@@ -47,10 +47,7 @@ button {
     background: #27233f;
   }
   @media screen and (max-width: 400px) {
-    .imagePlus{
-        width:10px;
-        height:10px;
-    }
+
     button {
         background: #2e2a49;
         color: #fff;
