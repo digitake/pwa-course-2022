@@ -14,14 +14,7 @@ function FriendList(){
   return(
     <App>
       <div className="friend-list">
-      {
-        friends.map((item) => {
-          return (<div className={`friend-list-item ${item.position}`}>
-            <Avatar name={item.user}/>
-            <div>{item.displayName}</div>
-          </div>)
-        })
-      }
+       ใส่โค้ดที่นี่
       </div>
     </App>
   )
