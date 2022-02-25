@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export function Inputbox (props) {
+function Inputbox (props) {
   const [value, setValue] = useState(props.value||"");
 
   return (
@@ -27,3 +27,5 @@ export function Inputbox (props) {
     </div>
   )
 }
+
+export default Inputbox;

@@ -1,6 +1,6 @@
 import {useState} from "react";
 import './Profile.css';
-import { Avatar } from './components/Avatar.js';
+import Avatar from './components/Avatar.js';
 
 function Profile() {
   const [name, setName] = useState("Unknown");

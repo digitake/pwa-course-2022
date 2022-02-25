@@ -1,7 +1,7 @@
 import './App.css';
-import { Chat } from'./components/Chat.js';
-import { Userlist } from'./components/Userlist.js';
-import { Inputbox } from'./components/Inputbox.js';
+import Chat from'./components/Chatbox.js';
+import Userlist from'./components/Userlist.js';
+import Inputbox from'./components/Inputbox.js';
 
 function App() {
   return (
