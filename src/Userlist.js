@@ -3,7 +3,9 @@ import './Userlist.css';
 function Userlist() {
     return(
         <div>
-            <img className="image" src="plus-icon-13062.png" width="30" height="30"></img>
+            <div className="imagePlus">
+            <img src="plus-icon-13062.png" width="30" height="30"></img>
+            </div>
             <div><button>Mr. Test</button></div>
             <div><button>Mr. X</button></div>
             <div><button>L Man 1</button></div>

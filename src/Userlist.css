@@ -1,5 +1,7 @@
 div {
     background-color: rgb(231, 220, 204);
+    width: 400;
+    height: 542;;
 }
 
 .UserName{
@@ -12,9 +14,16 @@ div {
     color: rgb(252, 252, 252);
 }
 
-img{
-    position: absolute;
-    right: 0%;
+.imagePlus{
+    left:100%;
+
+}
+
+.imagePlus img{
+    margin: auto 5px;
+    float: left; 
+    top:5%;
+    
 }
 
 button {
@@ -36,4 +45,25 @@ button {
   button:hover {
     cursor: pointer;
     background: #27233f;
+  }
+  @media screen and (max-width: 400px) {
+    .imagePlus{
+        width:10px;
+        height:10px;
+    }
+    button {
+        background: #2e2a49;
+        color: #fff;
+        width: 300px;
+        height: 50px;
+        padding: 0.6rem;
+        position:relative;
+        left: 50px;
+        margin-top: 10px;
+        border: none;
+        border-radius: 4px;
+        font-size: 30px;
+        font-weight: bold;
+        text-align: left;
+      }
   }

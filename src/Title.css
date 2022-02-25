@@ -1,5 +1,7 @@
 div {
     background-color: rgb(231, 215, 191);
+    width: 400;
+    height: 542;;
 }
 
 .text{
@@ -16,4 +18,17 @@ div {
     position: absolute;
     left:35%;
     top:40%;
+}
+
+@media screen and (max-width: 400px) {
+  .text{
+    font-size: 30px;
+    left:45%;
+  }
+  .image{
+    left:80px;
+    width:100px;
+    height:100px;
+    top:45%;
+  }
 }
