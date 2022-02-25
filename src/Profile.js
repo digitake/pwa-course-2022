@@ -11,7 +11,7 @@ function Profile() {
     <App>
       <div className="Profile">
         <Avatar name={name}/>
-        <label className="label1" for="displayname"/>
+        <label className="label1" htmlFor="displayname"/>
         <input 
           id="displayname"
           type="text" 
