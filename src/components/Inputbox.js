@@ -20,7 +20,7 @@ export function Inputbox (props) {
       />
       <input 
         type="button" 
-        value="Send" 
+        value="ส่ง" 
         onClick={() => props.onClick(value)} 
         className="button"
       />    
