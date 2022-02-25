@@ -1,14 +1,14 @@
 import './App.css';
-import Chat from'./components/Chatbox.js';
-import Userlist from'./components/Userlist.js';
-import Inputbox from'./components/Inputbox.js';
+import Chat from './Chat.js';
+import Tabbar from './components/Tabbar.js';
 
 function App() {
   return (
     <div className="App">
-      <Userlist/>
-      <Chat/>
-      <Inputbox/>
+      <div className="content">
+        <Chat/>
+      </div>
+      <Tabbar/>
     </div>
   );
 }

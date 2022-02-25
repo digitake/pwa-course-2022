@@ -7,6 +7,10 @@
   flex-direction: column;
 }
 
+.App .content {
+  flex: 1;
+}
+
 
 .userlist {
   flex: 1;
