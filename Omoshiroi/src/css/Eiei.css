@@ -1,0 +1,95 @@
+/* .Ei
+{
+    background-color: beige;
+    color: rgb(0, 153, 255);  
+    font-size: 24px; 
+    width: 30px;
+    height: 30px;
+    margin: 20px 10px; 
+    border-radius: 50%;
+    border: dashed;
+    text-align: center;
+    transition: width 1s, height 1s, background-color 2s;
+}
+.Ei:hover
+{
+    background-color: rgb(238, 255, 0);
+    width: 50px;
+    height: 50px;
+} */
+
+.main
+{
+    background-color: blanchedalmond;
+    width: 50%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.userlist
+{
+    flex: 1;   
+    background-color: rgb(166, 255, 0);
+}
+.text_userlist
+{
+    text-align: center;
+    padding: 20px;
+}
+  
+.chat 
+{
+    flex: 12;
+    background-color: rgb(231, 230, 230);
+}
+.left
+{
+    text-align: left;
+}
+.right
+{
+    text-align: right;
+}
+.talk_name
+{
+    margin: 0 10px;
+    margin-top: 10px;
+}
+.talk_left
+{
+    margin: 0 10px;
+    padding: 10px;
+    background-color: aliceblue;
+}
+.talk_right
+{
+    margin: 0 10px;
+    padding: 10px;
+    background-color: rgb(172, 222, 255); 
+}
+  
+.inputbox 
+{
+    flex: 1;
+    background-color: gray;
+}
+.input_text
+{
+    flex: 9;
+    margin: 5px;
+    padding-left: 10px;
+}
+.btn
+{
+    flex: 1;
+    margin: 5px;
+    background-color: rgb(75, 204, 255);
+}
+
+.myfriend
+{
+    flex: 1;
+}
