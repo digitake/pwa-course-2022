@@ -1,11 +1,11 @@
 import { useState } from "react";
 
-function Inputbox (props) {
+export function Inputbox (props) {
   const [value, setValue] = useState(props.value||"");
 
   return (
     <div className="inputbox">
-      <label className="label1" htmlFor="inputmsg">
+      <label className="label1" for="inputmsg">
         {props.label}
       </label>
       <input
@@ -27,5 +27,3 @@ function Inputbox (props) {
     </div>
   )
 }
-
-export default Inputbox;
