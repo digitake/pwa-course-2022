@@ -1,0 +1,8 @@
+.friend-list-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-bottom: 1px solid #494040;
+  cursor: pointer;
+  background-color: antiquewhite;
+}
