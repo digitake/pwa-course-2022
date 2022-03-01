@@ -1,0 +1,19 @@
+.friend-list-item {
+  display: flex;
+  color:#c35e59;
+  font-weight: bold;
+  font-family: sans-serif;
+  align-items: center;
+  line-height: 40px;
+  padding: 0.5rem;
+  border-bottom: 3px solid #fae0dc;
+  cursor: pointer;
+}
+.friend-name-space {
+  padding: 10px;
+}
+.friend-status {
+color:#eca9a7;
+font-family: sans-serif;
+font-weight: lighter;
+}
