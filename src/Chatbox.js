@@ -1,5 +1,5 @@
 import './css/Chatbox.css';
-import { Chat } from'./components/Chat.js';
+import { Chats } from'./components/Chats.js';
 import { Userlist } from'./components/Userlist.js';
 import { Inputbox } from'./components/Inputbox.js';
 
@@ -7,7 +7,7 @@ function Chatbox() {
   return (
     <div className="Chatbox">
       <Userlist/>
-      <Chat/>
+      <Chats/>
       <Inputbox/>
     </div>
   );

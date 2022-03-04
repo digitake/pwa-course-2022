@@ -1,4 +1,4 @@
-import '../css/Chat.css';
+import './css/Chat.css';
 
 function Chat () {
     return (

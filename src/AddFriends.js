@@ -1,4 +1,4 @@
-import '../css/AddFriends.css';
+import './css/AddFriends.css';
 
 function AddFriends () {
     return (
