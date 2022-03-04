@@ -1,18 +1,27 @@
 .App {
-  background-color: rgb(72, 137, 194);
+  background-color: rgb(250, 207, 243);
   width: 400px;
   height: 100%;
   margin: auto;
 }
 
  .userlist{
-
+  background-color: rgb(231, 148, 224);
+  width: 100%;
+  height: 64px;
  }
 
  .chat{
+  background-color: rgb(164, 213, 255);
+  height: 100%;
+  margin: auto;
 
  }
 
- .inputboc{
+ .inputbox{
+  background-color: rgb(250, 207, 243);
+  height: 64px;
+  margin: auto;
+
 
  }
