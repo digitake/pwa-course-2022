@@ -3,12 +3,13 @@
   width: 400px;
   height: 100%;
   margin: auto;
+  display: flex;
+  flex-direction: column;
 }
 
  .userlist{
   background-color: rgb(177, 20, 164);
-  width: 100%;
-  height: 10%;
+  flex: 1;
  }
 
  .chat{
