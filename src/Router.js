@@ -1,8 +1,8 @@
 import Chatbox from './Chatbox.js';
 import Profile from './Profile.js';
 import Chat from './components/Chat.js';
-import Friends from './Friends';
-import AddFriends from './components/AddFriends';
+import Friends from './Friends.js';
+import AddFriends from './components/AddFriends.js';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function Router(){

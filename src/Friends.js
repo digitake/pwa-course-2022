@@ -1,4 +1,4 @@
-import './Friends.css';
+import './css/Friends.css';
 import { useState } from 'react';
 
 function friends () {
