@@ -7,3 +7,5 @@ export function Avatar(props) {
     </div>
   );
 }
+
+export default Avatar;
