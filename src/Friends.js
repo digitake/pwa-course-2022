@@ -1,6 +1,6 @@
 import './Friends.css';
 
-function Chat () {
+function friends () {
     return (
         <div className='body-friends'>
             <div className="title-friends">Friends</div>
@@ -9,4 +9,4 @@ function Chat () {
         </div>
     )
 }
-export default Chat;
+export default friends;
