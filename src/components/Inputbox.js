@@ -27,3 +27,4 @@ export function Inputbox (props) {
     </div>
   )
 }
+export default Inputbox;
