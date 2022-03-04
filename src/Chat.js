@@ -1,12 +1,14 @@
 import './css/Chat.css';
+import App from './components/App.js';
 
 function Chat () {
     return (
-        <div className='body-chat'>
-            <div className="title-chat">Chat</div>
-            <div className="list-chat"></div>
-            <div className="icon-chat"></div>
-        </div>
+        <App>
+            <div className='body-chat'>
+                <div className="title-chat">Chat</div>
+                <div className="list-chat"></div>
+            </div>
+        </App>
     )
 }
 export default Chat;

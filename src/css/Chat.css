@@ -11,7 +11,9 @@
     background-color: #F79356;
     text-align: center;
     font-size: 2em;
-    flex: 1.5;
+    flex: 1;
+    height: 45px;
+    padding: 1rem;
     color: white;
 }
 
