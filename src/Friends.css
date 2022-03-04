@@ -28,3 +28,11 @@
     color: white;
     flex: 1.5;
 }
+
+.friend-list-item {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid #e5e5e5;
+    cursor: pointer;
+  }

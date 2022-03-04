@@ -1,6 +1,9 @@
 import './Friends.css';
+import { useState } from 'react';
 
 function friends () {
+    
+
     return (
         <div className='body-friends'>
             <div className="title-friends">Friends</div>
