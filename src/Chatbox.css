@@ -1,4 +1,4 @@
-.App {
+.Chatbox {
   background-color: #ddffdd;
   width: 100%;
   height: 100%;
@@ -6,7 +6,6 @@
   display: flex;
   flex-direction: column;
 }
-
 
 .userlist {
   flex: 1.5;

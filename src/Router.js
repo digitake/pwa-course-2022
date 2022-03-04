@@ -1,4 +1,4 @@
-import App from './App.js';
+import Chatbox from './Chatbox.js';
 import Profile from './Profile.js';
 import Chat from './Chat.js';
 import Friends from './Friends';
@@ -9,7 +9,7 @@ function Router(){
     return (
         <BrowserRouter>
             <Routes>
-                <Route path="/" element={ <App/> } />
+                <Route path="/" element={ <Chatbox/> } />
                 <Route path="/profile" element={ <Profile/> } />
                 <Route path="/chat" element={ <Chat/> } />
                 <Route path="/friends" element={ <Friends/> } />

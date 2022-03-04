@@ -1,11 +1,11 @@
-import './App.css';
+import './Chatbox.css';
 import { Chat } from'./components/Chat.js';
 import { Userlist } from'./components/Userlist.js';
 import { Inputbox } from'./components/Inputbox.js';
 
-function App() {
+function Chatbox() {
   return (
-    <div className="App">
+    <div className="Chatbox">
       <Userlist/>
       <Chat/>
       <Inputbox/>
@@ -13,4 +13,4 @@ function App() {
   );
 }
 
-export default App;
+export default Chatbox;
