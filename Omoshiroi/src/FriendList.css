@@ -1,0 +1,12 @@
+.friend-list-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: .5px solid #b6b6b6; /*เส้นกั้น*/
+  cursor: pointer; /*กดได้*/
+}
+
+.friend-list-name
+{
+  margin-left: 10px;
+}
