@@ -26,13 +26,13 @@
 
 .inputbox .label1 {
   font-size: 1.5 em;
-  text-align: right;
+  text-align: left;
 }
 
 .inputbox .text {
   font-size: 3em;
-  padding-left: 5px;
-  padding-right: 5px;
+  padding-left: 100px;
+  padding-right: 100px;
   flex: 2;
   border-radius: 5%;
 }
@@ -43,6 +43,7 @@
     height: 70px;
     border-radius: 50%;
     background-color: #b08051;
+    margin-left: 10px;
 }
 
 
