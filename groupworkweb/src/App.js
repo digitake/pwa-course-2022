@@ -8,7 +8,7 @@ function Userlist() {
   )
 }
 
-function Chat(){
+/*function Chat(){
   return(
   <div className='chat'>
 
@@ -22,7 +22,7 @@ function Chat(){
 
   </div>
    )
- }
+ }*/
 
  function App(){
   return(
