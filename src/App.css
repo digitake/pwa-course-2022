@@ -7,10 +7,11 @@
   flex-direction: column;
 }
 
-
-.userlist {
+.head {
   flex: 1;
   background-color: #b08051;
+  text-align: center;
+  
 }
 
 .chat {
@@ -31,8 +32,8 @@
 
 .inputbox .text {
   font-size: 3em;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 30%;
+  padding-right: 30%;
   flex: 2;
   border-radius: 5%;
 }
