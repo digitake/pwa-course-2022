@@ -4,14 +4,37 @@ import './App.css';
 function Userlist() {
   return(
     <div className='userlist'>
+
     </div>
   )
-
-  function Chat(){
-    <div className='chat'>
-
-    </div>
-  }
 }
+
+function Chat(){
+  return(
+  <div className='chat'>
+
+  </div>
+   )
+ }
+ 
+ function InputBox(){
+  return(
+  <div className='inputbox'>
+
+  </div>
+   )
+ }
+
+ function App(){
+  return(
+  <div className='App'>
+    <Userlist/>
+    <Chat/>
+    <InputBox/>
+  </div>
+   )
+ }
+
+
 
 export default App;
