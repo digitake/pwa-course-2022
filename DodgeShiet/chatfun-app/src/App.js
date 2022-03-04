@@ -1,13 +1,13 @@
-import './App.css';
-import Register from "./RegisterForm.js"
+import './css/App.css';
 
 function App() {
-return (
-	<div className="App">
-	<Register />
-	</div>
-	
-);
+  return (
+    <div className="App">
+      <div className="content">
+        <h1>Main Page</h1>
+      </div>
+    </div>
+  );
 }
 
 export default App;

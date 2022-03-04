@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './css/Register.css';
 
 export default function RegisterForm() {
 
