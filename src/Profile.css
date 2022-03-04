@@ -1,0 +1,21 @@
+.Profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #eae0d6;
+  padding: 0;
+  margin: 0;
+}
+
+.userbox{
+  flex: 1;
+  background-color: #cdb7a0;
+  text-align: center;
+  align-items: center;
+  display: inline-block;
+  width: 100%;
+  height: 8%;
+}
