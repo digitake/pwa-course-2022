@@ -9,8 +9,9 @@ function Profile() {
 
   return (
     <App>
+      
       <div className="Profile" >
-        <h1>My Profile</h1>
+      <h1 class="display-2" align = "center">My Profile</h1>
         <Avatar name={name}/>
         <label className="label1" htmlFor="displayname"/>
         <p></p>
@@ -26,7 +27,7 @@ function Profile() {
         </div>
         <div class="mb-3 form-check">
         <input type="checkbox" class="form-check-input" id="exampleCheck1"></input>
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        <label class="form-check-label" for="exampleCheck1">Save email and password</label>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
        </form>

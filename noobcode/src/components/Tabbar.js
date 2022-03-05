@@ -36,19 +36,20 @@ function Tabbar () {
                   <Link to="/profile" className="tabbutton">
                   <div> <i class="fa fa-user-circle-o" aria-hidden="true"></i> </div></Link>
                 
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <li class="nav-item dropdown ">
+                 <a class="nav-link dropdown-toggle fs-4 " align="center" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                        Help
                   </a>
-                  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
+                  <ul class="dropdown-menu dropdown-menu-dark " aria-labelledby="navbarDarkDropdownMenuLink">
                      <li><a class="dropdown-item" href="#">contact</a></li>
                      <li><a class="dropdown-item" href="#">00000</a></li>
                     <li><a class="dropdown-item" href="#">00000</a></li>
                   </ul>
                 </li>
+                <p></p>
                 <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  <i class="fa fa-cog fa-spin fa-3x fa-fw"></i><span class="sr-only">Loading...</span>
+                  <a class="nav-link dropdown-toggle" align="center" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  <i class="fa fa-cog fa-spin fa-2x fa-fw"></i><span class="sr-only">Loading...</span>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                      <li><a class="dropdown-item" href="#">00000</a></li>

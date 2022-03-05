@@ -17,9 +17,12 @@ function Chat() {
     <App>
       
       <div className="chat">
-        <div class="center">
+        <div class="center" >
+        <h1 class="display-2" align = "center">Massage</h1>
         <Userlist/>
+        
         <Chatbox data={chatData}/>
+        
         <Inputbox/>
       </div>
       </div>

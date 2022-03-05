@@ -3,7 +3,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  
   height: 100%;
   background-color: silver;
   padding: 0;
@@ -13,7 +13,11 @@
   margin: auto;
   width: 50%;
   position: relative;
-  max-width: 100%;
-  min-width: auto;
+  
+}
+
+.center {
+  position: absolute;
+  width: 100%;
 }
 
