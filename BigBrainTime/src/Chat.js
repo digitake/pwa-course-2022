@@ -3,7 +3,7 @@ import App from './components/App.js';
 import Chatbox from './components/Chatbox.js';
 import Userlist from './components/Userlist.js';
 import Inputbox from './components/Inputbox.js';
-import './Chat.css';
+import './css/Chat.css';
 
 function Chat() {
   const [chatData, setChatData] = useState([ //Array

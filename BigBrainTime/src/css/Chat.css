@@ -9,12 +9,12 @@
 
 .chatbox {
   flex: 12;
-  background-color: silver;
+  background-color: rgb(254, 255, 240);
 }
 
 .inputbox {
   flex: 1;
-  background-color: gray;
+  background-color: rgb(93, 205, 233);
   display: flex;
 }
 

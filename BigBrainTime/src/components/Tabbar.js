@@ -5,7 +5,7 @@ function Tabbar () {
   return (
     <div className="tabbar">
       <Link to="/friend-list" className="tabbutton">
-        Friend List
+        Friend
       </Link>
       <Link to="/chat" className="tabbutton">
         Chat
