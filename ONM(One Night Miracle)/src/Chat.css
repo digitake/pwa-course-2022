@@ -1,0 +1,44 @@
+.chat {
+  position: stati;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  font-family: Helvetica, Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatbox {
+  flex: 20;
+  background-color: rgb(236, 206, 241);
+}
+
+.inputbox {
+  flex: 1;
+  display: flex;
+}
+
+.inputbox .label1 {
+  font-size: 1.5rem;
+  text-align: right;
+}
+
+.inputbox .text {
+  font-size: 1rem;
+  border-radius: 15%;
+  padding-left: 8px;
+  padding-right: 8px;
+  flex: 1;
+}
+
+.inputbox .button {
+  font-size: 1em;
+  min-width: 40px;
+}
+
+.text-align{
+  text-align: center;
+  font-size:  1.5rem;
+  margin-bottom: 0.75rem;
+  color: white;
+}
