@@ -3,18 +3,18 @@ import { Inputbox } from'./components/Inputbox.js';
 
 function Chat(){
     return(
-        <div>
+        <div className='ChatBoard'>
             <div 
-                className='BorderSetting01 Title'>
+                className='CB1 Title'>
                 <div className='TextSetting04'>
                     Name
                 </div>
             </div>
             <div 
-                className='BorderSetting01 TextBorder02'>
+                className='CB2 TextBorder02'>
             </div>
             <div
-                className='BorderSetting01 TextBorder03'>
+                className='CB1 TextBorder03'>
                 <div >
                     <Inputbox/>
                 </div>

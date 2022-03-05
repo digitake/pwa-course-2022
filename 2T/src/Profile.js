@@ -2,20 +2,20 @@ import './css/Profile.css'
 
 function Profile(){
   return(
-    <div>
-      <div className='BorderSetting01 MenuTitle'>TextApp</div>
-      <div className='BorderSetting01 Your'>
+    <div className='ProfileBoard'>
+      <div className='PB1 MenuTitle'>Auttony</div>
+      <div className='PB1 Your'>
         <div className='YourPicture'></div>
       </div>
-      <div className='BorderSetting01 Friends'>Friends</div>
-      <div className='BorderSetting01 List'>
+      <div className='PB1 Friends'>Friends</div>
+      <div className='PB1 List'>
         <div className='FriendsPicture'></div>
         <div className='FriendsPicture'></div>
         <div className='FriendsPicture'></div>
         <div className='FriendsPicture'></div>
       
       </div>
-      <div className='BorderSetting01 TextBorder03'></div>
+      <div className='PB1 TextBorder03'></div>
     </div>
   )
 }

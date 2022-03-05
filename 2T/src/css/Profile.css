@@ -1,5 +1,12 @@
-.BorderSetting01 {
-    margin: auto;
+.ProfileBoard{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.PB1 {
+    flex: 3;
     border: 3px solid rgb(255, 255, 255);
     padding: 10px;
 }
@@ -13,19 +20,19 @@
 
 .YourPicture{
     background-color: rgb(232, 124, 152);
-    width: 182px;
-    height: 182px;
+    width: 180px;
+    height: 180px;
     border: 10px solid rgb(255, 255, 255);
-    margin-top: 5%;
-    margin-left: 5%;
+    margin-top: 25px;
+    margin-left: 25px;
 }
 
 .Friends{
     background-color: rgb(232, 124, 152);
     color: white;
-    height: 40px;
     font-family: fantasy;
     font-size: 30px;
+    padding-top: 30px;
 }
 
 .MenuTitle {
@@ -50,9 +57,9 @@
 
 .FriendsPicture{
     background-color: rgb(232, 124, 152);
-    width: 54px;
-    height: 54px;
-    border: 10px solid rgb(255, 255, 255);
-    margin-top: 4%;
-    margin-left: 3%;
+    width: 50px;
+    height: 50px;
+    border: 5px solid rgb(255, 255, 255);
+    margin-top: 20px;
+    margin-left: 20px;
 }

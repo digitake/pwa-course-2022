@@ -2,35 +2,35 @@ import './css/Login.css'
 
 function Login(){
     return(
-        <div>
+        <div className='LoginBoard'>
             <div 
-                className='BorderSetting01 Title'>
-                TextApp
+                className='LB1 Title'>
+                AuttonyApp
             </div>
             <div 
-                className='BorderSetting01 TextBorder02'>
+                className='LB1 TextBorder02'>
                 <div 
-                    className='BorderSetting01 PictureBorder'>
+                    className='LB1 PictureBorder'>
                 </div>
-                    <div className='BorderSetting02 TextSetting01'>
+                    <div className='LB2 TextSetting01'>
                         Email
                     </div>
-                <div className='BorderSetting01 LoginBorder'>
+                <div className='LB1 LoginBorder'>
                 </div>
-                    <div className='BorderSetting02 TextSetting01'>
+                    <div className='LB2 TextSetting01'>
                         Password
                     </div>
-                <div className='BorderSetting01 LoginBorder'>
+                <div className='LB1 LoginBorder'>
                 </div>
-                    <div className='BorderSetting02 TextSetting02'>
+                    <div className='LB2 TextSetting02'>
                         Forgetting Password?
                     </div>
-                <div className='BorderSetting01 TextSetting03 LoginBorder'>
+                <div className='LB1 TextSetting03 LoginBorder'>
                     Login
                 </div>
             </div>
             <div 
-                className='BorderSetting01 TextBorder03'>
+                className='LB1 TextBorder03'>
             </div>
         </div>
     

@@ -1,12 +1,16 @@
+.LoginBoard{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
-.BorderSetting01 {
-    margin: auto;
+.LB1 {
     border: 3px solid rgb(255, 255, 255);
     padding: 10px;
 }
 
-.BorderSetting02 {
-    margin: auto;
+.LB2 {
     padding: 10px;
 }
 
@@ -41,6 +45,7 @@
     color: white;
     height: 250px;
     width: 250px;
+    margin: auto;
 }
 
 .TextSetting01 {
