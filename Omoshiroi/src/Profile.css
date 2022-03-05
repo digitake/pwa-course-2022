@@ -1,0 +1,15 @@
+.Profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: #fafafa;
+  padding: 0;
+  margin: 0;
+
+  background-image: url('https://www.teahub.io/photos/full/3-37282_download-lovely-blue-sea-wallpaper-4k-resolution-.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+}
