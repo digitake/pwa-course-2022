@@ -13,7 +13,13 @@ function Friends () {
 
     return (
         <App>
-            <div className="title-friends">Friends</div>
+            <div className="title-friends">
+                <div className="left">
+                    <img src="logo192.png" className="icon"/>
+                </div>
+                <div className="center">Friends</div>
+                <div className="right">Right</div>
+            </div>
             <div className="friend-list">
             {
                 friendsList.map (x=> 
