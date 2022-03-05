@@ -5,13 +5,13 @@ function Tabbar () {
   return (
     <div className="tabbar">
       <Link to="/friend-list" className="tabbutton">
-        Friend List
+        <i class="fa fa-envelope-open" aria-hidden="true"></i>
       </Link>
       <Link to="/chat" className="tabbutton">
-        Chat
+        <i class="fa fa-bars" aria-hidden="true"></i>
       </Link>
       <Link to="/profile" className="tabbutton">
-        Profile
+        <i class="fa fa-play" aria-hidden="true"></i>
       </Link>
     </div>
   )
