@@ -3,20 +3,26 @@
     /*background-color:rgb(252, 224, 66)*/;
     padding: 3px;
     }
-    
+    .form{
+        text-align: center;
+    }
+
     .label{
     display: block;
     font-size: larger;
     color: rgb(97, 97, 97);
     padding: 5px;
+    text-align: center;
     }
-    
+
     .input{
+    text-align: center;
     font-size: larger;
     padding: 5px;
-    margin: 2px;
+    margin: 2px auto;
+    display:  flex;
     }
-    
+
     .btn{
     color: white;
     background-color: rgb(252, 214, 0);
@@ -26,12 +32,12 @@
     padding: 5px;
     margin: 10px auto;
     }
-    
+
     .messages{
     display: flex;
     justify-content: center;
     }
-    
+
     .error{
     display: block;
     background-color: red;
@@ -40,7 +46,7 @@
     height: 50px;
     padding: 5px;
     }
-    
+
     .success{
     display: block;
     background-color: rgb(255, 255, 255);
@@ -48,5 +54,4 @@
     width: fit-content;
     height: 50px;
     padding: 5px;
-    }
-    
+    } 
