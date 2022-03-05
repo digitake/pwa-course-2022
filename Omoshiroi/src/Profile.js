@@ -3,9 +3,12 @@ import {useState} from "react";
 import './Profile.css';
 import Avatar from './components/Avatar.js';
 import MyProfile from './components/MyProfile.js';
+import {useParams} from "react-router-dom";
 
-function Profile() {
-  const [name, setName] = useState("Unknown");
+
+function Profile(props) {
+  const {user} = useParams()
+  const [name, setName] = useState(user);
 
   return (
     <App>

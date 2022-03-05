@@ -13,6 +13,7 @@ function Router() {
       <Routes>
         <Route path="/chat" element={<Chat />}/>
         <Route path="/profile" element={<Profile />}/>
+        <Route path="/profile/:user" element={<Profile />}/>
         <Route path="/friend-list" element={<FriendList />}/>
         <Route path="/" element={<Chat />}/>
       </Routes>

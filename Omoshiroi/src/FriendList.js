@@ -3,6 +3,7 @@ import './FriendList.css';
 import App from './components/App';
 import Avatar from './components/Avatar';
 import Friendlist from './components/Friendlist.js';
+import { Link } from 'react-router-dom';
 
 function FriendList(){
   const [friends, setFriends] = useState([
@@ -20,7 +21,9 @@ function FriendList(){
           {
             friends.map( x=>
             <div className='friend-list-item'>
-              <Avatar name={x.user}/>
+              <Link to={"/profile/"+x.user} className="">
+                <Avatar name={x.user}/>
+              </Link>
               <div className='friend-list-name'>
                 {x.displayName}
               </div>
