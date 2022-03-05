@@ -1,0 +1,25 @@
+.tabbar {
+  background-color: #0096FF;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.tabbar .tabbutton {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.5em;
+  height: 50px;
+  width: 75px;
+  color: white;
+  margin: 0 5px;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 1s;
+}
+
+.tabbar .tabbutton:hover {
+  background-color: #0047AB;;
+}
