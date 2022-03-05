@@ -9,6 +9,8 @@ function FriendList(){
     {user: "user2", displayName: "White"},
     {user: "user3", displayName: "Black"},
     {user: "user4", displayName: "ข้าวสาร"},
+    {user: "user5", displayName: "Save"}
+
   ]);
 
   return(

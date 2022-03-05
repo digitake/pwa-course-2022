@@ -8,12 +8,12 @@
 }
 
 .App .content {
-  flex: 1;
+  flex: auto;
 }
 
 
 .userlist {
-  flex: 1;
+  flex: auto;
   background-color: #a8a8a8;
 }
 

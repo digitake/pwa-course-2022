@@ -7,10 +7,10 @@ import './Chat.css';
 
 function Chat() {
   const [chatData, setChatData] = useState([
-    {user: "user1", msg: "Hello", position: "left"},
-    {user: "user2", msg: "Hi", position: "right"},
-    {user: "user1", msg: "How are you?", position: "left"},
-    {user: "user2", msg: "I'm fine, thank you. And you?", position: "right"},
+    {user: "John", msg: "ไง", position: "left"},
+    {user: "ฉัน", msg: "ว่า", position: "right"},
+    {user: "John", msg: "เป็นไงบ้าง", position: "left"},
+    {user: "ฉัน", msg: "สบายดี", position: "right"},
   ]);
 
   return (
