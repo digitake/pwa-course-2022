@@ -5,11 +5,10 @@ function Tabbar () {
   return (
     <div className="tabbar">
       <Link to="/friend-list" className="tabbutton">
-        <div>Friend List</div>
-        
+        <div>Home</div>
       </Link>
       <Link to="/chat" className="tabbutton">
-      <div> Chat </div>
+      <div> Massage </div>
       </Link>
       <Link to="/profile" className="tabbutton">
       <div> Profile </div>
