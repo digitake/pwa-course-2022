@@ -2,6 +2,7 @@ import { useState } from 'react';
 import './FriendList.css';
 import App from './components/App';
 import Avatar from './components/Avatar';
+import Friendlist from './components/Friendlist.js';
 
 function FriendList(){
   const [friends, setFriends] = useState([
@@ -13,17 +14,20 @@ function FriendList(){
 
   return(
     <App>
-      <div className="friend-list">
-       {
-         friends.map( x=>
-          <div className='friend-list-item'>
-            <Avatar name={x.user}/>
-            <div className='friend-list-name'>
-              {x.displayName}
+      <div className="chat">
+        <Friendlist/>
+        <div className="friend-list">
+          {
+            friends.map( x=>
+            <div className='friend-list-item'>
+              <Avatar name={x.user}/>
+              <div className='friend-list-name'>
+                {x.displayName}
+              </div>
             </div>
-          </div>
-          )
-       }
+            )
+          }
+        </div>
       </div>
     </App>
   )

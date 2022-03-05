@@ -8,9 +8,9 @@ import './Chat.css';
 function Chat() {
   const [chatData, setChatData] = useState([
     {user: "user1", displayName: "มนุษย์ 1",msg: "ทำงานไหม", position: "left"},
-    {user: "Unknown", displayName: "",msg: "ไม่ว่างอะ", position: "right"},
+    {user: "Unknown", displayName: "Me",msg: "ไม่ว่างอะ", position: "right"},
     {user: "user1", displayName: "มนุษย์ 1",msg: "เล่นเกมไหม", position: "left"},
-    {user: "Unknown", displayName: "",msg: "จัดไป", position: "right"},
+    {user: "Unknown", displayName: "Me",msg: "จัดไป", position: "right"},
   ]);
 
   return (

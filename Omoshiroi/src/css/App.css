@@ -1,6 +1,6 @@
 .App {
   background-color: #ffffff;
-  width: 100%;
+  width: 30%;
   height: 100%;;
   margin: auto;
   display: flex;
@@ -19,3 +19,18 @@
   font-size: 50px;
 }
 
+.friendlist {
+  flex: .1;
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  font-size: 50px;
+}
+
+.myProfile {
+  flex: 1;
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  font-size: 50px;
+}
