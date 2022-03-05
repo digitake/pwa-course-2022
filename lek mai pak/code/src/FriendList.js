@@ -5,15 +5,15 @@ import Avatar from './components/Avatar';
 
 function FriendList(){
   const [friends, setFriends] = useState([
-    {user: "pop", displayName: "Pop"},
-    {user: "bob", displayName: "Bob"},
-    {user: "bab", displayName: "Bab"},
-    {user: "peter", displayName: "Peter"},
+    {user: "pop", displayName: "pop"},
+    {user: "bob", displayName: "bob"},
+    {user: "bab", displayName: "bab"},
+    {user: "peter", displayName: "peter"},
   ]);
 
   return(
     <App>
-      <div className="friend-list">
+      <div className="friend-list">        
         {
           friends.map ( x =>
               <div className='friend-list-item'>
