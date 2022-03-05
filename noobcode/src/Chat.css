@@ -10,17 +10,30 @@
 .chatbox {
   flex: 12;
   background-color: silver;
+  flex: auto;
+  margin: auto;
+  width: 50%;
+  position: relative;
+  max-width: 100%;
+  min-width: auto;
 }
 
 .inputbox {
   flex: 1;
   background-color: gray;
   display: flex;
+  flex: auto;
+  margin: auto;
+  width: 100%;
+  position: relative;
+  max-width: 100%;
+  min-width: auto;
 }
 
 .inputbox .label1 {
   font-size: 1.5em;
   text-align: right;
+  
 }
 
 .inputbox .text {
@@ -33,4 +46,11 @@
 .inputbox .button {
   font-size: 1em;
   min-width: 40px;
+}
+
+.center {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  
 }

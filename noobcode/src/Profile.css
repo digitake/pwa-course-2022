@@ -8,4 +8,12 @@
   background-color: silver;
   padding: 0;
   margin: 0;
+
+  flex: auto;
+  margin: auto;
+  width: 50%;
+  position: relative;
+  max-width: 100%;
+  min-width: auto;
 }
+

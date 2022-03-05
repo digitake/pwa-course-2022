@@ -16,6 +16,7 @@ function FriendList(){
   return(
     <App>
       <div className="friend-list">
+      <div className='center'>
        {
        friends.map (x=>
         <div className= 'friend-list-item' >
@@ -24,6 +25,7 @@ function FriendList(){
           </div>
          )
          }
+      </div>
       </div>
     </App>
   )

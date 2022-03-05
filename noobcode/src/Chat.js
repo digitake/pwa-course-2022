@@ -15,10 +15,13 @@ function Chat() {
 
   return (
     <App>
+      
       <div className="chat">
+        <div class="center">
         <Userlist/>
         <Chatbox data={chatData}/>
         <Inputbox/>
+      </div>
       </div>
     </App>
   );
