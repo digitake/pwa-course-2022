@@ -1,0 +1,22 @@
+.home {
+    display: flex;
+    background-color: #ffd3be;
+
+    
+
+}
+.dog{
+    background-color: chocolate;
+    display: flex;
+    width: 170px;
+    height: 30px;
+    font-size: 1.25em
+    
+}
+.box{
+    background-color: chocolate;
+    display: flex;
+    width: 2000px;
+    height: 200px;
+    font-size: 3.25em
+}
