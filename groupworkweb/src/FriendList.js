@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './FriendList.css';
-import App from './components/App';
+import App from './App';
 
 function FriendList(){
   const [friends, setFriends] = useState([
