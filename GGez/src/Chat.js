@@ -10,14 +10,12 @@ function Chat() {
     {user: "Nattan Lowa", msg: "สวัสดีจ้า เป็นไอดอลปะ", position: "left"},
     {user: "Super idol", msg: "ใช่คับ ดังมากด้วย", position: "right"},
     {user: "Nattan Lowa", msg: "ไม่ได้ถาม?", position: "left"},
-    {user: "Super idol", msg: "ไอฟาย เเทงคิ้ว เเทงครู", position: "right"},
     {user: "Super idol", msg: "หมายถึง i fine, thank you and you?", position: "right"},
   ]);
 
   return (
     <App>
       <div className="chat">
-        <Userlist/>
         <Chatbox data={chatData}/>
         <Inputbox/>
       </div>
