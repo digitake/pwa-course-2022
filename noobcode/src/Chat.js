@@ -17,8 +17,12 @@ function Chat() {
     <App>
       
       <div className="chat">
+        
+
         <div class="center" >
-        <h1 class="display-2" align = "center">Massage</h1>
+
+        <p align = "center"><img  src="https://media.discordapp.net/attachments/800643806278058035/950027578666782750/Chat.png" alt="Home" width="150" height="50"  /></p>
+        
         <Userlist/>
         
         <Chatbox data={chatData}/>

@@ -11,7 +11,7 @@ function Profile() {
     <App>
       
       <div className="Profile" >
-      <h1 class="display-2" align = "center">My Profile</h1>
+      <p align = "center"><img  src="https://media.discordapp.net/attachments/800643806278058035/950027579237220372/Profile.png" alt="Home" width="150" height="50"  /></p>
       <Avatar name={name}/>
       
       <form class="row g-3">

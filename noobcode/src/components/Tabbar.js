@@ -1,6 +1,7 @@
 import '../css/Tabbar.css';
-import { Link } from 'react-router-dom';
+import { Link ,img} from 'react-router-dom';
 import Avatar from './Avatar';
+
 
 function Tabbar () {
   return (
@@ -9,7 +10,7 @@ function Tabbar () {
 
       <nav class="navbar navbar-light bg-white fixed-top text-success " >
         <div class="container-fluid">
-         <a class=" navbar-brand navbar-center" href="#"><img src="Universe_font.png" alt="Universe" width="250" height="50"  /></a> 
+         <a class=" navbar-brand navbar-center " href="/"><img src="https://media.discordapp.net/attachments/800643806278058035/950017440715264060/Universe.png" alt="Universe_font" width="250" height="50" /></a> 
             <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
               <span class="navbar-toggler-icon">
               

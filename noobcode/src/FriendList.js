@@ -19,7 +19,7 @@ function FriendList(){
       
       
       <div className='center'>
-      <h1 align = "center"><img src="Home.png" alt="Home" width="400" height="150"  /></h1>
+      <h1 align = "center"><img src="https://media.discordapp.net/attachments/800643806278058035/950027579006525470/Home.png" alt="Home" width="150" height="50"  /></h1>
 
 
       <div class="accordion accordion-flush" id="accordionFlushExample">
