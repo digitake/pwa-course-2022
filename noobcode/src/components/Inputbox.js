@@ -10,14 +10,20 @@ function Inputbox (props) {
       <label className="label1" htmlFor="inputmsg">
         {props.label}
       </label>
-      <div class="btn-group dropstart">
+      <div class="btn-group dropdown">
         <button type="button" class="btn btn-sm btn-secondary " data-bs-toggle="dropdown" aria-expanded="false">
         <i class="fa fa-2x fa-plus-circle" aria-hidden="true"></i>
         </button>
         <ul class="dropdown-menu">
-          <button type="button" class="fa fa-paperclip fa-3x btn btn-lg btn-secondary "  aria-hidden="true"></button>
-          <button type="button" class="fa fa fa-picture-o fa-3x btn btn-lg btn-secondary  " aria-hidden="true"></button>
-          <button type="button" class="fa fa-paperclip fa-3x btn btn-lg btn-secondary  " aria-hidden="true"></button>
+          <button type="button" class="fa fa-paperclip fa-3x btn btn-lg btn-secondary "  aria-hidden="true">
+              
+            </button>
+          <button type="button" class="fa fa fa-picture-o fa-3x btn btn-lg btn-secondary  " aria-hidden="true">
+            
+            </button>
+          <button type="button" class="fa fa-location-arrow fa-3x btn btn-lg btn-secondary  " aria-hidden="true">
+            
+            </button>
           
         </ul>
       </div>

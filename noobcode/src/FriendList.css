@@ -7,12 +7,15 @@
   cursor: pointer;
   flex: auto;
   margin: auto;
-  width: 50%;
+  width: 90%;
+  
 }
 .center {
-  position: relative;
+  position: absolute;
   top: 70px;
-  width: 100%;
+  left: 50%;
+  transform: translatex(-50%);
+  width: 90%;
   height: 100%;
   
 }

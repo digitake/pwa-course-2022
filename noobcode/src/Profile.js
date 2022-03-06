@@ -10,11 +10,11 @@ function Profile() {
   return (
     <App>
       
-      <div className="Profile" >
+      <div className="Profile"  >
       <p align = "center"><img  src="https://media.discordapp.net/attachments/800643806278058035/950027579237220372/Profile.png" alt="Home" width="150" height="50"  /></p>
       <Avatar name={name}/>
       
-      <form class="row g-3">
+      <form class="row g-3 " >
         <p></p><p></p><p></p>
         <div class="col-md-4">
           <label for="validationDefault01" class="form-label">ชื่อ</label>
@@ -49,13 +49,16 @@ function Profile() {
          <div class="form-check">
             <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required></input>
            <label class="form-check-label" for="invalidCheck2">
-              Agree to terms and conditions
+              ตรวจสอบข้อมูลเรียบร้อยแล้ว
             </label>
           </div>
        </div>
+
        <div class="col-12">
-         <button class="btn btn-primary"  type="">บันทึก</button>
+         <button class="btn btn-primary"  type="submit" value="Send">บันทึก</button>
        </div>
+       
+
       </form>
 
         

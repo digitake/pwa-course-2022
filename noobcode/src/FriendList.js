@@ -22,7 +22,7 @@ function FriendList(){
       <h1 align = "center"><img src="https://media.discordapp.net/attachments/800643806278058035/950027579006525470/Home.png" alt="Home" width="150" height="50"  /></h1>
 
 
-      <div class="accordion accordion-flush" id="accordionFlushExample">
+      <div class="accordion accordion-flush " id="accordionFlushExample">
       <div class="accordion-item">
     <h2 class="accordion-header" id="flush-headingOne">
       <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
@@ -32,7 +32,7 @@ function FriendList(){
     <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
       <div class="accordion-body">{
        friends.map (x=>
-        <div className= 'friend-list-item' >
+        <div className= 'friend-list-item ' >
           <Avatar name = {x.user}/>
           &nbsp;&nbsp;&nbsp;
           {x.displayName}
