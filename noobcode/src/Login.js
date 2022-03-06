@@ -9,7 +9,7 @@ function Login() {
     <App>
       
       <div className="login " >
-      <h1 class="display-2" align = "center"><img src='Login-login.png' alt="login" width="400" height="150"  /></h1>
+      <h1 class="display-2" align = "center"><img src='Login_font.png' alt="login" width="400" height="150"  /></h1>
       <p></p><p></p><p></p><p></p><p></p>
       <form>
       <div class="form-floating mb-3">

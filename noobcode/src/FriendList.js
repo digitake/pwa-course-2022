@@ -19,7 +19,7 @@ function FriendList(){
       
       
       <div className='center'>
-      <h1 class="display-2" align = "center">Home</h1>
+      <h1 align = "center"><img src="Home.png" alt="Home" width="400" height="150"  /></h1>
 
 
       <div class="accordion accordion-flush" id="accordionFlushExample">

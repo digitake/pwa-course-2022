@@ -9,7 +9,7 @@ function Tabbar () {
 
       <nav class="navbar navbar-light bg-white fixed-top text-success " >
         <div class="container-fluid">
-         <a class=" navbar-brand navbar-center" href="#"><img src='Universe-logo.png' alt="Universe" width="250" height="50"  /></a> 
+         <a class=" navbar-brand navbar-center" href="#"><img src="Universe_font.png" alt="Universe" width="250" height="50"  /></a> 
             <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
               <span class="navbar-toggler-icon">
               
