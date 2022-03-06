@@ -1,0 +1,12 @@
+.friend-list-item {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 4px solid #396662;
+  cursor: pointer;
+  background-color: rgb(65, 179, 245);
+}
+.name{
+  margin-left: 50px;
+  font-size: 2.5em;
+}

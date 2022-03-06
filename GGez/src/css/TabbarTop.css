@@ -1,0 +1,18 @@
+.TabbarTop {
+  height: 100px;
+  background-color: #a0a0a0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.TabbarTop .tabbutton {
+  font-size: 5em;
+  color: rgb(0, 0, 0);
+  padding: 50px;
+  align-items: flex-end;
+}
+
+.TabbarTop .tabbutton:hover {
+  background-color: #dbdbdb;
+}
