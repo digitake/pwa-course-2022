@@ -35,14 +35,14 @@ body {
 }
 
 
-#myMenu {
+#myFriends {
   list-style-type: none;
   padding: 0;
   margin: 0;
   
 }
 
-#myMenu li a {
+#myFriends li a {
   padding: 12px;
   text-decoration: none;
   color: black;
@@ -50,6 +50,6 @@ body {
   border: 1px solid #ddd;
 }
 
-#myMenu li a:hover {
+#myFriends li a:hover {
   background-color: #eee;
 }
