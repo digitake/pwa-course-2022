@@ -19,6 +19,10 @@ function Home(){
                 <a href="friend">Friends</a>
                 <a href="group">Groups</a>
                 <a href="profile">Profile</a>
+                <div class ="topnav-right">
+                <a href="login">Login</a>
+                <a href="sign_in">Sign in</a>
+                </div>
             </div>   
         </div>
     )

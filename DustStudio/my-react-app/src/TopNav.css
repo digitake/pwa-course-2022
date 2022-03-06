@@ -8,6 +8,10 @@ body {
   background-color: #f1e3d5;
 }
 
+.topnav-right {
+  float: right;
+}
+
 .topnav a {
   float: left;
   display: block;
