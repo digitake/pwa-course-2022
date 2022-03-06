@@ -6,7 +6,7 @@ import Inputbox from './components/Inputbox.js';
 import './Chat.css';
 
 function Chat() {
-  const [chatData, setChatData] = useState([
+  let [chatData, setChatData] = useState([
     {user: "user1", msg: "Hello", position: "left"},
     {user: "user2", msg: "Hi", position: "right"},
     {user: "user1", msg: "How are you?", position: "left"},

@@ -5,7 +5,7 @@ function Inputbox (props) {
 
   return (
     <div className="inputbox">
-      <label className="label1" htmlFor="inputmsg">
+      <label className="label1" for="inputmsg">
         {props.label}
       </label>
       <input
