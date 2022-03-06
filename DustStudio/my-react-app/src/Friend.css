@@ -1,32 +1,55 @@
-#myInput {
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
 
-    background-position: 10px 12px;
-    background-repeat: no-repeat;
-    width: 100%;
-    font-size: 16px;
-    padding: 12px 20px 12px 40px;
-    border: 1px solid #ddd;
-    margin-bottom: 12px;
-  }
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+}
+
+
+.left {
+  flex: 15%;
+  padding: 15px 0;
   
-  #myUL {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+.right {
+  flex: 85%;
+  padding: 15px;
+  background-color: aquamarine;
+}
+
+
+#mySearch {
+  width: 100%;
+  font-size: 18px;
+  padding: 11px;
+
+}
+
+
+#myMenu {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
   
-  #myUL li a {
-    border: 1px solid #ddd;
-    margin-top: -1px; /* Prevent double borders */
-    width: 40%;
-    background-color: #f6f6f6;
-    padding: 15px;
-    text-decoration: none;
-    font-size: 18px;
-    color: black;
-    display: block
-  }
-  
-  #myUL li a:hover:not(.header) {
-    background-color: #eee;
-  }
+}
+
+#myMenu li a {
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  display: block;
+  border: 1px solid #ddd;
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
