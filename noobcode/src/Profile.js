@@ -12,27 +12,51 @@ function Profile() {
       
       <div className="Profile" >
       <h1 class="display-2" align = "center">My Profile</h1>
-        <Avatar name={name}/>
-        <label className="label1" htmlFor="displayname"/>
-        <p></p>
-      <form>
-        <div class="mb-3">
-       <label for="exampleInputEmail1" class="form-label">Email address</label>
-       <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"></input>
-       <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+      <Avatar name={name}/>
+      
+      <form class="row g-3">
+        <p></p><p></p><p></p>
+        <div class="col-md-4">
+          <label for="validationDefault01" class="form-label">ชื่อ</label>
+          <input type="text" class="form-control" id="validationDefault01"  required></input>
+        </div>
+        <div class="col-md-4">
+          <label for="validationDefault02" class="form-label">นามสกุล</label>
+         <input type="text" class="form-control" id="validationDefault02"  required></input>
+        </div>
+        <div class="col-md-4">
+          <label for="validationDefaultUsername" class="form-label">Username</label>
+          <div class="input-group">
+           <input type="text" class="form-control" id="validationDefaultUsername"  aria-describedby="inputGroupPrepend2" required></input>
+         </div>
+        </div>
+        <div class="col-md-8">
+         <label for="validationDefault03" class="form-label">City</label>
+         <input type="text" class="form-control" id="validationDefault03" required></input>
        </div>
-       <div class="mb-3">
-       <label for="exampleInputPassword1" class="form-label">Password</label>
-       <input type="password" class="form-control" id="exampleInputPassword1"></input>
-        </div>
-        <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1"></input>
-        <label class="form-check-label" for="exampleCheck1">Save email and password</label>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-       </form>
-       
-
+       <div class="col-md-4">
+        <label for="validationDefault04" class="form-label">State</label>
+          <select class="form-select" id="validationDefault04" required>
+           <option selected disabled value="">เลือก...</option>
+           <option>ไทย</option>
+           <option>ไทย</option>
+           <option>ไทย</option>
+           <option>ไทย</option>
+           <option>ไทย</option>
+          </select>
+       </div>
+        <div class="col-12">
+         <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="invalidCheck2" required></input>
+           <label class="form-check-label" for="invalidCheck2">
+              Agree to terms and conditions
+            </label>
+          </div>
+       </div>
+       <div class="col-12">
+         <button class="btn btn-primary"  type="">บันทึก</button>
+       </div>
+      </form>
 
         
         

@@ -9,7 +9,7 @@ function Tabbar () {
 
       <nav class="navbar navbar-light bg-white fixed-top text-success " >
         <div class="container-fluid">
-         <a class="navbar-brand position-absolute start-50 fs-2 " href="#">ChatApp</a> 
+         <a class="navbar-brand position-absolute start-50 fs-2 " href="#">Universe</a> 
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
               <span class="navbar-toggler-icon"></span>
             </button>
@@ -24,7 +24,7 @@ function Tabbar () {
 
                 <p></p>
                 
-               <h2> <div align = "center" > Name </div> </h2>
+               <h2> <div align = "center" > Name (Display) </div> </h2>
               
                 <div></div>
                     <Link to="/friend-list" className="tabbutton">
@@ -38,12 +38,11 @@ function Tabbar () {
                 
                 <li class="nav-item dropdown ">
                  <a class="nav-link dropdown-toggle fs-4 " align="center" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                       Help
+                       About us
                   </a>
                   <ul class="dropdown-menu dropdown-menu-dark " aria-labelledby="navbarDarkDropdownMenuLink">
-                     <li><a class="dropdown-item" href="#">contact</a></li>
-                     <li><a class="dropdown-item" href="#">00000</a></li>
-                    <li><a class="dropdown-item" href="#">00000</a></li>
+                     <li><a class="dropdown-item" href="#">This application is create for GI_472</a></li>
+                     <li><Link to="/develop"><a class="dropdown-item " href="#">Developer</a></Link></li>
                   </ul>
                 </li>
                 <p></p>
@@ -52,9 +51,9 @@ function Tabbar () {
                   <i class="fa fa-cog fa-spin fa-2x fa-fw"></i><span class="sr-only">Loading...</span>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                     <li><a class="dropdown-item" href="#">00000</a></li>
-                     <li><a class="dropdown-item" href="#">00000</a></li>
-                    <li><a class="dropdown-item" href="#">00000</a></li>
+                     <li><Link to="/"><a class="dropdown-item " href="#">Logout</a></Link></li>
+                     
+                    
                   </ul>
                 </li>
 
@@ -62,8 +61,7 @@ function Tabbar () {
 
 
               </ul>
-          <form class="d-flex">
-          </form>
+          
         </div>
       </div>
     </div>

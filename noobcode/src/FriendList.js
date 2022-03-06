@@ -34,10 +34,18 @@ function FriendList(){
        friends.map (x=>
         <div className= 'friend-list-item' >
           <Avatar name = {x.user}/>
+          &nbsp;&nbsp;&nbsp;
           {x.displayName}
+          &nbsp;
+          <button class="fa fa-phone-square fa-3x btn btn-md btn-secondary" aria-hidden="true"></button>
+
           </div>
+        
+          
          )
          }</div>
+
+         
     </div>
   </div>
   <div class="accordion-item">
@@ -51,7 +59,10 @@ function FriendList(){
        friends.map (x=>
         <div className= 'friend-list-item' >
           <Avatar name = {x.user}/>
+          &nbsp;&nbsp;&nbsp;
           {x.displayName}
+          &nbsp;
+          <button class="fa fa-phone-square fa-3x btn btn-md btn-secondary" aria-hidden="true"></button>
           </div>
          )
          }</div>
@@ -68,7 +79,10 @@ function FriendList(){
        friends.map (x=>
         <div className= 'friend-list-item' >
           <Avatar name = {x.user}/>
+          &nbsp;&nbsp;&nbsp;
           {x.displayName}
+          &nbsp;
+          <button class="fa fa-phone-square fa-3x btn btn-md btn-secondary" aria-hidden="true"></button>
           </div>
          )
          }</div>

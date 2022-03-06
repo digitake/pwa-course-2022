@@ -10,26 +10,32 @@ function Inputbox (props) {
       <label className="label1" htmlFor="inputmsg">
         {props.label}
       </label>
-      <i class="button fa fa-picture-o fa-3x  btn btn-secondary" aria-hidden="true">
-        </i>
-      <i  type="button" class="fa fa-paperclip fa-3x btn btn-secondary " aria-hidden="true"></i>
+      <div class="btn-group dropstart">
+        <button type="button" class="btn btn-sm btn-secondary " data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fa fa-2x fa-plus-circle" aria-hidden="true"></i>
+        </button>
+        <ul class="dropdown-menu">
+          <button type="button" class="fa fa-paperclip fa-3x btn btn-lg btn-secondary "  aria-hidden="true"></button>
+          <button type="button" class="fa fa fa-picture-o fa-3x btn btn-lg btn-secondary  " aria-hidden="true"></button>
+          <button type="button" class="fa fa-paperclip fa-3x btn btn-lg btn-secondary  " aria-hidden="true"></button>
+          
+        </ul>
+      </div>
 
-      <input
-        id="inputmsg"
-        type="text"
-        className="text"
-        value={value}
-        onChange={e => {
+
+      <input class="form-control" id="inputmsg" type="text" placeholder="Text me." aria-label="default input example" value={value} 
+          onChange={e => {
           setValue(e.target.value);
           props.onChange && props.onChange(e.target.value);
-        }}
-      />
-      <input 
-        type="button" 
-        value="Send" 
-        onClick={() => props.onClick(value)} 
-        className="button" class="btn btn-secondary"
-      />    
+        }}></input>
+      
+      
+       <button class="fa fa-paper-plane btn btn-lg btn-secondary" aria-hidden="true" >
+           {() => props.onClick(value)} 
+         
+         </button>
+
+        
     </div>
   )
 }
