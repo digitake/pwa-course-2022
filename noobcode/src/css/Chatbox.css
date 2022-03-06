@@ -11,3 +11,12 @@
 .chatbox-item .avatar{
   display: inline-block;
 }
+.colorblue{
+  color: #00386A;
+}
+.colorgray{
+  color: #696969;
+}
+.colorwhite{
+  color: #ffffff;
+}

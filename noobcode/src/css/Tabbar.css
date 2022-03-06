@@ -12,7 +12,7 @@
   font-size: 2.4em;
   height: 100px;
   
-  color: rgb(4, 112, 4);
+  color: #00386A;
   margin: 1px;
   padding: 15px;
   cursor: pointer;
@@ -20,8 +20,22 @@
   transition: background-color 1s;
 }
 
-
+.colorblue{
+  color: #00386A;
+}
+.colorgray{
+  color: #696969;
+}
+.colorwhite{
+  color: #ffffff;
+}
 
 .tabbar .tabbutton:hover {
   background-color: #747474;;
+}
+
+.navbar-center {
+  position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
 }

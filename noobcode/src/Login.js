@@ -9,7 +9,7 @@ function Login() {
     <App>
       
       <div className="login " >
-      <h1 class="display-2" align = "center">Login</h1>
+      <h1 class="display-2" align = "center"><img src='Login-login.png' alt="login" width="400" height="150"  /></h1>
       <p></p><p></p><p></p><p></p><p></p>
       <form>
       <div class="form-floating mb-3">
@@ -27,7 +27,7 @@ function Login() {
         <input type="checkbox" class="form-check-input" id="exampleCheck1"></input>
         <label class="form-check-label" for="exampleCheck1">Save email address</label>
         </div>
-        <button type="button" class="btn btn-outline-success" ><Link to="/friend-list" role="button">     
+        <button type="button" class="btn btn-outline-secondary" ><Link to="/friend-list" role="button">     
             submit
             </Link></button>
 

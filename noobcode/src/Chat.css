@@ -9,7 +9,7 @@
 
 .chatbox {
   flex: 12;
-  background-color: rgb(158, 230, 25);
+  background-color: #00386A;
   flex: auto;
   margin: auto;
   width: 50%;
@@ -47,4 +47,13 @@
 .center {
   position: absolute;
   width: 100%;
+}
+.colorblue{
+  color: #00386A;
+}
+.colorgray{
+  color: #696969;
+}
+.colorwhite{
+  color: #ffffff;
 }

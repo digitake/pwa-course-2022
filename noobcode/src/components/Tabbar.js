@@ -9,22 +9,25 @@ function Tabbar () {
 
       <nav class="navbar navbar-light bg-white fixed-top text-success " >
         <div class="container-fluid">
-         <a class="navbar-brand position-absolute start-50 fs-2 " href="#">Universe</a> 
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
-              <span class="navbar-toggler-icon"></span>
+         <a class=" navbar-brand navbar-center" href="#"><img src='Universe-logo.png' alt="Universe" width="250" height="50"  /></a> 
+            <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
+              <span class="navbar-toggler-icon">
+              
+
+                </span>
             </button>
             <div class="offcanvas offcanvas-start" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
             <div class="offcanvas-header">
-            <h4 class="offcanvas-title" id="navbarOffcanvasLgLabel">Menu</h4>
+            <h4 class="offcanvas-title colorblue" id="navbarOffcanvasLgLabel"  >Menu</h4>
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
-            <div class="offcanvas-body" color= "grey" >
+            <div class="offcanvas-body" color= "#696969" >
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" >            
                 <div align = "center" ><Avatar name = "" /></div>
 
                 <p></p>
                 
-               <h2> <div align = "center" > Name (Display) </div> </h2>
+               <h2> <div align = "center" className="colorgray" > Name (Display) </div> </h2>
               
                 <div></div>
                     <Link to="/friend-list" className="tabbutton">
@@ -41,7 +44,7 @@ function Tabbar () {
                        About us
                   </a>
                   <ul class="dropdown-menu dropdown-menu-dark " aria-labelledby="navbarDarkDropdownMenuLink">
-                     <li><a class="dropdown-item" href="#">This application is create for GI_472</a></li>
+                     <li> &nbsp;&nbsp;&nbsp; This application is create for GI_472</li>
                      <li><Link to="/develop"><a class="dropdown-item " href="#">Developer</a></Link></li>
                   </ul>
                 </li>

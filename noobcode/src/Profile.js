@@ -31,11 +31,11 @@ function Profile() {
          </div>
         </div>
         <div class="col-md-8">
-         <label for="validationDefault03" class="form-label">City</label>
+         <label for="validationDefault03" class="form-label">ที่อยู่</label>
          <input type="text" class="form-control" id="validationDefault03" required></input>
        </div>
        <div class="col-md-4">
-        <label for="validationDefault04" class="form-label">State</label>
+        <label for="validationDefault04" class="form-label">ประเทศ</label>
           <select class="form-select" id="validationDefault04" required>
            <option selected disabled value="">เลือก...</option>
            <option>ไทย</option>

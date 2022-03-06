@@ -37,7 +37,7 @@ function FriendList(){
           &nbsp;&nbsp;&nbsp;
           {x.displayName}
           &nbsp;
-          <button class="fa fa-phone-square fa-3x btn btn-md btn-secondary" aria-hidden="true"></button>
+          <button class="fa fa-phone-square fa-3x btn btn-md btn-light" aria-hidden="true"></button>
 
           </div>
         
@@ -62,7 +62,7 @@ function FriendList(){
           &nbsp;&nbsp;&nbsp;
           {x.displayName}
           &nbsp;
-          <button class="fa fa-phone-square fa-3x btn btn-md btn-secondary" aria-hidden="true"></button>
+          <button class="fa fa-phone-square fa-3x btn btn-md btn-light" aria-hidden="true"></button>
           </div>
          )
          }</div>
@@ -82,7 +82,7 @@ function FriendList(){
           &nbsp;&nbsp;&nbsp;
           {x.displayName}
           &nbsp;
-          <button class="fa fa-phone-square fa-3x btn btn-md btn-secondary" aria-hidden="true"></button>
+          <button class="fa fa-phone-square fa-3x btn btn-md btn-light" aria-hidden="true"></button>
           </div>
          )
          }</div>
