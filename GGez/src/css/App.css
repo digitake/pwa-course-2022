@@ -1,0 +1,19 @@
+.App {
+  background-color: rgb(65, 179, 245);
+  width: 100%;
+  height: 100%;;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.App .content {
+  flex: 1;
+}
+
+
+.userlist {
+  flex: 1;
+  background-color: #f32f2f;
+}
+
