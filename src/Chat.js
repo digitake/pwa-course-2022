@@ -4,8 +4,11 @@ import Chatbox from './components/Chatbox.js';
 import Userlist from './components/Userlist.js';
 import Inputbox from './components/Inputbox.js';
 import './Chat.css';
+import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
 
 function Chat() {
+  const { authState } = useAuthStateContext();
+
   let [chatData, setChatData] = useState([
     {user: "user1", msg: "Hello", position: "left"},
     {user: "user2", msg: "Hi", position: "right"},
