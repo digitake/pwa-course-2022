@@ -66,6 +66,14 @@ export default function ChatStateProvider({ children, self }) {
     });
   };
 
+  const listenToPrivateChat = (friendId, callback) => {
+    const chatroomId = `1-1-${hashCode(self.uid) + hashCode(friendId)}`;
+    return chatroomsRef.child(`${chatroomId}/chat`).on('child_added', snapshot => {
+      // {roomTitle, users, chat}
+      snapshot && callback(snapshot.val());
+    });
+  };
+
   const sendPrivateMsg = (msg, friendId) => {
     const chatroomId = `1-1-${hashCode(self.uid) + hashCode(friendId)}`;
     const chatroomRef = chatroomsRef.child(`${chatroomId}/chat`);
@@ -79,10 +87,18 @@ export default function ChatStateProvider({ children, self }) {
     });
   };
 
+  const listenToChatroom = (roomId, callback) => {
+    return chatroomsRef.child(`${roomId}/chat`).on('child_added', snapshot => {
+      // {roomTitle, users, chat}
+      callback(snapshot.val());
+    });
+  };
+
   const sendMsg = (msg, targetId) => {
     const chatroomRef = chatroomsRef.child(`${targetId}/chat`);
     chatroomRef.push(chat(msg));
   };
+  
 
   return (
     <ChatStateContext.Provider
@@ -91,8 +107,10 @@ export default function ChatStateProvider({ children, self }) {
         chatroomList: chatroomList,
         getUserProfile: getUserProfile,
         getPrivateChat: getPrivateChat,
+        listenToPrivateChat: listenToPrivateChat,
         sendPrivateMsg: sendPrivateMsg,
         getChatroom: getChatroom,
+        listenToChatroom: listenToChatroom,
         sendMsg: sendMsg
       }}
     >

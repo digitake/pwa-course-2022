@@ -9,9 +9,21 @@ import { useParams } from "react-router-dom";
 
 function PrivateChat() {
   const { uid } = useParams();
-  const { getPrivateChat, getUserProfile, sendPrivateMsg } = useChatStateContext();
+  const { getUserProfile, sendPrivateMsg, listenToPrivateChat } = useChatStateContext();
   const [ friendName, setFriendName ] = useState("");
   const [ chatData, setChatData ] = useState([]);
+
+  const onMsg = (msg) => {
+    
+    const mappedValue = {
+      ...msg,
+      key: msg.timestamp || Date.now(),
+      displayName: friendName,
+      position: msg.user === uid ? "right" : "left"
+    };
+    
+    setChatData(oldChat => [mappedValue, ...oldChat]);
+  }
 
   useEffect(() => {
     getUserProfile(uid)
@@ -19,24 +31,15 @@ function PrivateChat() {
       friend && setFriendName(friend.displayName);
       return friend;
     })
-    .then(friend => {
-      friend &&
-      getPrivateChat(uid)
-      .then(chatData => {
-        if (chatData) {
-          const mappedValues = Object.values(chatData.chat || []).map(item => ({
-            ...item,
-            key: item.timestamp || Date.now(),
-            displayName: friend.displayName,
-            position: item.position = item.user === uid ? "right" : "left"
-          }))
-          setChatData(mappedValues);
-        }
-      });
-    })
 
-    return () => {}
-  }, [uid,getPrivateChat,getUserProfile]);
+    const unsubscribePrivateChat = listenToPrivateChat(uid, onMsg);
+
+    return () => {unsubscribePrivateChat()}
+  }, [uid]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
     <App>

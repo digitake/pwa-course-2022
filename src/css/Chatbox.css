@@ -4,6 +4,10 @@
   overflow: auto;
 }
 
+.chatbox-item{
+  transition: top 1s opacity 1s display 1s width 1s height 1s;
+}
+
 .chatbox-item.left{
   text-align: left;
   margin-left: 24px;
