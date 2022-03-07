@@ -3,7 +3,7 @@ import App from './components/App.js';
 import Chatbox from './components/Chatbox.js';
 import Inputbox from './components/Inputbox.js';
 import Titlebar from './components/Titlebar.js';
-import './PrivateChat.css';
+import './Chat.css';
 import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import { useParams } from "react-router-dom";
 

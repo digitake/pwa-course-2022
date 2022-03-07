@@ -1,3 +1,9 @@
+.chatbox {
+  flex: 1;
+  background-color: silver;
+  overflow: auto;
+}
+
 .chatbox-item.left{
   text-align: left;
   margin-left: 24px;

@@ -7,15 +7,11 @@
   flex-direction: column;
 }
 
-.chatbox {
-  flex: 12;
-  background-color: silver;
-}
 
 .inputbox {
-  flex: 1;
   background-color: gray;
   display: flex;
+  height: 50px;
 }
 
 .inputbox .label1 {
