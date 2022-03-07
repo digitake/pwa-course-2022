@@ -9,21 +9,22 @@
 
 .chatbox {
   flex: 12;
-  background-color: #00386A;
+  background-color: #3f576b;
   flex: auto;
   margin: auto;
   width: 80%;
   position: relative;
   max-width: 100%;
   min-width: auto;
-  height: 690px;
+  height: 700px;
 }
 .chatcolor {
   border-radius: 15px 50px;
-  background: lightblue;
+  background: rgb(0, 0, 0);
   padding: 10px;
   
 }
+
 
 
 .inputbox .label1 {
@@ -33,6 +34,8 @@
 }
 
 .inputbox .text {
+  
+  
   font-size: 1em;
   padding-left: 8px;
   padding-right: 8px;

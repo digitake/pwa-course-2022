@@ -11,7 +11,7 @@ function Chatbox (props) {
           return (<div key={index} className={`chatbox-item ${item.position}`}>
             <div>{item.user}</div>
             <Avatar name={item.user}/>
-            <div className="chatbox-item-text"> {item.msg}</div>
+            <div className="chatbox-item msg"> {item.msg}</div>
           </div>)
         })
       }

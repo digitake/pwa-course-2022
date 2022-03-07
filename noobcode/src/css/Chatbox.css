@@ -1,6 +1,7 @@
 .chatbox-item.left{
   text-align: left;
   margin-left: 24px;
+  
 }
 
 .chatbox-item.right{
@@ -8,8 +9,20 @@
   margin-right: 24px;
 }
 
+
+.chatbox-item .msg {
+  border-radius: 25px;
+  background-color: #82ccdd;
+  padding: 10px;
+  width: max-content;
+
+}
+
 .chatbox-item .avatar{
   display: inline-block;
+  border-radius: 50%;
+  border: solid 3px #29b457;
+  background-color: #e5e5e5;
 }
 .colorblue{
   color: #00386A;

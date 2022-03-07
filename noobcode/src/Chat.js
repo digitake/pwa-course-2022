@@ -8,9 +8,9 @@ import './Chat.css';
 function Chat() {
   const [chatData, setChatData] = useState([
     {user: "John", msg: "ไง", position: "left"},
-    {user: "ฉัน", msg: "ว่า", position: "right"},
-    {user: "John", msg: "เป็นไงบ้าง", position: "left"},
-    {user: "ฉัน", msg: "สบายดี", position: "right"},
+    {user: "ฉัน", msg: "ว่า", position: "right",},
+    {user: "John", msg: "เป็นไงบ้าง", position: "left",},
+    {user: "ฉัน", msg: "สบายดี", position: "right",},
   ]);
 
   return (
@@ -25,7 +25,7 @@ function Chat() {
         
         <Userlist/>
         
-        <Chatbox data={chatData}/>
+        <Chatbox  data={chatData} />
         
         <Inputbox/>
       </div>
