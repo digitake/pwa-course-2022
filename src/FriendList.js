@@ -13,7 +13,7 @@ function FriendList(){
       {
         userList.map((item) => {
           return (
-            <Link to={`/friend/${item.key}`} key={item.key}>
+            <Link to={`/privatechat/${item.key}`} key={item.key}>
               <div className={`friend-list-item ${item.position}`}>
                 <Avatar name={item.key}/>
                 <div>{item.displayName}</div>

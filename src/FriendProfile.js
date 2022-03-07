@@ -9,7 +9,7 @@ function FriendProfile() {
   const { uid } = useParams();
 
   const { getUserProfile } = useChatStateContext();
-  const [name, setName] = useState("");
+  const [ name, setName ] = useState("");
 
   useEffect(() => {
     getUserProfile(uid)
@@ -18,7 +18,7 @@ function FriendProfile() {
     })
 
     return () => {}
-  }, [uid]);
+  }, [uid,getUserProfile]);
 
 
   return (

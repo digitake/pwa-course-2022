@@ -8,8 +8,8 @@ function Chatbox (props) {
     <div className="chatbox">
       {
         data.map((item) => {
-          return (<div className={`chatbox-item ${item.position}`}>
-            <div>{item.user}</div>
+          return (<div key={item.key} className={`chatbox-item ${item.position}`}>
+            <div>{item.displayName}</div>
             <Avatar name={item.user}/>
             <div className="chatbox-item-text"> {item.msg}</div>
           </div>)

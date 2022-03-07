@@ -3,6 +3,7 @@ import 'firebase/compat/auth';
 import 'firebase/compat/database';
 import {firebase} from './FirebaseConfig';
 
+const hashCode = s => s.split('').reduce((a,b) => (((a << 5) - a) + b.charCodeAt(0))|0, 0)
 
 const ChatStateContext = createContext({
   userList: [],
@@ -16,16 +17,12 @@ export default function ChatStateProvider({ children, self }) {
   const [userList, setUserList] = useState([]);
   const [chatroomList, setChatroomList] = useState([]);
 
+  const chat = msg => ({ msg: msg, user: self.uid, timestamp: firebase.database.ServerValue.TIMESTAMP });
+  
+
   useEffect(() => {
     const unregisterChatObserver = usersRef.on('child_added', snapshot => {
-
-      const userId = snapshot.key;
-      const user = snapshot.val();
-      console.log(userId, 'user');
-      console.log(self.uid, 'self');
-      if (userId === self.uid) {
-        console.log("got me", user)
-      }
+      
       const excludeSelf = x=> x.key !== self.uid;
       setUserList(oldList => [...oldList.filter(excludeSelf), {
         ...snapshot.val(),
@@ -37,7 +34,6 @@ export default function ChatStateProvider({ children, self }) {
     const unregisterChatObserverChildRemoved = usersRef.on('child_removed', snapshot => {
 
       const userId = snapshot.key;
-      const user = snapshot.val();
       
       const excludeSelf = x=> x.key !== userId;
       setUserList(oldList => oldList.filter(excludeSelf));
@@ -63,12 +59,41 @@ export default function ChatStateProvider({ children, self }) {
     });
   };
 
+  const getPrivateChat = (friendId) => {
+    const chatroomId = `1-1-${hashCode(self.uid) + hashCode(friendId)}`;
+    return chatroomsRef.child(`${chatroomId}`).once('value').then(snapshot => {
+      return snapshot.val();
+    });
+  };
+
+  const sendPrivateMsg = (msg, friendId) => {
+    const chatroomId = `1-1-${hashCode(self.uid) + hashCode(friendId)}`;
+    const chatroomRef = chatroomsRef.child(`${chatroomId}/chat`);
+    chatroomRef.push(chat(msg));
+  };
+
+  const getChatroom = (roomId) => {
+    return chatroomsRef.child(`${roomId}`).once('value').then(snapshot => {
+      // {roomTitle, users, chat}
+      return snapshot.val();
+    });
+  };
+
+  const sendMsg = (msg, targetId) => {
+    const chatroomRef = chatroomsRef.child(`${targetId}/chat`);
+    chatroomRef.push(chat(msg));
+  };
+
   return (
     <ChatStateContext.Provider
       value={{
         userList: userList,
         chatroomList: chatroomList,
         getUserProfile: getUserProfile,
+        getPrivateChat: getPrivateChat,
+        sendPrivateMsg: sendPrivateMsg,
+        getChatroom: getChatroom,
+        sendMsg: sendMsg
       }}
     >
       {children}

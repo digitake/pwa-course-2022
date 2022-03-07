@@ -4,6 +4,7 @@ import {
   Route
 } from "react-router-dom";
 import Chat from "./Chat";
+import PrivateChat from "./PrivateChat";
 import Profile from "./Profile";
 import FriendList from "./FriendList";
 import FriendProfile from "./FriendProfile";
@@ -22,6 +23,7 @@ function Router() {
           <BrowserRouter>
             <Routes>
               <Route path="/chat" element={<Chat />}/>
+              <Route path="/privatechat/:uid" element={<PrivateChat />}/>
               <Route path="/profile" element={<Profile />}/>
               <Route path="/friend-list" element={<FriendList />}/>
               <Route path="/friend/:uid" element={<FriendProfile />}/>
