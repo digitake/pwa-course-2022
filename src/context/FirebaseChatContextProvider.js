@@ -57,11 +57,18 @@ export default function ChatStateProvider({ children, self }) {
     // eslint-disable-next-line
   }, []);
 
+  const getUserProfile = uid => {
+    return usersRef.child(uid).once('value').then(snapshot => {
+      return snapshot.val();
+    });
+  };
+
   return (
     <ChatStateContext.Provider
       value={{
         userList: userList,
         chatroomList: chatroomList,
+        getUserProfile: getUserProfile,
       }}
     >
       {children}

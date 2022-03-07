@@ -6,6 +6,7 @@ import {
 import Chat from "./Chat";
 import Profile from "./Profile";
 import FriendList from "./FriendList";
+import FriendProfile from "./FriendProfile";
 import { useAuthStateContext, LoginComponent } from './context/FirebaseAuthContextProvider';
 import ChatStateProvider from "./context/FirebaseChatContextProvider";
   
@@ -23,6 +24,7 @@ function Router() {
               <Route path="/chat" element={<Chat />}/>
               <Route path="/profile" element={<Profile />}/>
               <Route path="/friend-list" element={<FriendList />}/>
+              <Route path="/friend/:uid" element={<FriendProfile />}/>
               <Route path="/" element={<Profile />}/>
             </Routes>
           </BrowserRouter>
