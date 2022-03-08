@@ -22,7 +22,7 @@ function TopNav(){
             </div>
             <div id="overlay"></div>
             <div id="myTopnav" class="topnav">
-                <a onClick={openNav}>&#9776;</a>
+                <icon onClick={openNav}>&#9776;</icon>
                 <b></b>
                 <a className={splitLocation[1] === "" ? "active" : ""} href = '/'>Home</a>
                 <a className={splitLocation[1] === "friend" ? "active" : ""} href = "/friend">Friends</a>
