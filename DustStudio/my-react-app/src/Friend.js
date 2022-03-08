@@ -1,7 +1,5 @@
 import './Friend.css';
-import './TopNav.css';
-import './Menu.css';
-import {openNav,closeNav} from './Menu';
+import TopNav from './components/TopNav';
 
 
 
@@ -9,23 +7,7 @@ function Friend(){
     return(
 
         <div>
-            <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closebtn" onClick={closeNav}>&times;</a>
-                <a href="friend">Friends</a>
-                <a href="#">Groups</a>
-                <a href="#">Profile</a>
-                <a href="#">Contact</a>
-            </div>
-            <div class="topnav">
-                <a onClick={openNav}>&#9776;</a>
-                <b></b>
-                <a href="/">Home</a>
-                <a class="active" href="friend">Friends</a>
-                <a href="group">Groups</a>
-                <a href="profile">Profile</a>
-            </div>   
-
-                    
+            <TopNav></TopNav>
             <div class="row">
                 <div class="left">
                     <input type="text" id="mySearch" onKeyUp={myFunction} placeholder="Search.." title="Type in a category"></input>

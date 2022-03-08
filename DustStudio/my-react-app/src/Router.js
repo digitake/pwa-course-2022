@@ -1,5 +1,5 @@
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
-import Home from './Home'
+import Home from './Home.js'
 import App from './App'
 import Profile from './Profile';
 import Friend from './Friend';
