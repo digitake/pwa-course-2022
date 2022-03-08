@@ -4,7 +4,6 @@ function Home(){
     return(
         <div> 
             <TopNav></TopNav>
-
         </div>
        
     )

@@ -26,7 +26,7 @@ function TopNav(){
                 <b></b>
                 <a className={splitLocation[1] === "" ? "active" : ""} href = '/'>Home</a>
                 <a className={splitLocation[1] === "friend" ? "active" : ""} href = "/friend">Friends</a>
-                <a className={splitLocation[1] === "service" ? "active" : ""} href = "/group">Groups</a>
+                <a className={splitLocation[1] === "group" ? "active" : ""} href = "/group">Groups</a>
             </div>   
         </div>
         
