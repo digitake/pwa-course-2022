@@ -13,6 +13,9 @@ function Router()
            <Route path="/app" element = {<App/>}/>
            <Route path="/profile" element = {<Profile/>}/>
            <Route path="/friend" element = {<Friend/>}/>
+           <Route path="/group"/>
+           <Route path="/login"/>
+           <Route path="/sign_in"/>
        </Routes>
        </BrowserRouter>
     )
