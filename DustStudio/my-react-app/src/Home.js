@@ -5,6 +5,8 @@ import {openNav,closeNav} from './Menu';
 function Home(){
     return(
         <div>
+            
+
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onClick={closeNav}>&times;</a>
                 <a href="friend">Friends</a>
@@ -12,7 +14,8 @@ function Home(){
                 <a href="profile">Profile</a>
                 <a href="app">Contact</a>
             </div>
-            <div class="topnav">
+            <div id="overlay"></div>
+            <div id="myTopnav" class="topnav">
                 <a onClick={openNav}>&#9776;</a>
                 <b></b>
                 <a class="active" href="/">Home</a>
