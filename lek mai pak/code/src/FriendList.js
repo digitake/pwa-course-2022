@@ -20,7 +20,9 @@ function FriendList(){
               <div className='friend-list-item'>
                 <Avatar name={x.user}/> 
                  <div className='text'>
-                    {x.displayName}<br/><br/>
+                  <div classname= 'username'>  
+                    {x.displayName}<br/>
+                  </div>  
                     {x.msg}
                   </div>
               </div>
