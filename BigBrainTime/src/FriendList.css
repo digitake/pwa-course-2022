@@ -1,5 +1,19 @@
+.friend-icon{
+  display: flex;
+  
+  font-size: 64px;
+  color: #06d8cd;
+  
+  font-family: sans-serif;
+  
+  margin: 20px;
+  height: 64px;
+  
+}
+
 .friend-list-item {
   display: flex;
+  flex: 10;
   align-items: center;
   padding: 1rem;
   border-bottom: 0.5px solid #e5e5e5;

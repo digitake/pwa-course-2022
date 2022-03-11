@@ -16,6 +16,7 @@ function FriendList(){
   return(
     <App>
       <div className="friend-list">
+       <div className="friend-icon">Friends</div>
        {
          friends.map( x=> 
 

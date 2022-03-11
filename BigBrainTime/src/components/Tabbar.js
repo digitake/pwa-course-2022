@@ -1,17 +1,21 @@
 import '../css/Tabbar.css';
 import { Link } from 'react-router-dom';
 
+
 function Tabbar () {
   return (
     <div className="tabbar">
       <Link to="/friend-list" className="tabbutton">
-          Friend
+          <img src="/icon-image/home.png" className="tab-icon" />
       </Link>
       <Link to="/chat" className="tabbutton">
-          Chat
+        <img src="/icon-image/chat-01.png" className="tab-icon" />
       </Link>
       <Link to="/profile" className="tabbutton">
-          Profile
+        <img src="/icon-image/profile-01.png" className="tab-icon" />
+      </Link>
+      <Link to="/add-new" className="tabbutton">
+        <img src="/icon-image/plus-01.png" className="tab-icon" />
       </Link>
     </div>
   )

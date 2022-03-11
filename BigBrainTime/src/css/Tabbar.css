@@ -1,19 +1,21 @@
 .tabbar {
   height: px;
-  background-color: #2caabb;
+  background-color: #ffecb9;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: flex-start;
+  
+  gap: 30px;
   align-items: center;
 }
 
 .tabbar .tabbutton {
   display: flex;
-  width: 120px;
+  width: 150px;
   justify-content:center;
   font-size: 32px;
-  color: white;
-  margin-left: px;
+  color: gray;
+  margin-top: 50px;
   
   cursor: pointer;
   text-decoration: none;
@@ -21,5 +23,10 @@
 }
 
 .tabbar .tabbutton:hover {
-  background-color: #0d677e;;
+  background-color: #f3e191;
+}
+
+.tabbar .tab-icon{
+  width: 74px;
+  height: 70px;
 }
