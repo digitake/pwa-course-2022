@@ -14,10 +14,6 @@
   position: absolute;
   width: 100%;
   overflow: auto;
-}
-
-.App .userlist {
-  flex: 1;
-  background-color: #331a12;
+  display: flex;
 }
 
