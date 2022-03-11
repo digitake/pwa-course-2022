@@ -90,7 +90,7 @@ export default function ChatStateProvider({ children, self }) {
   const listenToChatroom = (roomId, callback) => {
     return chatroomsRef.child(`${roomId}/chat`).on('child_added', snapshot => {
       // {roomTitle, users, chat}
-      callback(snapshot.val());
+      snapshot && callback(snapshot.val());
     });
   };
 
