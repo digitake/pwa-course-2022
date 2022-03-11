@@ -1,5 +1,5 @@
 .tabbar {
-  height: 50px;
+  height: 64px;
   background-color: #f5cec7;
   display: flex;
   justify-content: space-evenly;
@@ -7,20 +7,34 @@
 }
 
 .tabbar .tabbutton {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   font-family: sans-serif;
   text-align: center;
-  font-size: 1.5em;
+  align-items: center;
+  font-size: 1em;
   color: #c15954;
   margin: 0.5px;
   padding: 10px;
   cursor: pointer;
   text-decoration: none;
-  transition: background-color 1s;
-  transition: color 0.5s;
+  transition: color 0.1s;
 }
 
 .tabbar .tabbutton:hover {
-  background-color: #e79796;
-  color: aliceblue;
+  color: aliceblue;  
+  filter: grayscale(255) brightness(255);
+}
+
+.tabbar .tab-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.tabbar .red{
+  fill: #c15954;
+}
+
+.tabbar .experiment{
+  
 }

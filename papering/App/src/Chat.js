@@ -3,9 +3,11 @@ import App from './components/App.js';
 import Chatbox from './components/Chatbox.js';
 import Userlist from './components/Userlist.js';
 import Inputbox from './components/Inputbox.js';
+import Topbar from './components/Topbar';
 import './Chat.css';
 
 function Chat () {
+
   const [chatData, setChatData] = useState([ //Array
     {user: "user1", msg: "Hello", position: "left"},
     {user: "user2", msg: "Hi", position: "right"},
@@ -14,9 +16,10 @@ function Chat () {
   ]);
 
   return (
+    
     <App>
+      <Topbar title="Chats"/>
       <div className="chat">
-        <Userlist/>
         <Chatbox data={chatData}/>
         <Inputbox/>
       </div>

@@ -11,9 +11,34 @@
 }
 .friend-name-space {
   padding: 10px;
+  justify-items: stretch;
+  justify-content: center;
+  text-justify: inter-word;
 }
 .friend-status {
 color:#eca9a7;
 font-family: sans-serif;
 font-weight: lighter;
+}
+
+.group-name-space {
+  padding: 10px;
+}
+
+.friend-time{
+  color:#eca9a7;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
+
+.group-list-item {
+  display: flex;
+  color:#c35e59;
+  font-weight: bold;
+  font-family: sans-serif;
+  align-items: center;
+  line-height: 40px;
+  padding: 0.5rem;
+  border-bottom: 3px solid #fae0dc;
+  cursor: pointer;
 }
