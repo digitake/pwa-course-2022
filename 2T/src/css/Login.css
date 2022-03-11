@@ -55,11 +55,12 @@
     text-align: right;
     padding: 10px;
 }
-.TextSetting02 {
+
+.TextSetting03 {
     font-family: fantasy;
     font-size: 20px;
     text-align: center;
-    padding: 10px;
+    padding-top: 6px;
 }
 
 .LBottomTab {

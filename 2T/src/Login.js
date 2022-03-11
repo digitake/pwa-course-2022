@@ -25,8 +25,8 @@ function Login(){
                     <div className='TextSetting02'>
                         Forgetting Password?
                     </div>
-                <div className='TextSetting03 LoginBorder'>
-                    Login
+                <div className='LoginBorder'>
+                    <div className='TextSetting03'>Login</div>
                 </div>
             </div>
             <div 
