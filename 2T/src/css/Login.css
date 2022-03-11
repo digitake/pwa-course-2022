@@ -5,43 +5,38 @@
     flex-direction: column;
 }
 
-.LB1 {
-    border: 3px solid rgb(255, 255, 255);
-    padding: 10px;
-}
-
-.LB2 {
-    padding: 10px;
-}
-
-.Title {
+.LTop {
+    height: 50px;
+    padding-left: 10px;
+    padding-bottom: 10px;
     background-color: rgb(232, 124, 152);
+    border: 3px solid rgb(255, 255, 255);
     color: white;
-    font-size: 80px;
+    font-size: 48px;
     font-family: fantasy;
     text-align: center;
-    height: 100px;
 }
 
-.TextBorder02 {
+.LMiddle {
     background-color: rgb(255, 208, 208);
+    border: 3px solid rgb(255, 255, 255);
+    border-bottom: 3px;
+    border-top: 3px;
     color: white;
-    height: 700px;
-}
-.TextBorder03 {
-    background-color: rgb(232, 124, 152);
-    color: white;
-    height: 60px;
+    flex: 10;
+    padding: 10px;
 }
 
 .LoginBorder {
     background-color: rgb(232, 124, 152);
+    border: 3px solid rgb(255, 255, 255);
     color: white;
     height: 40px;
 }
 
 .PictureBorder {
     background-color: rgb(232, 124, 152);
+    border: 3px solid rgb(255, 255, 255);
     color: white;
     height: 250px;
     width: 250px;
@@ -51,16 +46,24 @@
 .TextSetting01 {
     font-family: fantasy;
     font-size: 30px;
+    padding: 10px;
 }
 
 .TextSetting02 {
     font-family: fantasy;
     font-size: 20px;
     text-align: right;
+    padding: 10px;
+}
+.TextSetting02 {
+    font-family: fantasy;
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
 }
 
-.TextSetting03 {
-    font-family: fantasy;
-    font-size: 30px;
-    text-align: center;
+.LBottomTab {
+    height: 50px;
+    background-color: rgb(232, 124, 152);
+    border: 3px solid rgb(255, 255, 255);
 }

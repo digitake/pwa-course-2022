@@ -4,33 +4,33 @@ function Login(){
     return(
         <div className='LoginBoard'>
             <div 
-                className='LB1 Title'>
+                className='LTop'>
                 AuttonyApp
             </div>
             <div 
-                className='LB1 TextBorder02'>
+                className='LMiddle'>
                 <div 
-                    className='LB1 PictureBorder'>
+                    className='PictureBorder'>
                 </div>
-                    <div className='LB2 TextSetting01'>
+                    <div className='TextSetting01'>
                         Email
                     </div>
-                <div className='LB1 LoginBorder'>
+                <div className='LoginBorder'>
                 </div>
-                    <div className='LB2 TextSetting01'>
+                    <div className='TextSetting01'>
                         Password
                     </div>
-                <div className='LB1 LoginBorder'>
+                <div className='LoginBorder'>
                 </div>
-                    <div className='LB2 TextSetting02'>
+                    <div className='TextSetting02'>
                         Forgetting Password?
                     </div>
-                <div className='LB1 TextSetting03 LoginBorder'>
+                <div className='TextSetting03 LoginBorder'>
                     Login
                 </div>
             </div>
             <div 
-                className='LB1 TextBorder03'>
+                className='LBottomTab'>
             </div>
         </div>
     

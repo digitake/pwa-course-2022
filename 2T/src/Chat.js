@@ -5,16 +5,12 @@ function Chat(){
     return(
         <div className='ChatBoard'>
             <div 
-                className='CB1 Title'>
-                <div className='TextSetting04'>
-                    Name
-                </div>
-            </div>
+                className='CTop'>Name</div>
             <div 
-                className='CB2 TextBorder02'>
+                className='CMiddle'>
             </div>
             <div
-                className='CB1 TextBorder03'>
+                className='CBottom'>
                 <div >
                     <Inputbox/>
                 </div>

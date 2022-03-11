@@ -5,12 +5,12 @@
     flex-direction: column;
 }
 
-.PB1 {
-    flex: 1;
-    padding: 10px;
+.PTop {
+    height: 50px;
+    padding-left: 10px;
+    padding-bottom: 10px;
     background-color: rgb(232, 124, 152);
     border: 3px solid rgb(255, 255, 255);
-    border-bottom: 3px;
     color: white;
     font-size: 48px;
     font-family: fantasy;
@@ -18,6 +18,10 @@
 
 
 .Your {
+    padding: 10px;
+    flex: 1;
+    border-left: 3px solid rgb(255, 255, 255);
+    border-right: 3px solid rgb(255, 255, 255);
     background-color: rgb(255, 208, 208);
     color: white;
 }
@@ -33,20 +37,21 @@
     flex: 1;
     background-color: rgb(232, 124, 152);
     border: 3px solid rgb(255, 255, 255);
-    border-bottom: 3px;
     color: white;
     font-family: fantasy;
     font-size: 48px;
-    padding: 10px;
+    padding-left: 10px;
 }
 
 .List{
     background-color: rgb(255, 208, 208);
+    border-left: 3px solid rgb(255, 255, 255);
+    border-right: 3px solid rgb(255, 255, 255);
     flex: 10;
 }
 
-.BottomTab {
-    flex: 1;
+.PBottomTab {
+    height: 50px;
     background-color: rgb(232, 124, 152);
     border: 3px solid rgb(255, 255, 255);
 }
