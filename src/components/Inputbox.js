@@ -5,7 +5,7 @@ function Inputbox (props) {
 
   return (
     <div className="inputbox">
-      <label className="label1" for="inputmsg">
+      <label className="label1" htmlFor="inputmsg">
         {props.label}
       </label>
       <input
@@ -21,7 +21,10 @@ function Inputbox (props) {
       <input 
         type="button" 
         value="Send" 
-        onClick={() => props.onClick(value)} 
+        onClick={() => {
+          props.onEnter(value);
+          setValue("");
+        }}
         className="button"
       />    
     </div>
