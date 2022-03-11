@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import App from './components/App.js';
 import Chatbox from './components/Chatbox.js';
-import Userlist from './components/Userlist.js';
+import Titlebar from './components/Titlebar.js';
 import Inputbox from './components/Inputbox.js';
 import './Chat.css';
 import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
@@ -19,7 +19,7 @@ function Chat() {
   return (
     <App>
       <div className="chat">
-        <Userlist/>
+        <Titlebar value="Chat"/>
         <Chatbox data={chatData}/>
         <Inputbox/>
       </div>
