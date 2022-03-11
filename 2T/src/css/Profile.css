@@ -6,53 +6,49 @@
 }
 
 .PB1 {
-    flex: 3;
-    border: 3px solid rgb(255, 255, 255);
+    flex: 1;
     padding: 10px;
+    background-color: rgb(232, 124, 152);
+    border: 3px solid rgb(255, 255, 255);
+    border-bottom: 3px;
+    color: white;
+    font-size: 48px;
+    font-family: fantasy;
 }
 
 
 .Your {
     background-color: rgb(255, 208, 208);
     color: white;
-    height: 250px;
 }
 
 .YourPicture{
     background-color: rgb(232, 124, 152);
     width: 180px;
     height: 180px;
-    border: 10px solid rgb(255, 255, 255);
-    margin-top: 25px;
-    margin-left: 25px;
+    border: 5px solid rgb(255, 255, 255);
 }
 
 .Friends{
+    flex: 1;
     background-color: rgb(232, 124, 152);
+    border: 3px solid rgb(255, 255, 255);
+    border-bottom: 3px;
     color: white;
     font-family: fantasy;
-    font-size: 30px;
-    padding-top: 30px;
-}
-
-.MenuTitle {
-    background-color: rgb(232, 124, 152);
-    color: white;
-    font-size: 80px;
-    font-family: fantasy;
-    text-align: left;
-    height: 100px;
+    font-size: 48px;
+    padding: 10px;
 }
 
 .List{
     background-color: rgb(255, 208, 208);
-    height: 400px;
+    flex: 10;
 }
 
-.TextSetting03 {
-    font-family: fantasy;
-    font-size: 30px;
-    text-align: center;
+.BottomTab {
+    flex: 1;
+    background-color: rgb(232, 124, 152);
+    border: 3px solid rgb(255, 255, 255);
 }
 
 .FriendsPicture{
