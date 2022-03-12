@@ -1,3 +1,7 @@
+.friend-list {
+  flex:1
+}
+
 .friend-list-item {
   display: flex;
   align-items: center;
