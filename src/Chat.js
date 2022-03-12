@@ -9,8 +9,10 @@ import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
 
 function Chat() {
-  const { sendMsg, listenToChatroom } = useChatStateContext();
+  const { sendMsg, listenToChatroom, listenToUserInChatroom } = useChatStateContext();
   const { authState } = useAuthStateContext();
+
+  let [userlist, setUserlist] = useState({});
 
   let [chatData, setChatData] = useState([
     {user: "user1", msg: "Hello", position: "left", timestamp: 0},
@@ -19,7 +21,7 @@ function Chat() {
     {user: "user2", msg: "I'm fine, thank you. And you?", position: "right", timestamp: 0},
   ]);
 
-  const onMsg = (msg) => {
+  function onMsg(msg) {
     
     const mappedValue = {
       ...msg,
@@ -30,10 +32,23 @@ function Chat() {
     setChatData(oldChat => [mappedValue, ...oldChat]);
   }
 
-  useEffect(() => {
-    const unsubscribePrivateChat = listenToChatroom('mainhall', onMsg);
+  function onUserUpdate(event, userKey, user) {
+    setUserlist(oldUserlist => setUserlist({
+      ...oldUserlist,
+      userKey: user
+    }));
+    
+    console.log(`user: ${event}`, userKey,user);
+  }
 
-    return () => {unsubscribePrivateChat()}
+  useEffect(() => {
+    const unsubscribeChatroom = listenToChatroom('mainhall', onMsg);
+    const unsubscribeUserListener = listenToUserInChatroom('mainhall', onUserUpdate);
+
+    return () => {
+      unsubscribeChatroom();
+      unsubscribeUserListener();
+    }
   }, []);
 
 
@@ -42,7 +57,7 @@ function Chat() {
       <Userlist />
       <div className="chat">
         <Titlebar value="Chat"/>        
-        <Chatbox data={chatData.sort((a,b)=>a.timestamp-b.timestamp)}/>
+        <Chatbox data={chatData.sort((a,b)=>a.timestamp - b.timestamp)}/>
         <Inputbox onEnter={x=>sendMsg(x,"mainhall")}/>
       </div>
     </App>
