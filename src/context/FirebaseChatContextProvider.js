@@ -21,7 +21,7 @@ export default function ChatStateProvider({ children, self }) {
   
 
   useEffect(() => {
-    const unregisterChatObserver = usersRef.on('child_added', snapshot => {
+    usersRef.on('child_added', snapshot => {
       
       const excludeSelf = x=> x.key !== self.uid;
       setUserList(oldList => [...oldList.filter(excludeSelf), {
@@ -31,8 +31,7 @@ export default function ChatStateProvider({ children, self }) {
       );
     });
 
-    const unregisterChatObserverChildRemoved = usersRef.on('child_removed', snapshot => {
-
+    usersRef.on('child_removed', snapshot => {
       const userId = snapshot.key;
       
       const excludeSelf = x=> x.key !== userId;
@@ -47,8 +46,8 @@ export default function ChatStateProvider({ children, self }) {
     x.onDisconnect().remove();
 
     return () => {
-      unregisterChatObserver();
-      unregisterChatObserverChildRemoved();
+      usersRef.off('child_added');
+      usersRef.off('child_removed');
     }
     // eslint-disable-next-line
   }, []);
