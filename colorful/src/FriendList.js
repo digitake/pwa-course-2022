@@ -1,24 +1,27 @@
-import { useState } from 'react';
 import './FriendList.css';
-import App from './App';
+import App from './components/App';
+import Avatar from './components/Avatar';
+import { useChatStateContext } from './context/FirebaseChatContextProvider';
+import { Link } from 'react-router-dom';
 
 function FriendList(){
-  const [friends, setFriends] = useState([
-    {user: "user1", displayName: "A"},
-    {user: "user2", displayName: "B"},
-    {user: "user3", displayName: "C"},
-  ]);
+  const { userList } = useChatStateContext();
 
   return(
     <App>
       <div className="friend-list">
-       {friends.map(x => 
-       <div className='friend-list-item'>
-            <div>{friends.user}</div>
-        {x.displayName}
-         </div>
-       )
-       }
+      {
+        userList.map((item) => {
+          return (
+            <Link to={`/privatechat/${item.key}`} key={item.key}>
+              <div className={`friend-list-item ${item.position}`}>
+                <Avatar name={item.displayName}/>
+                <div>{item.displayName}</div>
+              </div>
+            </Link>
+          )
+        })
+      }
       </div>
     </App>
   )
