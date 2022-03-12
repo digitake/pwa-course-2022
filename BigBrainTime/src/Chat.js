@@ -13,13 +13,15 @@ function Chat() {
     {user: "user2", msg: "I'm fine, thank you. And you?", position: "right"},
     {user: "user1", msg: "I'm so GOOD! Today.", position:"left"}
   ]);
+  let userchat = "user1";
 
   return (
     <App>
       <div className="chat">
-        <Userlist/>
+        <Userlist data={chatData}/>
         <Chatbox data={chatData}/>
         <Inputbox/>
+        
       </div>
     </App>
   );

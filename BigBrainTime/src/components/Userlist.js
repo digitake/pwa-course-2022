@@ -1,7 +1,10 @@
-function Userlist () {
+import "../css/Userlist.css";
+
+function Userlist (name) {
+  let username = name.data;
   return (
     <div className="userlist">
-      Friends
+      user1
     </div>
   )
 }

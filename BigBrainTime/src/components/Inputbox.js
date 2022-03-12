@@ -5,6 +5,7 @@ function Inputbox (props) {
 
   return (
     <div className="inputbox">
+      <div><img src="/icon-image/plus2-01.png" className="icon" /></div>
       <label className="label1" htmlFor="inputmsg">
         {props.label}
       </label>
