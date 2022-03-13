@@ -1,11 +1,11 @@
-.LoginBoard{
+.loginboard{
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.LTop {
+.ltop {
     height: 50px;
     padding-left: 10px;
     padding-bottom: 10px;
@@ -17,7 +17,7 @@
     text-align: center;
 }
 
-.LMiddle {
+.lmiddle {
     background-color: rgb(255, 208, 208);
     border: 3px solid rgb(255, 255, 255);
     border-bottom: 3px;
@@ -27,14 +27,14 @@
     padding: 10px;
 }
 
-.LoginBorder {
+.linputbox {
     background-color: rgb(232, 124, 152);
     border: 3px solid rgb(255, 255, 255);
     color: white;
     height: 40px;
 }
 
-.PictureBorder {
+.pictureborder {
     background-color: rgb(232, 124, 152);
     border: 3px solid rgb(255, 255, 255);
     color: white;
@@ -43,27 +43,27 @@
     margin: auto;
 }
 
-.TextSetting01 {
+.textsetting01 {
     font-family: fantasy;
     font-size: 30px;
     padding: 10px;
 }
 
-.TextSetting02 {
+.textsetting02 {
     font-family: fantasy;
     font-size: 20px;
     text-align: right;
     padding: 10px;
 }
 
-.TextSetting03 {
+.textsetting03 {
     font-family: fantasy;
     font-size: 20px;
     text-align: center;
     padding-top: 6px;
 }
 
-.LBottomTab {
+.lbottomtab {
     height: 50px;
     background-color: rgb(232, 124, 152);
     border: 3px solid rgb(255, 255, 255);

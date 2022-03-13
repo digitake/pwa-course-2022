@@ -1,11 +1,11 @@
-.ProfileBoard{
+.profileboard{
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
 }
 
-.PTop {
+.ptop {
     height: 50px;
     padding-left: 10px;
     padding-bottom: 10px;
@@ -17,7 +17,7 @@
 }
 
 
-.Your {
+.your {
     padding: 10px;
     flex: 1;
     border-left: 3px solid rgb(255, 255, 255);
@@ -26,14 +26,14 @@
     color: white;
 }
 
-.YourPicture{
+.yourpicture{
     background-color: rgb(232, 124, 152);
     width: 180px;
     height: 180px;
     border: 5px solid rgb(255, 255, 255);
 }
 
-.Friends{
+.friends{
     flex: 1;
     background-color: rgb(232, 124, 152);
     border: 3px solid rgb(255, 255, 255);
@@ -43,24 +43,30 @@
     padding-left: 10px;
 }
 
-.List{
+.list{
     background-color: rgb(255, 208, 208);
     border-left: 3px solid rgb(255, 255, 255);
     border-right: 3px solid rgb(255, 255, 255);
     flex: 10;
 }
 
-.PBottomTab {
+.pbottomtab {
     height: 50px;
     background-color: rgb(232, 124, 152);
     border: 3px solid rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
 }
 
-.FriendsPicture{
+.friendspicture{
     background-color: rgb(232, 124, 152);
     width: 50px;
     height: 50px;
     border: 5px solid rgb(255, 255, 255);
-    margin-top: 20px;
-    margin-left: 20px;
+    align-items: center;
+}
+
+.friendsflex{
+    margin: 20px;
 }

@@ -1,19 +1,13 @@
 import './css/Chat.css'
-import { Inputbox } from'./components/Inputbox.js';
+import { Link } from 'react-router-dom';
 
 function Chat(){
     return(
-        <div className='ChatBoard'>
-            <div 
-                className='CTop'>Name</div>
-            <div 
-                className='CMiddle'>
-            </div>
-            <div
-                className='CBottom'>
-                <div >
-                    <Inputbox/>
-                </div>
+        <div className='chatboard'>
+            <div className='ctop'>Name</div>
+            <div className='cmiddle'></div>
+            <div className='cbottom'>
+                <Link to='/'>Back</Link>
             </div>
         </div>
     

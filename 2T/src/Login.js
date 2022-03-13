@@ -1,37 +1,38 @@
 import './css/Login.css'
+import { Link } from 'react-router-dom';
 
 function Login(){
     return(
-        <div className='LoginBoard'>
+        <div className='loginboard'>
             <div 
-                className='LTop'>
+                className='ltop'>
                 AuttonyApp
             </div>
             <div 
-                className='LMiddle'>
+                className='lmiddle'>
                 <div 
-                    className='PictureBorder'>
+                    className='pictureborder'>
                 </div>
-                    <div className='TextSetting01'>
+                    <div className='textsetting01'>
                         Email
                     </div>
-                <div className='LoginBorder'>
+                <div className='linputbox'>
                 </div>
-                    <div className='TextSetting01'>
+                    <div className='textsetting01'>
                         Password
                     </div>
-                <div className='LoginBorder'>
+                <div className='linputbox'>
                 </div>
-                    <div className='TextSetting02'>
+                    <div className='textsetting02'>
                         Forgetting Password?
                     </div>
-                <div className='LoginBorder'>
-                    <div className='TextSetting03'>Login</div>
+                <div className='linputbox'>
+                    <div className='textsetting03'>
+                        <Link to='/profile'>Login</Link>
+                        </div>
                 </div>
             </div>
-            <div 
-                className='LBottomTab'>
-            </div>
+            <div className='lbottomtab'></div>
         </div>
     
     )
