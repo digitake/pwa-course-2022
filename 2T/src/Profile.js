@@ -1,3 +1,4 @@
+import Tabbar from './components/Tabbar';
 import './css/Profile.css'
 import { Link } from 'react-router-dom';
 
@@ -25,11 +26,8 @@ function Profile(){
             <div className='friendspicture'></div>
           </div>
         </Link>
-        
       </div>
-      <div className='pbottomtab'>
-        <Link to='/'>Back</Link>
-      </div>
+      <Tabbar/>
     </div>
   )
 }

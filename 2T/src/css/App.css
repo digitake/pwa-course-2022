@@ -7,17 +7,6 @@
   flex-direction: column;
 }
 
-
-.userlist {
-  flex: 1;
-  background-color: #331a12;
-}
-
-.chat {
-  flex: 12;
-  background-color: silver;
-}
-
 .inputbox {
   flex: 1;
   background-color: gray;

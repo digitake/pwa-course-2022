@@ -1,5 +1,5 @@
+import Tabbar from './components/Tabbar';
 import './css/Login.css'
-import { Link } from 'react-router-dom';
 
 function Login(){
     return(
@@ -27,12 +27,10 @@ function Login(){
                         Forgetting Password?
                     </div>
                 <div className='linputbox'>
-                    <div className='textsetting03'>
-                        <Link to='/profile'>Login</Link>
-                        </div>
+                    <div className='textsetting03'>Login</div>
                 </div>
             </div>
-            <div className='lbottomtab'></div>
+            <Tabbar/>
         </div>
     
     )
