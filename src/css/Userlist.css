@@ -4,15 +4,17 @@
   bottom: 0px;
   background-color: #331a12;
   z-index: 100;
-  transition: background-color 2s width 2s left 2s;
+  width: 400px;
 }
 
 .userlist.closed {
-  width: 10px;
+  width: 0px;
+  transition: width 2s;
 }
 
 .userlist.open {
-  width: 200px;
+  width: 400px;
+  transition: width 2s;
 }
 
 .userlist .close-button {
