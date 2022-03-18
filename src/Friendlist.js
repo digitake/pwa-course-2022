@@ -1,4 +1,4 @@
-import './Friendlist.css';
+import './css/Friendlist.css';
 
 function Friendlist(){
     return (

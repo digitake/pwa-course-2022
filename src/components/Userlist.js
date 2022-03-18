@@ -4,3 +4,5 @@ export function Userlist () {
     </div>
   )
 }
+
+export default Userlist;
