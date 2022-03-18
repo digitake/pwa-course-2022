@@ -1,6 +1,7 @@
 import Avatar from "./Avatar";
 import "../css/Chatbox.css";
 import { useRef, useEffect } from 'react';
+import { Link } from "react-router-dom";
 
 function Chatbox (props) {
   let data = props.data;
@@ -10,6 +11,17 @@ function Chatbox (props) {
     myRef.current && myRef.current.scrollIntoView()  
   },[data])
 
+  function textToHtml(text) {
+    //dangerouslySetInnerHTML={{__html: item.msg}}
+    if (text.startsWith("http")) {
+      return <Link to={text}>{text}</Link>
+    } else if (text.startsWith("<iframe")) {
+      return <div dangerouslySetInnerHTML={{__html: text}}></div>
+    } else {
+      return text;
+    }
+  }
+
   return (
     <div className="chatbox">
       {
@@ -17,7 +29,7 @@ function Chatbox (props) {
           return (<div ref={myRef} key={`${item.key}-${i}`} className={`chatbox-item ${item.position}`}>
             <div>{item.displayName}</div>
             <Avatar name={item.displayName}/>
-            <div className="chatbox-item-text"> {item.msg}</div>
+            <div className="chatbox-item-text">{textToHtml(item.msg)}</div>
           </div>)
         })
       }
