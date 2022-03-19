@@ -1,0 +1,13 @@
+.avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #F6B988;
+  border: solid 1px #020202;
+  overflow: hidden;
+}
+
+.avatar.small {
+  width: 40px;
+  height: 40px;
+}

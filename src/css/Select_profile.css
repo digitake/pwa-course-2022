@@ -1,0 +1,25 @@
+body {
+    background-color: #494949;
+}
+
+.ball {
+    background-color: #2E2C2C;
+    width: 90px;
+    height: 90px;
+    margin: 8px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width 2s, height 2s, background-color 2s;
+}
+
+.ball:hover{
+    background-color: #F8CBA7;
+    width: 100px;
+    height: 100px;
+}
+
+/* display: flex;
+justify-content: center;
+align-items: center; -->เป็นการทำให้ตัวอักษรอยู่กึ่งกลาง*/
