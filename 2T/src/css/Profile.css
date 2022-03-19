@@ -1,0 +1,58 @@
+.BorderSetting01 {
+    margin: auto;
+    border: 3px solid rgb(255, 255, 255);
+    padding: 10px;
+}
+
+
+.Your {
+    background-color: rgb(255, 208, 208);
+    color: white;
+    height: 250px;
+}
+
+.YourPicture{
+    background-color: rgb(232, 124, 152);
+    width: 182px;
+    height: 182px;
+    border: 10px solid rgb(255, 255, 255);
+    margin-top: 5%;
+    margin-left: 5%;
+}
+
+.Friends{
+    background-color: rgb(232, 124, 152);
+    color: white;
+    height: 40px;
+    font-family: fantasy;
+    font-size: 30px;
+}
+
+.MenuTitle {
+    background-color: rgb(232, 124, 152);
+    color: white;
+    font-size: 80px;
+    font-family: fantasy;
+    text-align: left;
+    height: 100px;
+}
+
+.List{
+    background-color: rgb(255, 208, 208);
+    height: 400px;
+}
+
+.TextSetting03 {
+    font-family: fantasy;
+    font-size: 30px;
+    text-align: center;
+}
+
+.FriendsPicture{
+    background-color: rgb(232, 124, 152);
+    width: 54px;
+    height: 54px;
+    border: 10px solid rgb(255, 255, 255);
+    margin-top: 4%;
+    margin-left: 3%;
+}
