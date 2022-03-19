@@ -1,0 +1,50 @@
+.chat {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatbox {
+  flex: 12;
+  background-color: rgb(158, 230, 25);
+  flex: auto;
+  margin: auto;
+  width: 50%;
+  position: relative;
+  max-width: 100%;
+  min-width: auto;
+  height: 690px;
+}
+.chatcolor {
+  border-radius: 15px 50px;
+  background: lightblue;
+  padding: 10px;
+  
+}
+
+
+.inputbox .label1 {
+  font-size: 1.5em;
+  text-align: right;
+  
+}
+
+.inputbox .text {
+  font-size: 1em;
+  padding-left: 8px;
+  padding-right: 8px;
+  flex: 1;
+}
+
+.inputbox .button {
+  font-size: 1em;
+  min-width: 40px;
+}
+
+.center {
+  position: absolute;
+  width: 100%;
+}

@@ -1,0 +1,30 @@
+.body-add-friends {
+    background-color: #1E4E8A;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-add-friends {
+    background-color: #F79356;
+    text-align: center;
+    font-size: 2em;
+    flex: 1.5;
+    color: white;
+}
+
+.list-add-friends {
+    background-color: #1E4E8A;
+    text-align: center;
+    color: white;
+    flex: 12;
+}
+
+.icon-add-friends {
+    background-color: #F79356;
+    text-align: center;
+    color: white;
+    flex: 1.5;
+}

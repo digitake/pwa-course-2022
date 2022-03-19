@@ -1,0 +1,62 @@
+.tabbar {
+<<<<<<< HEAD:papering/App/src/css/Tabbar.css
+  height: 64px;
+  background-color: #f5cec7;
+=======
+  height: 50px;
+  background-color: #cdb7a0;
+>>>>>>> class-origin/class/229j/groupwork:NoBrain/src/css/Tabbar.css
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.tabbar .tabbutton {
+<<<<<<< HEAD:papering/App/src/css/Tabbar.css
+  display: flex;
+  flex-direction: column;
+  font-family: sans-serif;
+  text-align: center;
+  align-items: center;
+  font-size: 1em;
+  color: #c15954;
+  margin: 0.5px;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: color 0.1s;
+}
+
+.tabbar .tabbutton:hover {
+  color: aliceblue;  
+  filter: grayscale(255) brightness(255);
+}
+
+.tabbar .tab-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.tabbar .red{
+  fill: #c15954;
+}
+
+.tabbar .experiment{
+  
+}
+=======
+  display: inline-block;
+  text-align: center;
+  font-size: 1.5em;
+  color: white;
+  margin: 0 5px;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 1s;
+}
+
+.tabbar .tabbutton:hover {
+  background-color: #89796a;;
+}
+>>>>>>> class-origin/class/229j/groupwork:NoBrain/src/css/Tabbar.css
