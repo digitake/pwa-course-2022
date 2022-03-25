@@ -17,7 +17,7 @@ function Userlist () {
   return (
     <div className={"userlist "+trayStatus}>
       <div className="close-button" onClick={onButtonClicked}>-</div>
-      <span style={{color:"white"}}>ถาดการบ้าน</span>
+      {/* <span style={{color:"white"}}>ถาดการบ้าน</span> */}
     </div>
   )
 }

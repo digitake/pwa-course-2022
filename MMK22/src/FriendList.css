@@ -13,3 +13,7 @@
   flex-direction: row;
   border-radius: 60px;
 }
+
+.display-name {
+  margin-left: 16px;
+}

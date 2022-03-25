@@ -16,7 +16,7 @@ function FriendList(){
             <Link to={`/privatechat/${item.key}`} key={item.key}>
               <div className={`friend-list-item ${item.position}`}>
                 <Avatar name={item.displayName}/>
-                <div>{item.displayName}</div>
+                <div className='display-name'> {item.displayName}</div>
               </div>
             </Link>
           )

@@ -9,7 +9,15 @@
   flex:4;
 }
 
+.userlist {
+  flex: 1;
+  background-color: #2E2C2C;
+}
 
+.chatbox {
+  flex: 12;
+  background-color: #494949;
+}
 
 .inputbox {
   background-color: #2E2C2C;
