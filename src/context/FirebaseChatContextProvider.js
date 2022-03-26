@@ -57,6 +57,18 @@ export default function ChatStateProvider({ children, self }) {
     });
   };
 
+  const setUserImage = (uid, base64Img) => {
+    const x = usersRef.child(`images/${uid}`)
+    x.set(base64Img);
+    return x;
+  };
+
+  const getUserImage = (uid) => {
+    return usersRef.child(`images/${uid}`).once('value').then(snapshot => {
+      return snapshot.val();
+    })
+  };
+
   const getPrivateChat = (friendId) => {
     const chatroomId = `1-1-${hashCode(self.uid) + hashCode(friendId)}`;
     return chatroomsRef.child(`${chatroomId}`).once('value').then(snapshot => {
@@ -130,7 +142,9 @@ export default function ChatStateProvider({ children, self }) {
         getChatroom: getChatroom,
         listenToChatroom: listenToChatroom,
         listenToUserInChatroom: listenToUserInChatroom,
-        sendMsg: sendMsg
+        sendMsg: sendMsg,
+        setUserImage: setUserImage,
+        getUserImage: getUserImage
       }}
     >
       {children}
