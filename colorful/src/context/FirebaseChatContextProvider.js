@@ -19,9 +19,8 @@ export default function ChatStateProvider({ children, self }) {
 
   const chat = msg => ({ msg: msg, user: self.uid, timestamp: firebase.database.ServerValue.TIMESTAMP });
   
-
   useEffect(() => {
-    const unregisterChatObserver = usersRef.on('child_added', snapshot => {
+    usersRef.on('child_added', snapshot => {
       
       const excludeSelf = x=> x.key !== self.uid;
       setUserList(oldList => [...oldList.filter(excludeSelf), {
@@ -31,8 +30,7 @@ export default function ChatStateProvider({ children, self }) {
       );
     });
 
-    const unregisterChatObserverChildRemoved = usersRef.on('child_removed', snapshot => {
-
+    usersRef.on('child_removed', snapshot => {
       const userId = snapshot.key;
       
       const excludeSelf = x=> x.key !== userId;
@@ -47,8 +45,8 @@ export default function ChatStateProvider({ children, self }) {
     x.onDisconnect().remove();
 
     return () => {
-      unregisterChatObserver();
-      unregisterChatObserverChildRemoved();
+      usersRef.off('child_added');
+      usersRef.off('child_removed');
     }
     // eslint-disable-next-line
   }, []);
@@ -88,17 +86,37 @@ export default function ChatStateProvider({ children, self }) {
   };
 
   const listenToChatroom = (roomId, callback) => {
+    console.log("self checkin to roomId", roomId);
+    const x = chatroomsRef.child(`${roomId}/users/${self.uid}`);
+    x.set({
+      displayName: self.displayName,
+    })
+    x.onDisconnect().remove();
+
     return chatroomsRef.child(`${roomId}/chat`).on('child_added', snapshot => {
       // {roomTitle, users, chat}
       snapshot && callback(snapshot.val());
     });
   };
 
+  const listenToUserInChatroom = (roomId, callback) => {
+    const x= chatroomsRef.child(`${roomId}/users`)
+    x.on('child_added', snapshot => {
+      snapshot && callback('JOINED',snapshot.key, snapshot.val());
+    });
+    x.on('child_removed', snapshot => {
+      snapshot && callback('LEFT', snapshot.key, snapshot.val());
+    });
+    return () => {
+      x.off('child_added');
+      x.off('child_removed');
+    }
+  };
+
   const sendMsg = (msg, targetId) => {
     const chatroomRef = chatroomsRef.child(`${targetId}/chat`);
     chatroomRef.push(chat(msg));
   };
-  
 
   return (
     <ChatStateContext.Provider
@@ -111,6 +129,7 @@ export default function ChatStateProvider({ children, self }) {
         sendPrivateMsg: sendPrivateMsg,
         getChatroom: getChatroom,
         listenToChatroom: listenToChatroom,
+        listenToUserInChatroom: listenToUserInChatroom,
         sendMsg: sendMsg
       }}
     >

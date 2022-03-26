@@ -5,7 +5,7 @@ function Userlist () {
   const [trayStatus, setTrayStatus] = useState("open");
 
   function onButtonClicked() {
-    // ex01 filling logic here
+    setTrayStatus(oldStatus => oldStatus === "open" ? "closed" : "open");
   }
 
   return (

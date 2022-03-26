@@ -9,31 +9,49 @@ import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
 
 function Chat() {
-  const { sendMsg, listenToChatroom } = useChatStateContext();
+  const { userList, sendMsg, listenToChatroom } = useChatStateContext();
   const { authState } = useAuthStateContext();
 
-  let [chatData, setChatData] = useState([
-    {user: "user1", msg: "Hello", position: "left"},
-    {user: "user2", msg: "Hi", position: "right"},
-    {user: "user1", msg: "How are you?", position: "left"},
-    {user: "user2", msg: "I'm fine, thank you. And you?", position: "right"},
-  ]);
+  const [chatData, setChatData] = useState([]);
+  const [usersDict, setUsersDict] = useState({});
 
-  const onMsg = (msg) => {
-    
-    const mappedValue = {
-      ...msg,
-      key: msg.timestamp || Date.now(),
-      position: msg.user === authState.user.uid ? "right" : "left"
-    };
-    
-    setChatData(oldChat => [mappedValue, ...oldChat]);
+  function userListToDict(userList) {
+    return userList.reduce((dict, item) => {
+      dict[item.key] = item;
+      return dict;
+    }, {});
   }
 
   useEffect(() => {
-    const unsubscribePrivateChat = listenToChatroom('mainhall', onMsg);
+    const x = userListToDict(userList);
+    setUsersDict(_=>x);
+  },[userList])
 
-    return () => {unsubscribePrivateChat()}
+  function onMsg(msg) {
+    setChatData(oldChat => [msg, ...oldChat]);
+  }
+
+  function transformChatData(item) {
+    let displayName = "ไม่ทราบชื่อ(Offline)";
+    if (item.user in usersDict && usersDict[item.user].displayName){
+      displayName = usersDict[item.user].displayName;
+    } else if (item.user === authState.user.uid) {
+      displayName = authState.user.displayName;
+    }
+    return ({
+      ...item,
+      key: item.timestamp || Date.now(),
+      displayName: displayName,
+      position: item.user === authState.user.uid ? "right" : "left"
+    });
+  }
+
+  useEffect(() => {
+    const unsubscribeChatroom = listenToChatroom('mainhall', onMsg);
+
+    return () => {
+      unsubscribeChatroom();
+    }
   }, []);
 
 
@@ -42,7 +60,7 @@ function Chat() {
       <Userlist />
       <div className="chat">
         <Titlebar value="Chat"/>        
-        <Chatbox data={chatData}/>
+        <Chatbox data={chatData.map(transformChatData).sort((a,b)=>a.timestamp - b.timestamp)}/>
         <Inputbox onEnter={x=>sendMsg(x,"mainhall")}/>
       </div>
     </App>
