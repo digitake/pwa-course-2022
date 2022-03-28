@@ -6,7 +6,6 @@ function Profile() {
   return (
     <div>
       <TopNav></TopNav>
-      
     </div>
    
   );

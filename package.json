@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "firebase": "^9.6.10",
-    "react-firebase-hooks": "^5.0.3"
-  }
-}
