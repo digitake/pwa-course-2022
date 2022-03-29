@@ -5,14 +5,15 @@ import Profile from './Profile';
 import Friend from './Friend';
 import Group from './Group.js';
 import SignIn from './SignIn.js';
-import { useState } from "react";
-import { signOut } from "firebase/auth";
 import { auth } from "./firebase";
+import { useState } from "react";
+
 
 function Router()
-{
+{   
     const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
-    if (isAuth){
+    
+    if(isAuth){
         return(
             <BrowserRouter>
             <Routes>
@@ -21,14 +22,20 @@ function Router()
                 <Route path="/profile" element = {<Profile/>}/>
                 <Route path="/friend" element = {<Friend/>}/>
                 <Route path="/group" element = {<Group/>}/>
-                <Route path="/sign_in"/>
             </Routes>
             </BrowserRouter>
          )
+    } else {
+        return(
+            <BrowserRouter>
+            <Routes>
+                <Route path="/" element = {<SignIn setIsAuth={setIsAuth}/>}/>
+            </Routes>
+        </BrowserRouter>
+        );       
     }
-    else {
 
-    }
 }
+        
 
 export default Router;
