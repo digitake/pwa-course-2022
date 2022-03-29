@@ -20,8 +20,11 @@ function Router()
                 <Route path="/" element = {<Home/>}/>
                 <Route path="/app" element = {<App/>}/>
                 <Route path="/profile" element = {<Profile/>}/>
-                <Route path="/friend" element = {<Friend/>}/>
+                <Route path="/friend-list" element = {<Friend/>}/>
                 <Route path="/group" element = {<Group/>}/>
+                <Route path="/chat"/>
+                <Route path="/privatechat/:uid"/>
+                <Route path="/friend/:uid"/>
             </Routes>
             </BrowserRouter>
          )

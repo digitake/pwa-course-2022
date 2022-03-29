@@ -31,9 +31,9 @@ function TopNav(){
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closebtn" onClick={closeNav}>&times;</a>
                 <a href="/">Home</a>
-                <a href="friend">Friends</a>
-                <a href="group">Groups</a>
-                <a href="profile">Profile</a>
+                <a href="/friend-list">Friends</a>
+                <a href="/group">Groups</a>
+                <a href="/profile">Profile</a>
  
             </div>
             <div id="overlay"></div>
@@ -41,7 +41,7 @@ function TopNav(){
                 <icon onClick={openNav}>&#9776;</icon>
                 <c></c>
                 <a className={splitLocation[1] === "" ? "active" : ""} href = '/'>Home</a>
-                <a className={splitLocation[1] === "friend" ? "active" : ""} href = "/friend">Friends</a>
+                <a className={splitLocation[1] === "friend-list" ? "active" : ""} href = "/friend-list">Friends</a>
                 <a className={splitLocation[1] === "group" ? "active" : ""} href = "/group">Groups</a>
                 <a className={splitLocation[1] === "profile" ? "active" : ""} href = "/profile">Profile</a>
                 <b onClick={signUserOut}>Sign out</b>

@@ -1,3 +1,4 @@
+import "./Home.css"
 import TopNav from "./components/TopNav";
 import CreatePost from "./components/CreatePost";
 import React, { useEffect, useState } from "react";
@@ -27,33 +28,29 @@ function Home(){
         <> 
             <TopNav></TopNav>
             <CreatePost></CreatePost>
-            <div className="homePage">
-            {postLists.map((post) => {
-            return (
-            <div className="post">
-              <div className="postHeader">
-               <div className="title">
-                <h1> {post.title}</h1>
-               </div>
-               <div className="deletePost">
-                {post.author.id === auth.currentUser.uid && (
-                  <button
-                    onClick={() => {
-                      deletePost(post.id);
-                    }}
-                  >
-                    {" "}
-                    &#128465;
-                  </button>
-                )}
-               </div>
-              </div>
-             <div className="postTextContainer"> {post.postText} </div>
-            <h3>@{post.author.name}</h3>
+            <div className ="row">
+                <div className ="column75">
+                <div className="homePage">
+                    {postLists.map((post) => {
+                        return (
+                        <div className="post">
+                            <div className="postHeader">
+                                <div className="title"><h1> {post.title}</h1></div>
+                                <div className="deletePost">
+                                    {post.author.id === auth.currentUser.uid && (
+                                    <button onClick={() => {deletePost(post.id);}}>{" "}&#128465;</button>
+                    )}
+                </div>
+                </div>
+                <div className="postTextContainer"> {post.postText} </div>
+                <h3>@{post.author.name}</h3>
             </div>
-        );
-      })}
-    </div>
+            );
+            })}
+            </div>
+                </div>
+                <div className ="column25"></div>
+            </div>
         </>
        
     );

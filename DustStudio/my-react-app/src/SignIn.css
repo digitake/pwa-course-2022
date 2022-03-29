@@ -1,0 +1,42 @@
+.loginPage a {
+    padding: 5% 5%;
+    display: block;
+
+}
+
+.loginPage {
+    height: 100%;
+    width: 100%;
+}
+
+.img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 15%;
+}
+
+.login-with-google-btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 30%;
+    padding: 15px 25px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: #5f2b01;
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+  }
+  
+  .login-with-google-btn:hover {background-color: #300f00}
+  
+  .login-with-google-btn:active {
+    background-color: #300f00;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+  }

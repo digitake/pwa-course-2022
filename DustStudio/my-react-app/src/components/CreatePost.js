@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import "../css/CreatePost.css"
+import React, { useRef, useState } from "react";
 import { addDoc, collection } from "firebase/firestore";
 import { db, auth } from "../firebase";
 
 function CreatePost() {
   const [title, setTitle] = useState("");
   const [postText, setPostText] = useState("");
+  const fileRef = useRef(null);
 
   const postsCollectionRef = collection(db, "posts");
 
@@ -38,6 +40,8 @@ function CreatePost() {
               setPostText(event.target.value);
             }}
           />
+          <input ref = {fileRef} type="file" hidden></input>
+          <button onClick={()=>fileRef.current.click()}>Select Image</button>
         </div>
         <button onClick={createPost}> Submit Post</button>
       </div>
