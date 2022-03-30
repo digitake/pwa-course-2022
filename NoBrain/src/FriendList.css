@@ -1,11 +1,25 @@
+<<<<<<< HEAD
 .friend-list {
   flex:1
 }
 
+=======
+>>>>>>> eb394efbc6782808612de935bf05a22154bf08f8
 .friend-list-item {
   display: flex;
   align-items: center;
   padding: 0.5rem;
+<<<<<<< HEAD
   border-bottom: 1px solid #ff8000;
   cursor: pointer;
+=======
+  border-bottom: 1px solid #e5e5e5;
+  cursor: pointer;
+}
+
+.text-user{
+  padding: 10px;
+  text-align: center;
+  align-items: center;
+>>>>>>> eb394efbc6782808612de935bf05a22154bf08f8
 }

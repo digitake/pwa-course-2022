@@ -1,4 +1,5 @@
 .tabbar {
+<<<<<<< HEAD
   height: 100%;
   background-color: #cdb7a0;
   display: flex;
@@ -8,6 +9,13 @@
   top: 0px;
   bottom: 0px;
   width: 100%;
+=======
+  height: 50px;
+  background-color: #cdb7a0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+>>>>>>> eb394efbc6782808612de935bf05a22154bf08f8
 }
 
 .tabbar .tabbutton {
@@ -21,6 +29,7 @@
   text-decoration: none;
   transition: background-color 1s;
 }
+<<<<<<< HEAD
 .tabbar .tabbutton1 {
   display: inline-block;
   flex-direction: column;
@@ -63,4 +72,9 @@
   right: 0px;
   height: 100%;
   flex-direction: column;
+=======
+
+.tabbar .tabbutton:hover {
+  background-color: #89796a;;
+>>>>>>> eb394efbc6782808612de935bf05a22154bf08f8
 }
