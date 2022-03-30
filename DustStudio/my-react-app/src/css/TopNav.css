@@ -5,7 +5,7 @@ body {
 
 .topnav {
   overflow: hidden;
-  background-color: #f1e3d5;
+  background-color: #ffb951;
 }
 
 .topnav-right {
@@ -23,13 +23,13 @@ body {
 }
 
 .topnav a:hover {
-  background-color: rgb(226, 201, 166);
+  background-color: #f3b07a;
   color: black;
 }
 
 .topnav a.active {
-  background-color: #b1864e;
-  color: white;
+  background-color: #943400;
+  color: #ffdca8;
 }
 
 .topnav b {
@@ -43,7 +43,8 @@ body {
 }
 
 .topnav b:hover {
-  background-color: rgb(226, 201, 166);
+  background-color:  #f3b07a;
+  ;
   color: black;
 }
 
@@ -68,7 +69,7 @@ body {
   font-size: 17px;
 }
 .topnav icon:hover {
-  background-color: rgb(226, 201, 166);
+  background-color: #f3b07a  ;
   color: black;
 }
 

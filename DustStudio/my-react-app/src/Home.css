@@ -1,10 +1,14 @@
 .column75 {
     float: left;
-    width: 50%;
+    width: 75%;
+    background-color: rgb(255, 215, 166);
   }
 .column25 {
     float: left;
-    width: 50%;
+    
+    width: 25%;
+    background-color: rgb(212, 117, 0);
+
   }
   /* Clear floats after the columns */
 .row:after {

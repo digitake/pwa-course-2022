@@ -2,10 +2,10 @@ import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Home from './Home.js'
 import App from './App'
 import Profile from './Profile';
-import Friend from './Friend';
+import Friend from './Friend-List';
 import Group from './Group.js';
 import SignIn from './SignIn.js';
-import { auth } from "./firebase";
+import { auth } from "./firebase/firebase";
 import { useState } from "react";
 
 

@@ -3,7 +3,7 @@ import '../css/Menu.css';
 import { useLocation } from "react-router-dom";
 import {openNav,closeNav} from './Menu';
 import { signOut } from "firebase/auth";
-import { auth } from "../firebase";
+import { auth } from "../firebase/firebase";
 import { useState } from "react";
 
 
