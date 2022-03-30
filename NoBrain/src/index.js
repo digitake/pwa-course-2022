@@ -7,13 +7,9 @@ import AuthStateProvider from './context/FirebaseAuthContextProvider';
 
 ReactDOM.render(
   <React.StrictMode>
-<<<<<<< HEAD
     <AuthStateProvider>
       <Router />
     </AuthStateProvider>
-=======
-    <Router />
->>>>>>> eb394efbc6782808612de935bf05a22154bf08f8
   </React.StrictMode>,
   document.getElementById('root')
 );

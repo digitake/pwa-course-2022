@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <<<<<<< Updated upstream
 node_modules/
 =======
@@ -26,6 +25,3 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 >>>>>>> Stashed changes
-=======
-node_modules/
->>>>>>> eb394efbc6782808612de935bf05a22154bf08f8

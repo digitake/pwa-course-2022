@@ -9,20 +9,11 @@
 
 .App .content {
   flex: 1;
-<<<<<<< HEAD
   top: 0px;
   bottom: 0px;
   position: absolute;
   width: 100%;
   overflow: auto;
   display: flex;
-=======
-}
-
-
-.userlist {
-  flex: 1;
-  background-color: #331a12;
->>>>>>> eb394efbc6782808612de935bf05a22154bf08f8
 }
 

@@ -4,7 +4,6 @@ import {
   Route
 } from "react-router-dom";
 import Chat from "./Chat";
-<<<<<<< HEAD
 import PrivateChat from "./PrivateChat";
 import Profile from "./Profile";
 import FriendList from "./FriendList";
@@ -36,22 +35,6 @@ function Router() {
   } else {
     return <LoginComponent />;
   }
-=======
-import Profile from "./Profile";
-import FriendList from "./FriendList";
-
-function Router() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/chat" element={<Chat />}/>
-        <Route path="/profile" element={<Profile />}/>
-        <Route path="/friend-list" element={<FriendList />}/>
-        <Route path="/" element={<FriendList />}/>
-      </Routes>
-    </BrowserRouter>
-  );
->>>>>>> eb394efbc6782808612de935bf05a22154bf08f8
 }
 
 export default Router;

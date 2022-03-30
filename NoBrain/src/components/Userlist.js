@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 import { useState } from 'react';
 import '../css/Userlist.css';
 import '../css/Tabbar.css';
@@ -30,12 +29,6 @@ function Userlist () {
       </Link>
       </div>
       </div>
-=======
-function Userlist () {
-  return (
-    <div className="userlist">
-      
->>>>>>> eb394efbc6782808612de935bf05a22154bf08f8
     </div>
   )
 }
