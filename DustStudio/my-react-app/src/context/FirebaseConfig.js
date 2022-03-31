@@ -1,15 +1,10 @@
-// Import the functions you need from the SDKs you need
 import firebase from 'firebase/compat/app';
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
+import 'firebase/compat/auth';
+import 'firebase/compat/database';
 import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore"
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyA5pE-undz7JJtAb98MlJ1TvcR48kVxPMU",
   authDomain: "subchatapp.firebaseapp.com",
@@ -21,11 +16,11 @@ const firebaseConfig = {
   databaseURL: "https://subchatapp-default-rtdb.asia-southeast1.firebasedatabase.app/"
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+firebase.initializeApp(firebaseConfig);
+
+const app = firebase.initializeApp(firebaseConfig);
 export const auth = getAuth(app);
 export const db = getFirestore(app);
-export default firebase ;
+export default firebase;
 
 

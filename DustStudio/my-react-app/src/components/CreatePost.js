@@ -1,7 +1,7 @@
 import "../css/CreatePost.css"
 import React, { useRef, useState } from "react";
 import { addDoc, collection } from "firebase/firestore";
-import { db, auth } from "../firebase/firebase";
+import { db, auth } from "../context/FirebaseConfig";
 import { initializeAuth } from "firebase/auth";
 import FileBase64 from 'react-file-base64';
 import { Button, IconButton , TextField , Avatar , Stack} from '@mui/material';

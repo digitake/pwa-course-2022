@@ -5,8 +5,8 @@ import FriendList from './Friend-List';
 import Chat  from './Chat';
 import FriendProfile from './FriendProfile';
 import PrivateChat from './PrivateChat';
-import { useAuthStateContext, LoginComponent } from './firebase/FirebaseAuthContextProvider';
-import ChatStateProvider from "./firebase/FirebaseChatContextProvider";
+import { useAuthStateContext, LoginComponent } from './context/FirebaseAuthContextProvider';
+import ChatStateProvider from "./context/FirebaseChatContextProvider";
 
 
 function Router()

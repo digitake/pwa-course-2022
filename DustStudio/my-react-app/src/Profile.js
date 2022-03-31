@@ -2,8 +2,8 @@ import App from './components/App.js';
 import { useState, useEffect } from "react";
 import './Profile.css';
 import Avatar from './components/Avatar.js';
-import { useAuthStateContext } from './firebase/FirebaseAuthContextProvider';
-import { useChatStateContext } from './firebase/FirebaseChatContextProvider.js';
+import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
+import { useChatStateContext } from './context/FirebaseChatContextProvider.js';
 import FileBase64 from 'react-file-base64';
 
 

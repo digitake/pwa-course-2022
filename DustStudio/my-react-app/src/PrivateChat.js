@@ -4,7 +4,7 @@ import Chatbox from './components/Chatbox.js';
 import Inputbox from './components/Inputbox.js';
 import Titlebar from './components/Titlebar.js';
 import './Chat.css';
-import { useChatStateContext } from './firebase/FirebaseChatContextProvider';
+import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import { useParams } from "react-router-dom";
 
 function PrivateChat() {

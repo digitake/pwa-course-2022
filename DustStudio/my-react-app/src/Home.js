@@ -3,7 +3,7 @@ import TopNav from "./components/TopNav";
 import CreatePost from "./components/CreatePost";
 import React, { useEffect, useState } from "react";
 import { getDocs, collection, deleteDoc, doc } from "firebase/firestore";
-import { auth, db } from "./firebase/firebase";
+import { auth, db } from "./context/FirebaseConfig";
 import FriendList from "./Friend-List";
 import { Avatar , IconButton, Stack } from "@mui/material";
 import { Delete }  from '@material-ui/icons';

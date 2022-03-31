@@ -1,5 +1,5 @@
 import './Friend-List.css';
-import { useChatStateContext } from './firebase/FirebaseChatContextProvider';
+import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import { Link } from 'react-router-dom';
 import { Avatar } from '@mui/material';
 

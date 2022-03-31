@@ -5,8 +5,8 @@ import Titlebar from './components/Titlebar.js';
 import Userlist from './components/Userlist.js';
 import Inputbox from './components/Inputbox.js';
 import './Chat.css';
-import { useChatStateContext } from './firebase/FirebaseChatContextProvider';
-import { useAuthStateContext } from './firebase/FirebaseAuthContextProvider';
+import { useChatStateContext } from './context/FirebaseChatContextProvider';
+import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
 
 function Chat() {
   const { userList, sendMsg, listenToChatroom } = useChatStateContext();

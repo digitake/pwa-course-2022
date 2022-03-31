@@ -2,7 +2,7 @@ import App from './components/App.js';
 import { useState, useEffect} from "react";
 import './Profile.css';
 import Avatar from './components/Avatar.js';
-import { useChatStateContext } from './firebase/FirebaseChatContextProvider';
+import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import { useParams } from "react-router-dom";
 
 function FriendProfile() {
