@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import 'firebase/compat/auth';
 import 'firebase/compat/database';
-import {firebase} from './firebase';
+import firebase from './firebase';
 
 const hashCode = s => s.split('').reduce((a,b) => (((a << 5) - a) + b.charCodeAt(0))|0, 0)
 

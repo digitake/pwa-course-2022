@@ -1,44 +1,40 @@
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Home from './Home.js'
-import App from './App'
 import Profile from './Profile';
-import Friend from './Friend-List';
-import Group from './Group.js';
-import SignIn from './SignIn.js';
-import { auth } from "./firebase/firebase";
-import { useState } from "react";
+import FriendList from './Friend-List';
+import Chat  from './Chat';
+import FriendProfile from './FriendProfile';
+import PrivateChat from './PrivateChat';
+import { useAuthStateContext, LoginComponent } from './firebase/FirebaseAuthContextProvider';
+import ChatStateProvider from "./firebase/FirebaseChatContextProvider";
 
 
 function Router()
 {   
-    const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
-    
-    if(isAuth){
-        return(
-            <BrowserRouter>
-            <Routes>
-                <Route path="/" element = {<Home/>}/>
-                <Route path="/app" element = {<App/>}/>
-                <Route path="/profile" element = {<Profile/>}/>
-                <Route path="/friend-list" element = {<Friend/>}/>
-                <Route path="/group" element = {<Group/>}/>
-                <Route path="/chat"/>
-                <Route path="/privatechat/:uid"/>
-                <Route path="/friend/:uid"/>
-            </Routes>
-            </BrowserRouter>
-         )
-    } else {
-        return(
-            <BrowserRouter>
-            <Routes>
-                <Route path="/" element = {<SignIn setIsAuth={setIsAuth}/>}/>
-            </Routes>
-        </BrowserRouter>
-        );       
-    }
+    const { authState } = useAuthStateContext();
 
+    if (authState && authState.state === "AUTHENTICATION_LOADING") {
+    return <div>Loading...</div>;
+  }
+  else if (authState && authState.state === "AUTHENTICATED") {
+    return (
+        <ChatStateProvider self={authState.user}>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element = {<Home/>}/>
+              <Route path="/chat" element={<Chat />}/>
+              <Route path="/privatechat/:uid" element={<PrivateChat />}/>
+              <Route path="/profile" element={<Profile />}/>
+              <Route path="/friend-list" element={<FriendList />}/>
+              <Route path="/friend/:uid" element={<FriendProfile />}/>
+              <Route path="/" element={<Profile />}/>
+            </Routes>
+          </BrowserRouter>
+        </ChatStateProvider>
+      );
+  } else {
+    return <LoginComponent/>;
+  }
 }
-        
 
 export default Router;

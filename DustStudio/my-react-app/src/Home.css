@@ -1,12 +1,12 @@
-.column75 {
+.column65 {
     float: left;
-    width: 75%;
+    width: 65%;
     background-color: rgb(255, 215, 166);
   }
-.column25 {
+.column35 {
     float: left;
     
-    width: 25%;
+    width: 35%;
     background-color: rgb(212, 117, 0);
 
   }
@@ -16,3 +16,29 @@
     display: table;
     clear: both;
   }
+.post {
+  width: 90%;
+  margin: 10px;
+  background-color: blanchedalmond;
+  border-radius: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.Image {
+  margin: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  height: 50%;
+  width: 50%;
+
+}
+.a {
+  margin: 90px;
+}
+.b {
+  margin-left: 10px;
+}
+.title {
+  margin-left: 40px;
+}

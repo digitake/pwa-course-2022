@@ -5,6 +5,38 @@ import React, { useEffect, useState } from "react";
 import { getDocs, collection, deleteDoc, doc } from "firebase/firestore";
 import { auth, db } from "./firebase/firebase";
 import FriendList from "./Friend-List";
+import { Avatar , IconButton, Stack } from "@mui/material";
+import { Delete }  from '@material-ui/icons';
+
+function stringToColor(string) {
+    let hash = 0;
+    let i;
+  
+    /* eslint-disable no-bitwise */
+    for (i = 0; i < string.length; i += 1) {
+      hash = string.charCodeAt(i) + ((hash << 5) - hash);
+    }
+  
+    let color = '#';
+  
+    for (i = 0; i < 3; i += 1) {
+      const value = (hash >> (i * 8)) & 0xff;
+      color += `00${value.toString(16)}`.slice(-2);
+    }
+    /* eslint-enable no-bitwise */
+  
+    return color;
+  }
+  
+  function stringAvatar(name) {
+    return {
+      sx: {
+        bgcolor: stringToColor(name),
+      },
+      children: `${name.split(' ')[0][0]}${name.split(' ')[1][0]}`,
+    };
+  }
+  
 
 function Home(){
     const [postLists, setPostList] = useState([]);
@@ -29,28 +61,31 @@ function Home(){
         <> 
             <TopNav></TopNav>
             <div className ="row">
-                <div className ="column75">
+                <div className ="column65">
                 <CreatePost></CreatePost>
                 <div className="homePage">
                     {postLists.map((post) => {
                         return (
                         <div className="post">
-                            <div className="postHeader">
-                                <div className="title"><h1> {post.title}</h1></div>
-                                <img src={post.image} style = {{height : 720 ,width: 1080}}/>
-                                <div className="deletePost">
+                            <a className="a"></a>
+                            <Stack direction="row" spacing={3} className="postHeader">
+                            <a className="b"></a>
+                            <Avatar {...stringAvatar(post.author.name)} ></Avatar>
+                            <h1>{post.author.name}</h1>
+                            <div className="deletePost">
                                     {post.author.id === auth.currentUser.uid && (
-                                    <button onClick={() => {deletePost(post.id);}}>{" "}&#128465;</button>
-                    )}
+                                    <IconButton onClick={() => {deletePost(post.id);}}><Delete></Delete></IconButton>
+                                )}
+                            </div>
+                            </Stack>
+                            <div className="title"><h3> {post.title}</h3></div>
+                            <img className="Image" src={post.image}/>
+                        </div>
+                        );
+                    })}
                 </div>
                 </div>
-                <h3>{post.author.name}</h3>
-            </div>
-            );
-            })}
-            </div>
-                </div>
-                <div className ="column25"><FriendList></FriendList></div>
+            <div className ="column35"><FriendList></FriendList></div>
             </div>
         </>
        

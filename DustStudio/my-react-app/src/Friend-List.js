@@ -1,12 +1,14 @@
 import './Friend-List.css';
 import { useChatStateContext } from './firebase/FirebaseChatContextProvider';
 import { Link } from 'react-router-dom';
+import { Avatar } from '@mui/material';
 
 function FriendList(){
   const { userList } = useChatStateContext();
 
   return(
       <div className="friend-list">
+        <Avatar/>
       {
         userList.map((item) => {
           return (
