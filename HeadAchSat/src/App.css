@@ -1,0 +1,50 @@
+.App {
+  background-color: #ddffdd;
+  width: 100%;
+  height: 100%;;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.head {
+  flex: 1;
+  background-color: #b08051;
+  text-align: center;
+  
+}
+
+.chat {
+  flex: 11;
+  background-color: #d9b490;
+}
+
+.inputbox {
+  flex: 1;
+  background-color: #eeeee4;
+  
+}
+
+.inputbox .label1 {
+  font-size: 1.5 em;
+  text-align: left;
+}
+
+.inputbox .text {
+  font-size: 3em;
+  padding-left: 30%;
+  padding-right: 30%;
+  flex: 2;
+  border-radius: 5%;
+}
+
+.inputbox .button {
+  font-size: 2em;
+  min-width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #b08051;
+    margin-left: 10px;
+}
+
+
