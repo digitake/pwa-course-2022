@@ -2,13 +2,9 @@ import '../css/TopNav.css';
 import '../css/Menu.css';
 import { useLocation } from "react-router-dom";
 import {openNav,closeNav} from './Menu';
-import { signOut } from "firebase/auth";
-import { auth } from "../context/FirebaseConfig";
-import { useState } from "react";
 
 
 function TopNav(){
-    const [isAuth, setIsAuth] = useState(localStorage.getItem("isAuth"));
     const location = useLocation();
 
     //destructuring pathname from location
@@ -18,13 +14,6 @@ function TopNav(){
     const splitLocation = pathname.split("/");
 
     
-    const signUserOut = () => {
-        signOut(auth).then(() => {
-          localStorage.clear();
-          setIsAuth(false);
-          window.location.pathname = "/";
-        });
-      };
 
     return(
         <div>
@@ -44,7 +33,7 @@ function TopNav(){
                 <a className={splitLocation[1] === "friend-list" ? "active" : ""} href = "/friend-list">Friends</a>
                 <a className={splitLocation[1] === "group" ? "active" : ""} href = "/group">Groups</a>
                 <a className={splitLocation[1] === "profile" ? "active" : ""} href = "/profile">Profile</a>
-                <b onClick={signUserOut}>Sign out</b>
+                <b >Sign out</b>
             </div>   
         </div>
         

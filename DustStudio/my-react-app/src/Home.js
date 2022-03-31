@@ -3,10 +3,12 @@ import TopNav from "./components/TopNav";
 import CreatePost from "./components/CreatePost";
 import React, { useEffect, useState } from "react";
 import { getDocs, collection, deleteDoc, doc } from "firebase/firestore";
-import { auth, db } from "./context/FirebaseConfig";
+import { db } from "./context/FirebaseConfig";
 import FriendList from "./Friend-List";
 import { Avatar , IconButton, Stack } from "@mui/material";
 import { Delete }  from '@material-ui/icons';
+import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
+
 
 function stringToColor(string) {
     let hash = 0;
@@ -39,6 +41,7 @@ function stringToColor(string) {
   
 
 function Home(){
+    const { authState } = useAuthStateContext();
     const [postLists, setPostList] = useState([]);
     const postsCollectionRef = collection(db, "posts");
 
@@ -73,7 +76,7 @@ function Home(){
                             <Avatar {...stringAvatar(post.author.name)} ></Avatar>
                             <h1>{post.author.name}</h1>
                             <div className="deletePost">
-                                    {post.author.id === auth.currentUser.uid && (
+                                    {post.author.id === authState.currentUser.uid && (
                                     <IconButton onClick={() => {deletePost(post.id);}}><Delete></Delete></IconButton>
                                 )}
                             </div>

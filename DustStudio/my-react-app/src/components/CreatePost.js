@@ -1,11 +1,11 @@
 import "../css/CreatePost.css"
 import React, { useRef, useState } from "react";
 import { addDoc, collection } from "firebase/firestore";
-import { db, auth } from "../context/FirebaseConfig";
-import { initializeAuth } from "firebase/auth";
-import FileBase64 from 'react-file-base64';
+import { db } from "../context/FirebaseConfig";
 import { Button, IconButton , TextField , Avatar , Stack} from '@mui/material';
 import { createTheme } from '@mui/material/styles';
+import { useAuthStateContext } from '../context/FirebaseAuthContextProvider';
+
 
 const theme = createTheme({
   palette: {
@@ -18,6 +18,7 @@ const theme = createTheme({
 });
 
 function CreatePost() {
+  const { authState } = useAuthStateContext();
   const [image, setImage] = useState(null);
   const [title, setTitle] = useState("");
   const fileRef = useRef(null);
@@ -28,7 +29,7 @@ function CreatePost() {
     await addDoc(postsCollectionRef, {
       title,
       image,
-      author: { name: auth.currentUser.displayName, id: auth.currentUser.uid },
+      author: { name: authState.currentUser.displayName, id: authState.currentUser.uid },
     });
   };
 
