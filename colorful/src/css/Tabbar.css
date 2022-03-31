@@ -24,6 +24,7 @@
 
 .tabbar.stick-bottom {
   position: absolute;
+  background-color: rgb(164, 24, 155);
   bottom: 0px;
   width: 100%;
 }
