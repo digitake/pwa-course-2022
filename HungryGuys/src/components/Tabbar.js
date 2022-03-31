@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom';
 
 function Tabbar () {
   return (
-    <div className="tabbar">
-      <Link to="/friends" className="tabbutton">
-        Friends
+    <div className="tabbar stick-bottom">
+      <Link to="/friend-list" className="tabbutton">
+        Friend List
       </Link>
       <Link to="/chat" className="tabbutton">
         Chat
