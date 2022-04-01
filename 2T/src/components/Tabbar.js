@@ -7,10 +7,10 @@ function Tabbar(){
             <Link to='/' className='tabbutton'>
                 Login
             </Link>
-            <Link to='/Profile' className='tabbutton'>
-                Profile
+            <Link to='/main' className='tabbutton'>
+                Main
             </Link>
-            <Link to='/Chat' className='tabbutton'>
+            <Link to='/chathistory' className='tabbutton'>
                 Chat
             </Link>
         </div>
