@@ -1,4 +1,4 @@
-import './Friend-List.css';
+import './FriendList.css';
 import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import { Link } from 'react-router-dom';
 import { Avatar } from '@mui/material';

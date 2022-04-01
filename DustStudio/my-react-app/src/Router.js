@@ -1,7 +1,7 @@
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Home from './Home.js'
 import Profile from './Profile';
-import FriendList from './Friend-List';
+import FriendList from './FriendList';
 import Chat  from './Chat';
 import FriendProfile from './FriendProfile';
 import PrivateChat from './PrivateChat';
@@ -13,7 +13,7 @@ function Router()
 {   
     const { authState } = useAuthStateContext();
 
-    if (authState && authState.state === "AUTHENTICATION_LOADING") {
+  if (authState && authState.state === "AUTHENTICATION_LOADING") {
     return <div>Loading...</div>;
   }
   else if (authState && authState.state === "AUTHENTICATED") {

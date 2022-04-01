@@ -15,6 +15,7 @@ const firebaseConfig = {
   databaseURL: "https://subchatapp-default-rtdb.asia-southeast1.firebasedatabase.app/"
 };
 
+
 const app = firebase.initializeApp(firebaseConfig);
 
 export const db = getFirestore(app);
