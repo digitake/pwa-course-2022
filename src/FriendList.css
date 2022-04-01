@@ -1,5 +1,6 @@
 .friend-list {
   flex:1
+  
 }
 
 .friend-list-item {
@@ -8,4 +9,8 @@
   padding: 0.5rem;
   border-bottom: 1px solid #e5e5e5;
   cursor: pointer;
+}
+
+.friend-list-item-text{
+  margin-left: 16px ;
 }

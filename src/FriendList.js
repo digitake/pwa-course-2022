@@ -1,6 +1,7 @@
 import './FriendList.css';
 import App from './components/App';
 import Avatar from './components/Avatar';
+import Titlebar from './components/Titlebar.js';
 import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import { Link } from 'react-router-dom';
 
@@ -10,6 +11,7 @@ function FriendList(){
   return(
     <App>
       <div className="friend-list">
+      <Titlebar/>      
       {
         userList.map((item) => {
           return (
