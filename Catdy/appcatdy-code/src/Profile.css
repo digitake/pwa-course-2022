@@ -1,8 +1,8 @@
 .Profile {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: top;
   width: 100%;
   height: 100%;
   background-color: #ffd3be;
@@ -12,8 +12,18 @@
 .pro{
   background-color: coral;
   display: flex;
-  width: 250px;
-  height: 100px;
+  width: 2500px;
+  height: 50px;
   font-size: 2em;
+
+
+}
+.Ero{
+  background-color: coral;
+  display: flex;
+  width: 2500px;
+  height: 50px;
+  font-size: 1.2em;
+
 
 }
