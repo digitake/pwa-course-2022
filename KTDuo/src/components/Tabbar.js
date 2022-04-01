@@ -4,11 +4,12 @@ import { Link } from 'react-router-dom';
 function Tabbar () {
   return (
     <div className="tabbar">
-      <Link to="/chat" className="tabbutton">
-        Chat
-      </Link>
+      <h2 className='menu'>Menu</h2>
       <Link to="/profile" className="tabbutton">
         Profile
+      </Link>
+      <Link to="/chat" className="tabbutton">
+        Group Chat
       </Link>
     </div>
   )

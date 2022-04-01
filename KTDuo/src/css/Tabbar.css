@@ -1,25 +1,38 @@
 .tabbar {
-  background-color: #0096FF;
+  background-color: #f7cac9;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
+  padding:10px 20px;
+}
+
+h2{
+  text-align: center;
+  margin: 0;
+  padding: 20px 10px;
+  color: white;
+  background-color: #9c88aa;
+}
+
+.menu{
+  width: 100%;
 }
 
 .tabbar .tabbutton {
   display: inline-block;
   text-align: center;
-  font-size: 1.5em;
-  height: 50px;
-  width: 75px;
+  font-size: 1em;
+  width: 100%;
   color: white;
-  margin: 0 5px;
-  padding: 10px;
+  background-color: #b5a5c0;
+  font-weight: bold;
+  margin: 0;
+  padding: 20px 10px;
   cursor: pointer;
   text-decoration: none;
   transition: background-color 1s;
 }
 
 .tabbar .tabbutton:hover {
-  background-color: #0047AB;;
+  background-color: #9c88aa;
 }

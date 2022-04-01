@@ -5,17 +5,15 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-}
 
-.chatbox {
-  flex: 12;
-  background-color: silver;
+  flex: 4;
 }
 
 .inputbox {
-  flex: 1;
-  background-color: gray;
+  background-color: #fce9e9;
   display: flex;
+  padding: 20px 100px;
+  margin-bottom: 10px;
 }
 
 .inputbox .label1 {
