@@ -1,11 +1,11 @@
 import '../css/Avatar.css';
 
-function Avatar(props) {
+function Avatarprofile(props) {
   return (
-    <div className="avatar">
+    <div className="avatarprofile">
       <img src={`https://avatars.dicebear.com/api/human/${props.name}.svg`} alt={props.name}/>
     </div>
   );
 }
 
-export default Avatar;
+export default Avatarprofile;

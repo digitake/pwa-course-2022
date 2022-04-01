@@ -1,37 +1,36 @@
+import Tabbar from './components/Tabbar';
 import './css/Login.css'
 
 function Login(){
     return(
-        <div>
+        <div className='loginboard'>
             <div 
-                className='BorderSetting01 Title'>
-                TextApp
+                className='ltop'>
+                AuttonyApp
             </div>
             <div 
-                className='BorderSetting01 TextBorder02'>
+                className='lmiddle'>
                 <div 
-                    className='BorderSetting01 PictureBorder'>
+                    className='pictureborder'>
                 </div>
-                    <div className='BorderSetting02 TextSetting01'>
+                    <div className='textsetting01'>
                         Email
                     </div>
-                <div className='BorderSetting01 LoginBorder'>
+                <div className='linputbox'>
                 </div>
-                    <div className='BorderSetting02 TextSetting01'>
+                    <div className='textsetting01'>
                         Password
                     </div>
-                <div className='BorderSetting01 LoginBorder'>
+                <div className='linputbox'>
                 </div>
-                    <div className='BorderSetting02 TextSetting02'>
+                    <div className='textsetting02'>
                         Forgetting Password?
                     </div>
-                <div className='BorderSetting01 TextSetting03 LoginBorder'>
-                    Login
+                <div className='linputbox'>
+                    <div className='textsetting03'>Login</div>
                 </div>
             </div>
-            <div 
-                className='BorderSetting01 TextBorder03'>
-            </div>
+            <Tabbar/>
         </div>
     
     )
