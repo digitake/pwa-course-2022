@@ -7,7 +7,7 @@ function App(props) {
       <div className="content">
         {props.children}
       </div>
-      <Tabbar/>
+      
     </div>
   );
 }

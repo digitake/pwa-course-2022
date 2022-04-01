@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import App from './components/App.js';
 import Chatbox from './components/Chatbox.js';
 import Titlebar from './components/Titlebar.js';
+import TabbarTopChat from './components/TabbarTopChat.js';
 import Userlist from './components/Userlist.js';
 import Inputbox from './components/Inputbox.js';
 import './Chat.css';
@@ -59,7 +60,7 @@ function Chat() {
     <App>
       <Userlist />
       <div className="chat">
-        <Titlebar value="Chat"/>        
+        <TabbarTopChat/>        
         <Chatbox data={chatData.map(transformChatData).sort((a,b)=>a.timestamp - b.timestamp)}/>
         <Inputbox onEnter={x=>sendMsg(x,"mainhall")}/>
       </div>

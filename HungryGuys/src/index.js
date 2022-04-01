@@ -1,13 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './css/index.css';
+import './index.css';
 import Router from './Router';
 import reportWebVitals from './reportWebVitals';
 import AuthStateProvider from './context/FirebaseAuthContextProvider';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router />
+    <AuthStateProvider>
+      <Router />
+    </AuthStateProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

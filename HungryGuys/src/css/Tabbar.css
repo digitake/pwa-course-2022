@@ -1,6 +1,6 @@
 .tabbar {
-  height: 50px;
-  background-color: #2cbb84;
+  height: 75px;
+  background-color: #F79356;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -9,17 +9,17 @@
 .tabbar .tabbutton {
   display: inline-block;
   text-align: center;
-  font-size: 1.5em;
-  color: white;
+  color: rgb(255, 255, 255);
   margin: 0 5px;
-  padding: 10px;
+  padding: 5px;
   cursor: pointer;
   text-decoration: none;
   transition: background-color 1s;
 }
 
 .tabbar .tabbutton:hover {
-  background-color: #0d7e53;;
+  border-radius: 10px 10px;
+  border: solid white;
 }
 
 .tabbar.stick-bottom {
@@ -46,4 +46,17 @@
   right: 0px;
   height: 100%;
   flex-direction: column;
+}
+
+.tabbar .tabbutton .tab-icon {
+  width: 50px;
+  height: 50px;
+}
+
+.tabbar .titletabbar {
+  align-items: center;
+  width: 50%;
+  text-align: center;
+  font-size: 2em;
+  color: rgb(255, 255, 255);
 }

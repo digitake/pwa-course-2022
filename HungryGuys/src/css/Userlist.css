@@ -2,7 +2,7 @@
   position: absolute;
   top: 0px;
   bottom: 0px;
-  background-color: #331a12;
+  background-color: #1E4E8A;
   z-index: 100;
   width: 300px;
 }
@@ -36,7 +36,7 @@
   background-color: #cee740;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1920px) {
   .userlist {
     flex: 2;
     position: relative;

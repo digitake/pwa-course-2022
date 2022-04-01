@@ -1,8 +1,9 @@
 .titlebar {
-  height: 50px;
-  background-color: #2c49bb;
+  height: 75px;
+  background-color: #F79356;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  color: aliceblue;
+  font-size: 1.5em;
+  color: rgb(255, 255, 255);
 }

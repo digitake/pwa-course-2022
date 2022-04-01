@@ -28,8 +28,11 @@ function Chatline(props) {
     }
     else if (text.startsWith("/randomfact")) {
       // ex10-01 here: Implement randomfact using fetch & promise
-      // https://uselessfacts.jsph.pl/random.json?language=en
-
+      // https://uselessfacts.jsph.pl/random.json?languagne=e
+      fetch("https://uselessfacts.jsph.pl/random.json?language=en")
+        .then(res => res.json())
+        .then(data => setElement(data.text || " "));
+        
     }
   };
 

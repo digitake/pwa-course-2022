@@ -2,7 +2,7 @@ import { useState } from 'react';
 import '../css/Userlist.css';
 
 function Userlist () {
-  const [trayStatus, setTrayStatus] = useState("open");
+  const [trayStatus, setTrayStatus] = useState("closed");
 
   function onButtonClicked() {
     setTrayStatus(oldStatus => oldStatus === "open" ? "closed" : "open");

@@ -2,7 +2,9 @@ import App from './components/App.js';
 import {useState} from "react";
 import './Profile.css';
 import Avatar from './components/Avatar.js';
+import TabbarTop from './components/TabbarTop.js';
 import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
+import Tabbar from './components/Tabbar.js';
 
 function Profile() {
   const { authState, updateDisplayName, signOut } = useAuthStateContext();
@@ -17,12 +19,14 @@ function Profile() {
   return (
     <App>
       <div className="Profile">
+        <Tabbar/>
+        <TabbarTop value={"Profile"}/>
         <Avatar name={name}/>
         <label className="label1" htmlFor="displayname"/>
         <input 
           id="displayname"
           type="text" 
-          className="text" 
+          className="tabName" 
           value={name}
           onChange={e => setName(e.target.value)}
         />
