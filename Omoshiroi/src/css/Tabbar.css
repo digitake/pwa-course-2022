@@ -1,6 +1,6 @@
 .tabbar {
   height: 50px;
-  background-color: #000000;
+  background-color: #747474;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -16,11 +16,41 @@
   cursor: pointer;
   text-decoration: none;
   transition: background-color 1s;
-  border-bottom: 5px solid #e5e5e5;
 }
 
 .tabbar .tabbutton:hover {
-  background-color: #00f7ff3b;;
-  border-bottom: 5px solid #00a2ffd8;
-  transition: 1s; 
+  background-color: #ffffff86;
+}
+
+.tabbar.stick-bottom {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.tabbar.stick-top {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+
+.tabbar.stick-left {
+  position: absolute;
+  left: 0px;
+  height: 100%;
+  flex-direction: column;
+}
+
+.tabbar.stick-right {
+  position: absolute;
+  right: 0px;
+  height: 100%;
+  flex-direction: column;
+}
+
+.img {
+  background-color: rgb(0, 0, 0);
+    width:  100%;
+    height: 30px;
+    background-position: center;
 }

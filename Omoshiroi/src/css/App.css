@@ -1,6 +1,6 @@
 .App {
   background-color: #ffffff;
-  width: 30%;
+  width: 100%;
   height: 100%;;
   margin: auto;
   display: flex;
@@ -9,28 +9,10 @@
 
 .App .content {
   flex: 1;
-}
-
-.userlist {
-  flex: 1;
-  background-color: #000000;
-  color: white;
-  text-align: center;
-  font-size: 50px;
-}
-
-.friendlist {
-  flex: .1;
-  background-color: #000000;
-  color: white;
-  text-align: center;
-  font-size: 50px;
-}
-
-.myProfile {
-  flex: 1;
-  background-color: #000000;
-  color: white;
-  text-align: center;
-  font-size: 50px;
+  top: 0px;
+  bottom: 50px;
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+  display: flex;
 }
