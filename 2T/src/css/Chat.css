@@ -5,15 +5,6 @@
   flex-direction: column;
 }
 
-.chat .backbutton{
-  display: inline-block;
-  text-align: center;
-  color: white;
-  cursor: pointer;
-  text-decoration: none;
-  transition: background-color 1s;
-}
-
 .ctop {
   height: 50px;
   padding-left: 10px;

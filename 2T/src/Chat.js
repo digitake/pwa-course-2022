@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import Chatbox from './components/Chatbox.js';
 import Inputbox from './components/Inputbox.js';
 import './css/Chat.css';
 import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import { useParams } from "react-router-dom";
+import Titlebar from './components/Titlebar.js';
 
 function Chat() {
 
@@ -43,11 +43,7 @@ function Chat() {
 
     return(
         <div className='chat'>
-            <div className='ctop' value={friendName}>
-                <Link to='/main' className='backbutton'>
-                    BACK
-                </Link>
-            </div>
+            <Titlebar value={friendName}/>
             <Chatbox data={chatData}/>
             <div className='cbottom'>
                 <Inputbox onEnter={x=>sendPrivateMsg(x,uid)}/>
