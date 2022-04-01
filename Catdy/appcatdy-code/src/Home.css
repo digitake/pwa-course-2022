@@ -17,7 +17,8 @@
 .box{
     background-color: rgb(243, 128, 75);
     display: flex;
-    text-align: center;
+    text-align: left;
+    font-size: large;
     
     
     
