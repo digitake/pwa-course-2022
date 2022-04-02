@@ -4,7 +4,6 @@ import Avatar from './components/Avatar';
 import {useChatStateContext} from './context/FirebaseChatContextProvider';
 import {Link} from 'react-router-dom';
 import Topbar from "./components/Topbar";
-import Titlebar from "./components/Titlebar";
 
 
 function FriendList() {
@@ -19,7 +18,7 @@ function FriendList() {
                         userList.map((item) => {
                             return (
                                 <Link to={`/privatechat/${item.key}`} key={item.key}>
-                                    <div className={`friend-list-item ${item.position}`}>
+                                    <div className={`friend-list-single ${item.position}`}>
                                         <Avatar name={item.displayName}/>
                                         <div>{item.displayName}</div>
                                     </div>
