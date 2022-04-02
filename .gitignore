@@ -1,1 +1,5 @@
 node_modules
+.gitignore
+/papering/Paperize/
+/papering/Ref/
+/.idea/
