@@ -1,6 +1,10 @@
 .titlebar {
   height: 50px;
+<<<<<<< HEAD:papering/App/src/css/Titlebar.css
   background-color: #e79796;
+=======
+  background-color: #89796a;
+>>>>>>> 8a7d2f9f4c4fc4e54e255647f5a068b78c099c8b:src/css/Titlebar.css
   display: flex;
   justify-content: space-evenly;
   align-items: center;

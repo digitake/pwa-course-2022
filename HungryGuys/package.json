@@ -10,7 +10,14 @@
     "firebaseui": "^6.0.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
+<<<<<<< HEAD:HungryGuys/package.json
     "react-firebaseui": "^6.0.0",
+=======
+<<<<<<<< HEAD:NoBrain/package.json
+    "react-firebaseui": "^6.0.0",
+========
+>>>>>>>> eb394efbc6782808612de935bf05a22154bf08f8:2T/package.json
+>>>>>>> 8a7d2f9f4c4fc4e54e255647f5a068b78c099c8b:2T/package.json
     "react-router-dom": "^6.2.1",
     "react-scripts": "5.0.0",
     "web-vitals": "^2.1.4"
