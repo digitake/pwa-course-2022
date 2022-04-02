@@ -1,6 +1,6 @@
 .tabbar {
   height: 50px;
-  background-color: #976c3b;
+  background-color: #2cbb84;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -19,5 +19,31 @@
 }
 
 .tabbar .tabbutton:hover {
-  background-color: #7e4c14;;
+  background-color: #0d7e53;;
+}
+
+.tabbar.stick-bottom {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.tabbar.stick-top {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+
+.tabbar.stick-left {
+  position: absolute;
+  left: 0px;
+  height: 100%;
+  flex-direction: column;
+}
+
+.tabbar.stick-right {
+  position: absolute;
+  right: 0px;
+  height: 100%;
+  flex-direction: column;
 }
