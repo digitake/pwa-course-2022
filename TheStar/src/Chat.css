@@ -1,0 +1,46 @@
+.chat {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex:4;
+}
+
+.inputbox {
+  background-color: rgb(248, 171, 235);
+  display: flex;
+  height: 50px;
+}
+
+.inputbox .label1 {
+  font-size: 1.5em;
+  text-align: right;
+}
+
+.inputbox .text {
+  font-size: 2em;
+  padding-left: 8px;
+  padding-right: 8px;
+  flex: 1;
+}
+
+.inputbox .button {
+  font-size: 1.5em;
+  min-width: 100px;
+  float: right;
+  outline: 0 none;
+  border: rgb(0, 0, 0) 2px solid;
+  background: rgba(232, 90, 236, 0.25);
+  height: 40px;
+  width: 40px;
+  border-radius: 20%;
+  padding: 2px 0 0 0;
+  margin: 5px;
+  transition: all 0.15s ease-in-out;
+}
+
+.inputbox .button2 {
+  font-size: 1em;
+  min-width: 80px;
+}
