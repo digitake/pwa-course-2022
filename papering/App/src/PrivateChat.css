@@ -1,10 +1,36 @@
 .chat {
   position: relative;
+<<<<<<< HEAD
+=======
   width: 100%;
+>>>>>>> 4dd716d90f6c3958bd4ded103bd3b879413f1cfa
   height: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
+
+<<<<<<<< HEAD:papering/App/src/PrivateChat.css
+.chatbox {
+  flex: 12;
+  background-color: silver;
+========
+  flex:4;
+>>>>>>>> 4dd716d90f6c3958bd4ded103bd3b879413f1cfa:GGez/src/Chat.css
+}
+
+
+
+.inputbox {
+<<<<<<<< HEAD:papering/App/src/PrivateChat.css
+  flex: 1;
+  background-color: gray;
+========
+  background-color: rgb(128, 128, 128);
+>>>>>>>> 4dd716d90f6c3958bd4ded103bd3b879413f1cfa:GGez/src/Chat.css
+  display: flex;
+  height: 50px;
+=======
 }
 
 .chatbox {
@@ -16,6 +42,7 @@
   flex: 1;
   background-color: gray;
   display: flex;
+>>>>>>> 4dd716d90f6c3958bd4ded103bd3b879413f1cfa
 }
 
 .inputbox .label1 {
@@ -31,6 +58,23 @@
 }
 
 .inputbox .button {
+<<<<<<< HEAD
+<<<<<<<< HEAD:papering/App/src/PrivateChat.css
   font-size: 1em;
   min-width: 40px;
+========
+  background-color: rgb(255, 255, 255);
+  font-size: 1em;
+  min-width: 40px;
+  transition: background-color 0.4s;
+}
+
+.inputbox .button:hover {
+  background-color: #929090;
+  transition: background-color 0.4s;
+>>>>>>>> 4dd716d90f6c3958bd4ded103bd3b879413f1cfa:GGez/src/Chat.css
+=======
+  font-size: 1em;
+  min-width: 40px;
+>>>>>>> 4dd716d90f6c3958bd4ded103bd3b879413f1cfa
 }
