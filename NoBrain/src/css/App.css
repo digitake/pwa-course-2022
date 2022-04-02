@@ -1,5 +1,9 @@
 .App {
+<<<<<<< HEAD:NoBrain/src/css/App.css
   background-color: #eae0d6;
+=======
+  /* background-color: #ddffdd; */
+>>>>>>> 4dd716d90f6c3958bd4ded103bd3b879413f1cfa:GGez/src/css/App.css
   width: 100%;
   height: 100%;;
   margin: auto;
@@ -10,7 +14,11 @@
 .App .content {
   flex: 1;
   top: 0px;
+<<<<<<< HEAD:NoBrain/src/css/App.css
   bottom: 0px;
+=======
+  bottom: 50px;
+>>>>>>> 4dd716d90f6c3958bd4ded103bd3b879413f1cfa:GGez/src/css/App.css
   position: absolute;
   width: 100%;
   overflow: auto;
