@@ -1,24 +1,67 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import App from './components/App.js';
 import Chatbox from './components/Chatbox.js';
+import Titlebar from './components/Titlebar.js';
 import Userlist from './components/Userlist.js';
 import Inputbox from './components/Inputbox.js';
 import './Chat.css';
+import { useChatStateContext } from './context/FirebaseChatContextProvider';
+import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
 
 function Chat() {
-  const [chatData, setChatData] = useState([
-    {user: "เจ้าหนี้", msg: "ทำไมยังไม่คืนอีกอ่ะ", position: "right"},
-    {user: "ลูกหนี้เเสนน่ารัก", msg: "ยังไม่มีเลย แปปๆ", position: "left"},
-    {user: "ลูกหนี้เเสนน่ารัก", msg: "เดวคืนไม่เกินเดือนนี้", position: "left"},
-    {user: "เจ้าหนี้", msg: "รอมา3อาทิตย์เเล้ว", position: "right"},
-  ]);
+  const { userList, sendMsg, listenToChatroom } = useChatStateContext();
+  const { authState } = useAuthStateContext();
+
+  const [chatData, setChatData] = useState([]);
+  const [usersDict, setUsersDict] = useState({});
+
+  function userListToDict(userList) {
+    return userList.reduce((dict, item) => {
+      dict[item.key] = item;
+      return dict;
+    }, {});
+  }
+
+  useEffect(() => {
+    const x = userListToDict(userList);
+    setUsersDict(_=>x);
+  },[userList])
+
+  function onMsg(msg) {
+    setChatData(oldChat => [msg, ...oldChat]);
+  }
+
+  function transformChatData(item) {
+    let displayName = "Offline";
+    if (item.user in usersDict && usersDict[item.user].displayName){
+      displayName = usersDict[item.user].displayName;
+    } else if (item.user === authState.user.uid) {
+      displayName = authState.user.displayName;
+    }
+    return ({
+      ...item,
+      key: item.timestamp || Date.now(),
+      displayName: displayName,
+      position: item.user === authState.user.uid ? "right" : "left"
+    });
+  }
+
+  useEffect(() => {
+    const unsubscribeChatroom = listenToChatroom('mainhall', onMsg);
+
+    return () => {
+      unsubscribeChatroom();
+    }
+  }, []);
+
 
   return (
     <App>
+      <Userlist />
       <div className="chat">
-        <Userlist/>
-        <Chatbox data={chatData}/>
-        <Inputbox/>
+        <Titlebar value="Chat"/>        
+        <Chatbox data={chatData.map(transformChatData).sort((a,b)=>a.timestamp - b.timestamp)}/>
+        <Inputbox onEnter={x=>sendMsg(x,"mainhall")}/>
       </div>
     </App>
   );
