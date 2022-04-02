@@ -5,13 +5,13 @@ function Tabbar(){
     return(
         <div className='tabbar stick-bottom'>
             <Link to='/' className='tabbutton'>
-                Login
+            <img src='/IconLogin.png'/>
             </Link>
             <Link to='/main' className='tabbutton'>
-                Main
+                <img src='/IconHome.png'/>
             </Link>
             <Link to='/chathistory' className='tabbutton'>
-                Chat
+            <img src='/IconChat.png'/>
             </Link>
         </div>
     )
