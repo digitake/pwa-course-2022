@@ -1,21 +1,40 @@
-import Chatbox from './Chatbox.js';
-import Profile from './Profile.js';
-import Chat from './Chat.js';
-import Friends from './Friends.js';
-import AddFriends from './AddFriends.js';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+import Chat from "./Chat";
+import PrivateChat from "./PrivateChat";
+import Profile from "./Profile";
+import FriendList from "./FriendList";
+import FriendProfile from "./FriendProfile";
+import { useAuthStateContext, LoginComponent } from './context/FirebaseAuthContextProvider';
+import ChatStateProvider from "./context/FirebaseChatContextProvider";
+  
+function Router() {
+  const { authState } = useAuthStateContext();
 
-function Router(){
+  if (authState && authState.state === "AUTHENTICATION_LOADING") {
+    return <div>Loading...</div>;
+  }
+  else if (authState && authState.state === "AUTHENTICATED") {
     return (
-        <BrowserRouter>
+        <ChatStateProvider self={authState.user}>
+          <BrowserRouter>
             <Routes>
-                <Route path="/" element={ <Chatbox/> } />
-                <Route path="/profile" element={ <Profile/> } />
-                <Route path="/chat" element={ <Chat/> } />
-                <Route path="/friends" element={ <Friends/> } />
-                <Route path="/add-friends" element={ <AddFriends/> } />
+              <Route path="/chat" element={<Chat />}/>
+              <Route path="/privatechat/:uid" element={<PrivateChat />}/>
+              <Route path="/profile" element={<Profile />}/>
+              <Route path="/friend-list" element={<FriendList />}/>
+              <Route path="/friend/:uid" element={<FriendProfile />}/>
+              <Route path="/" element={<Profile />}/>
             </Routes>
-        </BrowserRouter>
-    )
+          </BrowserRouter>
+        </ChatStateProvider>
+      );
+  } else {
+    return <LoginComponent />;
+  }
 }
+
 export default Router;
