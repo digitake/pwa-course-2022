@@ -9,11 +9,18 @@
 
 .App .content {
   flex: 1;
+  top: 0px;
+  bottom: 50px;
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+  display: flex;
 }
-
 
 .userlist {
   flex: 1;
   background-color: #331a12;
+  color: #ffffff;
+  text-align: center;
+  font-size: 50px;
 }
-

@@ -6,3 +6,8 @@
   border: solid 1px #020202;
   overflow: hidden;
 }
+
+.avatar.small {
+  width: 40px;
+  height: 40px;
+}

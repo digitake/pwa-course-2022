@@ -1,3 +1,7 @@
+.friend-list {
+  flex:1
+}
+
 .friend-list-item {
   display: flex;
   align-items: center;
@@ -5,4 +9,11 @@
   border-bottom: 1px solid #494040;
   cursor: pointer;
   background-color: #D9D9D9;
+  margin: 8px;
+  flex-direction: row;
+  border-radius: 60px;
+}
+
+.display-name {
+  margin-left: 16px;
 }

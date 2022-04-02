@@ -21,7 +21,10 @@ function Inputbox (props) {
       <input 
         type="button" 
         value="Send" 
-        onClick={() => props.onClick(value)} 
+        onClick={() => {
+          props.onEnter(value);
+          setValue("");
+        }}
         className="button"
       />    
     </div>
