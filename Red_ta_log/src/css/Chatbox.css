@@ -1,0 +1,17 @@
+.chatbox-item.left{
+  text-align: left;
+  font-family: cursive;
+  font-weight: bold;
+  margin-left: 24px;
+}
+
+.chatbox-item.right{
+  text-align: right;
+  font-family: cursive;
+  font-weight: bold;
+  margin-right: 24px;
+}
+
+.chatbox-item .avatar{
+  display: inline-block;
+}
