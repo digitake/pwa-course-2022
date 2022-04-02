@@ -1,21 +1,16 @@
 .chat {
   position: relative;
-  width: 100%;
   height: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-}
-
-.chatbox {
-  flex: 12;
-  background-color: rgb(255, 255, 255);
+  flex:4;
 }
 
 .inputbox {
-  flex: 1;
-  background-color: rgb(255, 255, 255);
+  background-color: gray;
   display: flex;
+  height: 50px;
 }
 
 .inputbox .label1 {

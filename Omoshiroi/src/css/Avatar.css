@@ -2,13 +2,26 @@
   width: 100px;
   height: 100px;
   border-radius: 50%;
-  border: solid 1px rgb(0, 0, 0);
+  border: solid 1px gray;
   overflow: hidden;
-  transition:0.5s;
+  margin-left: 5px;
 }
 
-.avatar:hover 
-{
-  border: solid 5px rgb(255, 0, 0);
-  transition:0.5s; 
+.avatar.small {
+  width: 40px;
+  height: 40px;
+}
+
+.avatarSelf {
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: groove 10px rgb(51, 255, 0);
+  overflow: hidden;
+}
+
+.avatarSelf img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
