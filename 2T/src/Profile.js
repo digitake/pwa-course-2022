@@ -46,7 +46,7 @@ function Profile(){
                 <div className={`friendspicture ${item.position}`}>
                   <Avatarprofile name={item.displayName}/>
                 </div>
-                <div>{item.displayName}</div>
+                <div className="friendsname">{item.displayName}</div>
               </div>
             </Link>
           )

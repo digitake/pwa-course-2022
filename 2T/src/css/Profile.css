@@ -71,6 +71,8 @@
 
 .friendsflex{
     margin: 20px;
+    display: flex;
+    align-items: center;
 }
 
 .yourname{
@@ -78,4 +80,9 @@
     justify-content: space-evenly;
     align-items: center;
     position: relative;
+}
+
+.friendsname{
+    font-family: fantasy;
+    margin-left: 10px;
 }
