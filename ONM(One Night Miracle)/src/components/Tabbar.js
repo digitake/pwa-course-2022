@@ -3,15 +3,12 @@ import { Link } from 'react-router-dom';
 
 function Tabbar () {
   return (
-    <div className="tabbar">
+    <div className="tabbar stick-bottom">
       <Link to="/friend-list" className="tabbutton">
-        Friends
-      </Link>
-      <Link to="/chat" className="tabbutton">
-        Chat
+        <img src='/friend-logo.png' className='tab-icon-friendlist'/>
       </Link>
       <Link to="/profile" className="tabbutton">
-        Profile
+        <img src='/profile-logo.png' className='tab-icon-profile'/>
       </Link>
     </div>
   )

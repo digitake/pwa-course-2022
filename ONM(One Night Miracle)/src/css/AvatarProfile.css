@@ -1,0 +1,9 @@
+.avatar-profile-large {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: solid 5px rgb(255, 255, 255);
+    overflow: hidden;
+    margin-right: 1em;
+    margin-left: 0.5em;
+  }
