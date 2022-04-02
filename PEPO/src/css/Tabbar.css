@@ -1,0 +1,53 @@
+.tabbar {
+  height: 50px;
+  background-color: #73ccf6;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.tabbar .tabbutton {
+  display: inline-block;
+  text-align: center;
+  font-size: 1.5em;
+  color: white;
+  margin: 0 5px;
+  padding: 10px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 1s;
+}
+
+
+
+.tabbar.stick-bottom {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.tabbar.stick-top {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+
+.tabbar.stick-left {
+  position: absolute;
+  left: 0px;
+  height: 100%;
+  flex-direction: column;
+}
+
+.tabbar.stick-right {
+  position: absolute;
+  right: 0px;
+  height: 100%;
+  flex-direction: column;
+}
+
+.tabbar .tab-icon {
+  margin-top: 0.25em;
+ width: 40px;
+ height: 40px;
+}
