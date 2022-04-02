@@ -1,19 +1,21 @@
 .chat {
   position: relative;
+  width: 100%;
   height: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-
-  flex:4;
 }
 
-
+.chatbox {
+  flex: 12;
+  background-color: silver;
+}
 
 .inputbox {
-  background-color: rgb(128, 128, 128);
+  flex: 1;
+  background-color: gray;
   display: flex;
-  height: 50px;
 }
 
 .inputbox .label1 {
@@ -29,13 +31,6 @@
 }
 
 .inputbox .button {
-  background-color: rgb(255, 255, 255);
   font-size: 1em;
   min-width: 40px;
-  transition: background-color 0.4s;
-}
-
-.inputbox .button:hover {
-  background-color: #929090;
-  transition: background-color 0.4s;
 }

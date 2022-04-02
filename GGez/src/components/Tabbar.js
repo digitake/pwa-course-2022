@@ -3,15 +3,15 @@ import { Link } from 'react-router-dom';
 
 function Tabbar () {
   return (
-    <div className="tabbar">
+    <div className="tabbar stick-bottom">
       <Link to="/friend-list" className="tabbutton">
-        <i class="fa fa-envelope-open" aria-hidden="true"></i>
+        <i class="fa fa-list-ul" aria-hidden="true"></i>
       </Link>
       <Link to="/chat" className="tabbutton">
-        <i class="fa fa-bars" aria-hidden="true"></i>
+        <i class="fa fa-weixin" aria-hidden="true"></i>
       </Link>
       <Link to="/profile" className="tabbutton">
-        <i class="fa fa-play" aria-hidden="true"></i>
+        <i class="fa fa-user-circle" aria-hidden="true"></i>
       </Link>
     </div>
   )
