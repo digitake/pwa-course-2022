@@ -1,0 +1,16 @@
+.chatavatar {
+    text-align: center;
+    width: 50px;
+    height: 50px;
+    margin-top: 2.8em;
+    background-color: yellow;
+    border-radius: 50%;
+    border: solid 5px rgb(255, 255, 255);
+    overflow: hidden;
+    display:inline-block;
+    padding: 0px;
+  }
+
+  .avatar-align{
+      text-align: center;
+  }

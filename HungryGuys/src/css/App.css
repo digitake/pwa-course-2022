@@ -9,7 +9,11 @@
 
 .App .content {
   flex: 1;
+<<<<<<< HEAD:HungryGuys/src/css/App.css
   top: 0px;
+=======
+  top: 50px;
+>>>>>>> a0bae496c89571d08ceb4c7ed326ba43fe1c600e:ONM(One Night Miracle)/src/css/App.css
   bottom: 0px;
   position: absolute;
   width: 100%;
