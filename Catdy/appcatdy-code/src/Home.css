@@ -1,6 +1,7 @@
 .home {
     display: flex;
     background-color: #ffd3be;
+    
 
     
 
@@ -14,9 +15,11 @@
     
 }
 .box{
-    background-color: chocolate;
+    background-color: rgb(243, 128, 75);
     display: flex;
-    width: 2000px;
-    height: 200px;
-    font-size: 3.25em
+    text-align: left;
+    font-size: large;
+    
+    
+    
 }

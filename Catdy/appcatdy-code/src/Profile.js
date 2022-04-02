@@ -10,7 +10,8 @@ function Profile() {
   return (
     <App>
       <div className="Profile">
-        <div className="pro"> ข้อมูลของผู้ใช้งาน </div>
+        <div className="pro"> Mr.Chitsanupong Sri-kaew </div>
+        <div className="Ero"> User : filmkb_53@hotmail.com </div>
       </div>
     </App>
   );
