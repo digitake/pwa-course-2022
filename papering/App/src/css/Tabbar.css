@@ -18,23 +18,41 @@
   padding: 10px;
   cursor: pointer;
   text-decoration: none;
-  transition: color 0.1s;
+  transition: background-color 1s;
 }
 
 .tabbar .tabbutton:hover {
-  color: aliceblue;  
+  color: aliceblue;
   filter: grayscale(255) brightness(255);
+}
+
+.tabbar.stick-bottom {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+
+.tabbar.stick-top {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+
+.tabbar.stick-left {
+  position: absolute;
+  left: 0px;
+  height: 100%;
+  flex-direction: column;
+}
+
+.tabbar.stick-right {
+  position: absolute;
+  right: 0px;
+  height: 100%;
+  flex-direction: column;
 }
 
 .tabbar .tab-icon {
   width: 26px;
   height: 26px;
-}
-
-.tabbar .red{
-  fill: #c15954;
-}
-
-.tabbar .experiment{
-  
 }

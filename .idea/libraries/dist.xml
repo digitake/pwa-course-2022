@@ -1,0 +1,15 @@
+<component name="libraryTable">
+  <library name="dist">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/node_modules/material-design-lite/dist/mdl-template-dashboard.zip!/" />
+      <root url="jar://$PROJECT_DIR$/node_modules/material-design-lite/dist/mdl-template-android-dot-com.zip!/" />
+      <root url="jar://$PROJECT_DIR$/node_modules/material-design-lite/dist/mdl-template-text-only.zip!/" />
+      <root url="jar://$PROJECT_DIR$/node_modules/material-design-lite/dist/mdl-template-portfolio.zip!/" />
+      <root url="jar://$PROJECT_DIR$/node_modules/material-design-lite/dist/mdl-template-article.zip!/" />
+      <root url="jar://$PROJECT_DIR$/node_modules/material-design-lite/dist/mdl.zip!/" />
+      <root url="jar://$PROJECT_DIR$/node_modules/material-design-lite/dist/mdl-template-blog.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

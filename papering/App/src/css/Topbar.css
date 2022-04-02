@@ -1,5 +1,6 @@
 .topbar {
     height: 50px;
+    width: 100%;
     background-color: #e79796;
     color: #ffffff;
     font-family: sans-serif;
@@ -8,9 +9,9 @@
     display: flex;
     justify-content: left;
     align-items: center;
-  }
-  
-  .topbar .tabbutton {
+}
+
+.topbar .tabbutton {
     display: inline-block;
     font-family: sans-serif;
     text-align: center;
@@ -22,11 +23,10 @@
     text-decoration: none;
     transition: background-color 1s;
     transition: color 0.5s;
-  }
-  
-  .tar .tabbutton:hover {
+}
+
+.tar .tabbutton:hover {
     background-color: #e79796;
     color: aliceblue;
-    
-  }
-  
+
+}

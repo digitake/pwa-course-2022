@@ -1,11 +1,21 @@
+.chatbox {
+  flex: 1;
+  background-color: #feefec;
+  overflow: auto;
+}
+
+.chatbox-item{
+  transition: top 1s;
+}
+
 .chatbox-item.left{
   text-align: left;
-  margin-left: 20px;
+  margin-left: 24px;
 }
 
 .chatbox-item.right{
   text-align: right;
-  margin-right: 20px;
+  margin-right: 24px;
 }
 
 .chatbox-item .avatar{
