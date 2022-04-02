@@ -22,7 +22,7 @@ function Chat() {
         position: msg.user === uid ? "left" : "right"
       };
       
-      setChatData(oldChat => [...oldChat ,mappedValue]);
+      setChatData(oldChat => [mappedValue ,...oldChat]);
     }
   
     useEffect(() => {

@@ -5,6 +5,8 @@
     background-color: rgb(255, 208, 208);
     padding: 10px;
     overflow: auto;
+    flex-direction: column-reverse;
+    display: flex;
   }
   
   .chatbox-item{
