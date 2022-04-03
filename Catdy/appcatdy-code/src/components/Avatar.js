@@ -1,6 +1,6 @@
 import '../css/Avatar.css';
 
-function Avatar(props) {
+export function Avatar(props) {
   return (
     <div className="avatar">
       <img src={`https://avatars.dicebear.com/api/human/${props.name}.svg`} alt={props.name}/>
@@ -8,4 +8,3 @@ function Avatar(props) {
   );
 }
 
-export default Avatar;

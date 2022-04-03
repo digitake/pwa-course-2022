@@ -1,24 +1,21 @@
-import {
-  BrowserRouter,
-  Routes,
-  Route
-} from "react-router-dom";
-import Chat from "./Chat";
-import Profile from "./Profile";
-import FriendList from "./FriendList";
-import Home from "./Home";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
-function Router() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/chat" element={<Chat />}/>
-        <Route path="/profile" element={<Profile />}/>
-        <Route path="/home" element={<Home />}/>
-        <Route path="/" element={<Chat />}/>
-      </Routes>
-    </BrowserRouter>
-  );
+import App from './App.js'
+import Profile from './Profile.js'
+import Chat from './Chat.js';
+import Friendlist from './Friendlist.js';
+
+function Router(){
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={ <App/>} />
+                <Route path="/profile" element={ <Profile/> } />
+                <Route path="/chat" element={ <Chat/> } />
+                <Route path="/friend" element={ <Friendlist/> } />
+            </Routes>
+        </BrowserRouter>
+    )
 }
 
 export default Router;
