@@ -1,12 +1,13 @@
-import '../css/App.css'
+import '../css/App.css';
 import Tabbar from './Tabbar.js';
-import Inputbox from'./Inputbox.js';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
+      <div className="content">
+        {props.children}
+      </div>
       <Tabbar/>
-      <Inputbox/>
     </div>
   );
 }
