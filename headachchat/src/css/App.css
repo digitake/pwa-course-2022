@@ -1,47 +1,19 @@
-.chat {
-  position: relative;
-  height: 100%;
-  overflow: hidden;
+.App {
+  background-color: #ddffdd;
+  width: 100%;
+  height: 100%;;
+  margin: auto;
   display: flex;
   flex-direction: column;
-
-<<<<<<< HEAD:headachchat/src/css/App.css
-<<<<<<< HEAD:papering/App/src/Chat.css
-  flex:4;
-=======
-.chatbox {
-  flex: 12;
-  background-color: silver;
->>>>>>> 1cb9a77534af9b8ef824365c4556aed755dd7c0a:PEPO/src/PrivateChat.css
 }
 
-
-
-=======
->>>>>>> 6cda98e408edb661e3fabcc8a82f166da4bdfd69:headachchat/src/css/App.css
-.inputbox {
-<<<<<<< HEAD:headachchat/src/css/App.css
-=======
+.App .content {
   flex: 1;
->>>>>>> 1cb9a77534af9b8ef824365c4556aed755dd7c0a:PEPO/src/PrivateChat.css
-  background-color: gray;
+  top: 0px;
+  bottom: 50px;
+  position: absolute;
+  width: 100%;
+  overflow: auto;
   display: flex;
-  height: 50px;
 }
 
-.inputbox .label1 {
-  font-size: 1.5em;
-  text-align: right;
-}
-
-.inputbox .text {
-  font-size: 1em;
-  padding-left: 8px;
-  padding-right: 8px;
-  flex: 1;
-}
-
-.inputbox .button {
-  font-size: 1em;
-  min-width: 40px;
-}

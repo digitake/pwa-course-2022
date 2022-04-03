@@ -1,0 +1,51 @@
+.userlist {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  background-color: #331a12;
+  z-index: 100;
+  width: 300px;
+}
+
+.userlist.closed {
+  width: 0px;
+  transition: width 2s;
+}
+
+.userlist.open {
+  width: 300px;
+  transition: width 2s;
+}
+
+.userlist .close-button {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 14pt;
+  background-color: azure;
+  border: gray 1px solid;
+  border-radius: 50%;
+  float: right;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.userlist .close-button:hover {
+  background-color: #cee740;
+}
+
+@media screen and (min-width: 768px) {
+  .userlist {
+    flex: 2;
+    position: relative;
+    background-color: #06668c;
+    width: unset;
+    max-width: 300px;
+  }
+
+  .userlist .close-button {
+    display: none;
+  }
+}

@@ -1,7 +1,8 @@
+
 import React, { createContext, useContext, useState, useEffect } from "react";
 import 'firebase/compat/auth';
 import 'firebase/compat/database';
-import {firebase} from './FirebaseConfig';
+import firebase from './FirebaseConfig';
 
 const hashCode = s => s.split('').reduce((a,b) => (((a << 5) - a) + b.charCodeAt(0))|0, 0)
 
@@ -19,7 +20,6 @@ export default function ChatStateProvider({ children, self }) {
 
   const chat = msg => ({ msg: msg, user: self.uid, timestamp: firebase.database.ServerValue.TIMESTAMP });
   
-
   useEffect(() => {
     usersRef.on('child_added', snapshot => {
       
@@ -58,6 +58,18 @@ export default function ChatStateProvider({ children, self }) {
     });
   };
 
+  const setUserImage = (uid, base64Img) => {
+    const x = usersRef.child(`images/${uid}`)
+    x.set(base64Img);
+    return x;
+  };
+
+  const getUserImage = (uid) => {
+    return usersRef.child(`images/${uid}`).once('value').then(snapshot => {
+      return snapshot.val();
+    })
+  };
+
   const getPrivateChat = (friendId) => {
     const chatroomId = `1-1-${hashCode(self.uid) + hashCode(friendId)}`;
     return chatroomsRef.child(`${chatroomId}`).once('value').then(snapshot => {
@@ -87,17 +99,37 @@ export default function ChatStateProvider({ children, self }) {
   };
 
   const listenToChatroom = (roomId, callback) => {
+    console.log("self checkin to roomId", roomId);
+    const x = chatroomsRef.child(`${roomId}/users/${self.uid}`);
+    x.set({
+      displayName: self.displayName,
+    })
+    x.onDisconnect().remove();
+
     return chatroomsRef.child(`${roomId}/chat`).on('child_added', snapshot => {
       // {roomTitle, users, chat}
       snapshot && callback(snapshot.val());
     });
   };
 
+  const listenToUserInChatroom = (roomId, callback) => {
+    const x= chatroomsRef.child(`${roomId}/users`)
+    x.on('child_added', snapshot => {
+      snapshot && callback('JOINED',snapshot.key, snapshot.val());
+    });
+    x.on('child_removed', snapshot => {
+      snapshot && callback('LEFT', snapshot.key, snapshot.val());
+    });
+    return () => {
+      x.off('child_added');
+      x.off('child_removed');
+    }
+  };
+
   const sendMsg = (msg, targetId) => {
     const chatroomRef = chatroomsRef.child(`${targetId}/chat`);
     chatroomRef.push(chat(msg));
   };
-  
 
   return (
     <ChatStateContext.Provider
@@ -110,7 +142,10 @@ export default function ChatStateProvider({ children, self }) {
         sendPrivateMsg: sendPrivateMsg,
         getChatroom: getChatroom,
         listenToChatroom: listenToChatroom,
-        sendMsg: sendMsg
+        listenToUserInChatroom: listenToUserInChatroom,
+        sendMsg: sendMsg,
+        setUserImage: setUserImage,
+        getUserImage: getUserImage
       }}
     >
       {children}

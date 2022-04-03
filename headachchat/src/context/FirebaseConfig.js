@@ -1,17 +1,24 @@
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/database';
+import { getFirestore } from "firebase/firestore"
+
+
 const firebaseConfig = {
-  apiKey: "AIzaSyDOPJ9_X7MbrMXHkai922aLK2NVa7xbGjo",
-  authDomain: "gi472-pwa-course-2022.firebaseapp.com",
-  projectId: "gi472-pwa-course-2022",
-  storageBucket: "gi472-pwa-course-2022.appspot.com",
-  messagingSenderId: "967644458652",
-  appId: "1:967644458652:web:6f71ad83773786006b8759",
-  measurementId: "G-Z7Z74R200B",
-  databaseURL: "https://gi472-pwa-course-2022-default-rtdb.asia-southeast1.firebasedatabase.app"
+  apiKey: "AIzaSyA5pE-undz7JJtAb98MlJ1TvcR48kVxPMU",
+  authDomain: "subchatapp.firebaseapp.com",
+  projectId: "subchatapp",
+  storageBucket: "subchatapp.appspot.com",
+  messagingSenderId: "452856763161",
+  appId: "1:452856763161:web:1c1b45dca468ca5339eb88",
+  measurementId: "G-4BKQF68SP3",
+  databaseURL: "https://subchatapp-default-rtdb.asia-southeast1.firebasedatabase.app/"
 };
 
-firebase.initializeApp(firebaseConfig);
 
-export { firebase };
+const app = firebase.initializeApp(firebaseConfig);
+
+export const db = getFirestore(app);
+export default firebase;
+
+
