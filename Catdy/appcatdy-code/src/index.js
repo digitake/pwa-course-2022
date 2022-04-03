@@ -1,8 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+<<<<<<< HEAD:Catdy/appcatdy-code/src/index.js
 import Router from './Router';
+=======
+>>>>>>> 96be4e0890c69d8fcbb37c218dee31f4ff357710:src/index.js
 import reportWebVitals from './reportWebVitals';
+import Router from './Router.js';
 
 ReactDOM.render(
   <React.StrictMode>
