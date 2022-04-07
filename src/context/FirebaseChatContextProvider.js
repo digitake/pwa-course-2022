@@ -13,6 +13,7 @@ const ChatStateContext = createContext({
 export default function ChatStateProvider({ children, self }) {
   const usersRef = firebase.database().ref('users');
   const chatroomsRef = firebase.database().ref('chatrooms');
+  const imagesRef = firebase.database().ref('images');
 
   const [userList, setUserList] = useState([]);
   const [chatroomList, setChatroomList] = useState([]);
@@ -58,13 +59,13 @@ export default function ChatStateProvider({ children, self }) {
   };
 
   const setUserImage = (uid, base64Img) => {
-    const x = usersRef.child(`images/${uid}`)
+    const x = imagesRef.child(`${uid}`)
     x.set(base64Img);
     return x;
   };
 
   const getUserImage = (uid) => {
-    return usersRef.child(`images/${uid}`).once('value').then(snapshot => {
+    return imagesRef.child(`${uid}`).once('value').then(snapshot => {
       return snapshot.val();
     })
   };
