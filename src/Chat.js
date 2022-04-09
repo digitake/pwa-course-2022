@@ -9,17 +9,11 @@ import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
 
 function Chat() {
-  const { userList, sendMsg, listenToChatroom, imageDict, userDict } = useChatStateContext();
+  const { sendMsg, listenToChatroom, imageDict, userDict } = useChatStateContext();
   const { authState } = useAuthStateContext();
 
   const [chatData, setChatData] = useState([]);
 
-  function userListToDict(userList) {
-    return userList.reduce((dict, item) => {
-      dict[item.key] = item;
-      return dict;
-    }, {});
-  }
 
   function onMsg(msg) {
     setChatData(oldChat => [msg, ...oldChat]);
