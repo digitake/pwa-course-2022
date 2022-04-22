@@ -22,6 +22,7 @@ function Router(){
                   <Route path="/chathistory" element={<Chathistory />}/>
                   <Route path="/login" element={<Login />}/>
                   <Route path="/" element={<Login />}/>
+                  <Route path="/profile" element={<Login />}/>
                 </Routes>
               </BrowserRouter>
             </ChatStateProvider>
