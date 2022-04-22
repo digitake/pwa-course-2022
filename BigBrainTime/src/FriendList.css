@@ -1,0 +1,37 @@
+.friend-icon{
+  display: flex;
+  
+  font-size: 64px;
+  color: #06d8cd;
+  
+  font-family: sans-serif;
+  margin: 20px;
+  height: 64px;
+  
+}
+
+.favorite{
+  display: flex;
+  flex-direction: row;
+  font-family: sans-serif;
+  justify-content: flex-start;
+  margin-left: 2%;
+  
+}
+
+.friend-list-item {
+  display: flex;
+  flex: 10;
+  align-items: center;
+  padding: 1rem;
+  border-bottom: 0.5px solid #e5e5e5;
+  cursor: pointer;
+  font-weight: bolder;
+  
+}
+
+.favorite-friend{
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 30px;
+}

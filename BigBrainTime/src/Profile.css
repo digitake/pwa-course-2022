@@ -1,0 +1,25 @@
+.Profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  background-color: rgb(254, 255, 240);
+  padding: 0;
+  margin: 5%;
+}
+
+.Info {
+  margin: 3%;
+  font-size: 32px;
+  font-family: sans-serif;
+  text-align: left;
+  margin-left: 64px;
+  color: #06d8cd;
+}
+
+.Info .List{
+  margin: 2%;
+  font-size: 20px;
+  color: gray;
+}
