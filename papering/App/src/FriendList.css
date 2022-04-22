@@ -1,6 +1,12 @@
 .friend-list {
   width: 100%;
   flex:1;
+  overflow: auto;
+}
+
+.friend-text{
+  padding-left: 10px;
+  text-decoration: none;
 }
 
 .friend-list-item {
