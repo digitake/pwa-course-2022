@@ -10,15 +10,7 @@
   width: 90%;
   
 }
-.center {
-  position: absolute;
-  top: 70px;
-  left: 50%;
-  transform: translatex(-50%);
-  width: 90%;
-  height: 100%;
-  
-}
+
 .video-center {
   display: block;
   margin-left: auto;

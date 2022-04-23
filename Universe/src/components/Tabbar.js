@@ -1,11 +1,16 @@
 import '../css/Tabbar.css';
-import { Link ,img} from 'react-router-dom';
-import Avatar from './Avatar';
+import { Link } from 'react-router-dom';
+import { useAuthStateContext } from '../context/FirebaseAuthContextProvider';
 
+
+
+  
 
 function Tabbar () {
-  return (
 
+  const { signOut } = useAuthStateContext();
+
+  return (
     <div className="tabbar">
 
       <nav class="navbar navbar-light bg-white fixed-top text-success " >
@@ -14,7 +19,6 @@ function Tabbar () {
             <button class="navbar-toggler " type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg" aria-controls="navbarOffcanvasLg">
               <span class="navbar-toggler-icon">
               
-
                 </span>
             </button>
             <div class="offcanvas offcanvas-start" tabindex="-1" id="navbarOffcanvasLg" aria-labelledby="navbarOffcanvasLgLabel">
@@ -24,7 +28,7 @@ function Tabbar () {
             </div>
             <div class="offcanvas-body" color= "#696969" >
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3" >            
-                <div align = "center" ><Avatar name = "" /></div>
+                <div align = "center" ></div>
 
                 <p></p>
                 
@@ -46,7 +50,6 @@ function Tabbar () {
                   </a>
                   <ul class="dropdown-menu dropdown-menu-dark " aria-labelledby="navbarDarkDropdownMenuLink">
                      <li> &nbsp;&nbsp;&nbsp; This application is create for GI_472</li>
-                     <li><Link to="/develop"><a class="dropdown-item " href="#">Developer</a></Link></li>
                   </ul>
                 </li>
                 <p></p>
@@ -55,15 +58,16 @@ function Tabbar () {
                   <i class="fa fa-cog fa-spin fa-2x fa-fw"></i><span class="sr-only">Loading...</span>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
-                     <li><Link to="/"><a class="dropdown-item " href="#">Logout</a></Link></li>
+                     <li>
+                          <div align = "center"><h3>
+                            <button onClick={() => signOut()}>SignOut</button>
+                            </h3>
+                          </div>
+                     </li>
                      
                     
                   </ul>
                 </li>
-
-
-
-
               </ul>
           
         </div>
@@ -71,7 +75,6 @@ function Tabbar () {
     </div>
   </nav> 
 </div>
-    
   )
 }
 
