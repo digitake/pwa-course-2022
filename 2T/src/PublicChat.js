@@ -1,14 +1,14 @@
 import './css/Chat.css'
 import Tabbar from './components/Tabbar';
 
-function Chathistory() {
+function PublicChat() {
     return(
         <div className='chat'>
-            <div className='ctop'>Chat History</div>
+            <div className='ctop'>Public Chat</div>
             <div className='cmiddle'></div>
             <Tabbar/>
         </div>
     );
 }
 
-export default Chathistory;
+export default PublicChat;

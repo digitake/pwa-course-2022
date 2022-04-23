@@ -2,7 +2,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Profile from './Profile';
 import Login from './Login';
 import Chat from './Chat';
-import Chathistory from './Chathistory';
+import PublicChat from './PublicChat';
 import { useAuthStateContext, LoginComponent } from './context/FirebaseAuthContextProvider';
 import ChatStateProvider from "./context/FirebaseChatContextProvider";
 
@@ -19,10 +19,8 @@ function Router(){
                 <Routes>
                   <Route path="/chat/:uid" element={<Chat />}/>
                   <Route path="/main" element={<Profile />}/>
-                  <Route path="/chathistory" element={<Chathistory />}/>
-                  <Route path="/login" element={<Login />}/>
-                  <Route path="/" element={<Login />}/>
-                  <Route path="/profile" element={<Login />}/>
+                  <Route path="/publicchat" element={<PublicChat />}/>
+                  <Route path="/" element={<Profile />}/>
                 </Routes>
               </BrowserRouter>
             </ChatStateProvider>
