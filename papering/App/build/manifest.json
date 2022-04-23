@@ -1,6 +1,6 @@
 {
-  "short_name": "My App Class 06",
-  "name": "Create React App Sample",
+  "short_name": "Papering",
+  "name": "Papering",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "#c15853",
+  "background_color": "#feefec"
 }

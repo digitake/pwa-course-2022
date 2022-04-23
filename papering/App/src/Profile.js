@@ -47,7 +47,7 @@ function Profile() {
             />
           </div>
           <FileBase64 multiple={false} onDone={onDone} className="button" />
-          <div classname>
+          <div>
             <input
               type="button"
               value="Save"
