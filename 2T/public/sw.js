@@ -3,9 +3,10 @@ const VERSION = 3;
 self.addEventListener('install',function(event) {
     console.log("[SW] installing service worker version " + VERSION);
     event.waitUntil(
-        caches.open('gu472-chat').then(function(caches) {
+        caches.open('gi472-chat').then(function(caches) {
             return caches.addAll([
                 '/',
+                '/2T',
                 '/index.html',
             ]);
         })
