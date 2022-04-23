@@ -17,8 +17,13 @@
     cursor: pointer;
     text-decoration: none;
     transition: background-color 1s;
+    width: 40px;
   }
 
   .titlebar .name{
-      float: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: calc(100% - 40px);
+    display: inline-block;
+    text-align: right;
   }
