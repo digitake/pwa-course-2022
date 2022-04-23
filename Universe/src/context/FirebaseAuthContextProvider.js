@@ -117,9 +117,11 @@ const uiConfig = {
 
 export const LoginComponent = (callback) => {
   return (
-  <div>
-    <h1>GI472 PWA Chat App</h1>
-    <p>{"Please sign-in:"}</p>
+  <div className="center">
+    <p></p>
+    
+    <center><img src="https://media.discordapp.net/attachments/800643806278058035/950022790243819590/Login.png" width="200" height="100" ></img></center>
+    <p></p>
     <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()}/>
   </div>
   )
