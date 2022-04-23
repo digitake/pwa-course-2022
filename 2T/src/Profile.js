@@ -36,7 +36,7 @@ function Profile(){
       <div className='ptop'>Profile</div>
       <div className='your'>
         <div className='yourpicture'>
-          <Avatarprofile name={name}/>
+          <Avatarprofile name={name} base64Image={base64Image}/>
         </div>
         <div className="yourname">
         <label className="label1" htmlFor="displayname"/>
@@ -77,4 +77,4 @@ function Profile(){
   );
 }
 
-export default Profile
+export default Profile;

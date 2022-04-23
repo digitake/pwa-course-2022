@@ -9,3 +9,15 @@
     height: 100%;
     align-items: center;
 }
+
+.avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.avatarprofile img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
