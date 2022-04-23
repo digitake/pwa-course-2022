@@ -63,7 +63,7 @@ function Chat() {
     return(
         <div className='chat'>
             <Titlebar value={friendName}/>
-            <Chatbox data={chatData.map(transformChatData).sort((a,b)=>a.timestamp - b.timestamp)}/>
+            <Chatbox data={chatData.map(transformChatData).sort((b,a)=>a.timestamp - b.timestamp)}/>
             <div className='cbottom'>
                 <Inputbox onEnter={x=>sendPrivateMsg(x,uid)}/>
             </div>

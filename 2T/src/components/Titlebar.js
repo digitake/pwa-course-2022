@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Titlebar ({value}) {
   return (
     <div className="titlebar">
-        <Link to='/main' className='backbutton'><img src='/IconBack.png'/></Link>
+        <Link to='/profile' className='backbutton'><img src='/IconBack.png'/></Link>
         <div className='name'>{value}</div>
     </div>
   )

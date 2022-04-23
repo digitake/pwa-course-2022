@@ -18,7 +18,7 @@ function Router(){
               <BrowserRouter>
                 <Routes>
                   <Route path="/chat/:uid" element={<Chat />}/>
-                  <Route path="/main" element={<Profile />}/>
+                  <Route path="/profile" element={<Profile />}/>
                   <Route path="/publicchat" element={<PublicChat />}/>
                   <Route path="/" element={<Profile />}/>
                 </Routes>

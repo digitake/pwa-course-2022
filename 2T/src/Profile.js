@@ -1,20 +1,34 @@
-import {useState} from "react";
+import {useState , useEffect} from "react";
 import Tabbar from './components/Tabbar';
 import './css/Profile.css'
 import { Link } from 'react-router-dom';
 import Avatarprofile from './components/Avatarprofile';
 import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
 import { useChatStateContext } from './context/FirebaseChatContextProvider';
+import FileBase64 from 'react-file-base64';
 
 function Profile(){
   const { userList } = useChatStateContext();
   const { authState, updateDisplayName, signOut } = useAuthStateContext();
+  const { setUserImage, getUserImage } = useChatStateContext();
   const [name, setName] = useState(authState.user.displayName);
+  const [base64Image, setBase64Image] = useState("");
+
+  useEffect(() =>{
+    getUserImage(authState.user.uid).then(imgBase64 => {
+      setBase64Image(imgBase64);
+    })
+  }, []);
 
   function save() {
     updateDisplayName(name).then(_=>{
       authState.user.reload()
-    })
+      setUserImage(authState.user.uid, base64Image);
+    });
+  }
+
+  function onDone(data) {
+    setBase64Image(data.base64);
   }
 
   return(
@@ -33,7 +47,12 @@ function Profile(){
           value={name}
           onChange={e => setName(e.target.value)}
         />
+        <FileBase64
+          multiple={ false }
+          onDone={ onDone } 
+        />
         <input type="button" value="Save" onClick={save}/>
+        <input type="button" onClick={() => signOut()} value="Sign-out"/>
         </div>
       </div>
       <div className='friends'>Friends</div>
