@@ -8,7 +8,7 @@ import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import FileBase64 from 'react-file-base64';
 
 function Profile(){
-  const { userList } = useChatStateContext();
+  const { userList, imageDict} = useChatStateContext();
   const { authState, updateDisplayName, signOut } = useAuthStateContext();
   const { setUserImage, getUserImage } = useChatStateContext();
   const [name, setName] = useState(authState.user.displayName);
@@ -39,31 +39,35 @@ function Profile(){
           <Avatarprofile name={name} base64Image={base64Image}/>
         </div>
         <div className="yourname">
-        <label className="label1" htmlFor="displayname"/>
-        <input 
-          id="displayname"
-          type="text" 
-          className="text" 
-          value={name}
-          onChange={e => setName(e.target.value)}
-        />
-        <FileBase64
-          multiple={ false }
-          onDone={ onDone } 
-        />
-        <input type="button" value="Save" onClick={save}/>
-        <input type="button" onClick={() => signOut()} value="Sign-out"/>
+          <label className="label1" htmlFor="displayname"/>
+          <div className="userinfo">
+            <input 
+              id="displayname"
+              type="text" 
+              className="text" 
+              value={name}
+              onChange={e => setName(e.target.value)}
+            />
+          </div>
+          <div className="userinfo">
+            <FileBase64
+              multiple={ false }
+              onDone={ onDone } 
+            />
+          </div>
+          <div className="userinfo"><input type="button" value="Save" onClick={save}/></div>
+          <div className="userinfo"><input type="button" onClick={() => signOut()} value="Sign-out"/></div>
         </div>
       </div>
       <div className='friends'>Friends</div>
       <div className='list'>
       {
-        userList.map((item) => {
+        userList.map((item,i) => {
           return (
             <Link to={`/chat/${item.key}`} key={item.key}>
               <div className="friendsflex">
                 <div className={`friendspicture ${item.position}`}>
-                  <Avatarprofile name={item.displayName}/>
+                <Avatarprofile name={item.displayName} base64Image={imageDict[item.key]}/>
                 </div>
                 <div className="friendsname">{item.displayName}</div>
               </div>
