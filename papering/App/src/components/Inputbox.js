@@ -1,4 +1,5 @@
 import { useState } from "react";
+import '../css/Inputbox.css';
 
 function Inputbox (props) {
   const [value, setValue] = useState(props.value||"");
@@ -29,13 +30,13 @@ function Inputbox (props) {
       />
       <input 
         type="button" 
-        value="Send" 
+        value=">" 
         onClick={() => {
           props.onEnter(value);
           setValue("");
         }}
         className="button"
-      />    
+      />
     </div>
   )
 }

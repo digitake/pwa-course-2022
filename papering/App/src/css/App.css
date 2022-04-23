@@ -5,15 +5,21 @@
   margin: auto;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  position: relative;
 }
 
 .App .content {
   flex: 1;
   top: 0px;
-  bottom: 77px;
+  bottom: 50px;
   position: absolute;
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
   display: flex;
 }
 
+.userlist {
+  flex: 1;
+  background-color: #e79796;
+}

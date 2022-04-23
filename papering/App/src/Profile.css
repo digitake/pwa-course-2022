@@ -8,8 +8,50 @@
   background-color: #feefec;
   padding: 0;
   margin: 0;
+  overflow: hidden;
 }
 
-.Forcefull{
-  width: 100%;
+.Profile .top{
+  margin-left: 10px;
+}
+
+.Profile .list{
+  display: flex;
+  flex-direction: column;
+}
+
+.name{
+  height: 20px;
+  font-size: 15px;
+  padding: 0px 20px;
+  flex: 1;
+  border-radius: 25px;
+  border: 20px;
+  outline-width: 0px;
+  color: #f5cec7;
+  text-align: center;
+}
+
+.Profile .space{
+  display: flex;
+  width: 15%;
+  justify-content: space-around;
+}
+
+.Profile .button{
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  min-width: 40px;
+  padding: 2px 20px;
+  background-color: #e89b99;
+  border: none;
+  border-radius: 25px;
+  margin: 5px 5px 5px 5px; 
+  transition: 0.25s;
+}
+
+.Profile .button:hover{
+  background-color: #f5cec7;
+  color: white;
 }

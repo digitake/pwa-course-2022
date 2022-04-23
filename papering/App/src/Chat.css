@@ -1,34 +1,33 @@
 .chat {
-  position: relative;
   height: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-
   flex:4;
 }
 
-
-
-.inputbox {
-  background-color: gray;
-  display: flex;
-  height: 50px;
+::-webkit-scrollbar {
+  width: 16px;
+  transition: background-color 0.5s;
 }
 
-.inputbox .label1 {
-  font-size: 1.5em;
-  text-align: right;
+/* Track */
+::-webkit-scrollbar-track {
+  background: #feefec;
+  height: 70%;
 }
 
-.inputbox .text {
-  font-size: 1em;
-  padding-left: 8px;
-  padding-right: 8px;
-  flex: 1;
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background-color: #f5cec7;
+  border-radius: 10px;
+  border: 5px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
 }
 
-.inputbox .button {
-  font-size: 1em;
-  min-width: 40px;
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #e79796;
+  border: 6px solid rgba(0, 0, 0, 0);
+  background-clip: padding-box;
 }

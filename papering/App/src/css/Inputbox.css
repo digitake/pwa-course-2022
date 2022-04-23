@@ -1,0 +1,37 @@
+.inputbox {
+  background-color: #f5cec7;
+  display: flex;
+  height: 50px;
+  padding-bottom: 10px;
+}
+
+.inputbox .label1 {
+  font-size: 1.5em;
+  text-align: right;
+}
+
+.inputbox .text {
+  height: 30px;
+  font-size: 15px;
+  padding: 0px 20px;
+  flex: 1;
+  border-radius: 25px;
+  border: 0px;
+  outline-width: 0px;
+  margin: auto 10px;
+  color: #f5cec7;
+}
+
+.inputbox .button {
+  color: #e89b99;
+  font-size: 1em;
+  font-weight: 800;
+  min-width: 40px;
+  background-color: #f5cec7;
+  border: none;
+  transition: 0.25s;
+}
+
+.inputbox .button:hover{
+    background-color: #ffffff;
+}

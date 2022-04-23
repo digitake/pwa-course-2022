@@ -9,7 +9,7 @@ import { useParams } from "react-router-dom";
 
 function PrivateChat() {
   const { uid } = useParams();
-  const { getUserProfile, sendPrivateMsg, listenToPrivateChat } = useChatStateContext();
+  const { getUserProfile, sendPrivateMsg, listenToPrivateChat, imageDict } = useChatStateContext();
   const [ friendName, setFriendName ] = useState("");
   const [ chatData, setChatData ] = useState([]);
 
@@ -19,7 +19,8 @@ function PrivateChat() {
       ...msg,
       key: msg.timestamp || Date.now(),
       displayName: friendName,
-      position: msg.user === uid ? "right" : "left"
+      position: msg.user === uid ? "right" : "left",
+      image: imageDict[msg.user]
     };
     
     setChatData(oldChat => [mappedValue, ...oldChat]);

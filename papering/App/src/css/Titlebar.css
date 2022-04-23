@@ -4,5 +4,11 @@
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+
+}
+
+.titlebar .text {
   color: aliceblue;
+  font-weight: 800;
+  margin: auto 10px;
 }
