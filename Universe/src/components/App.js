@@ -1,0 +1,19 @@
+import '../css/App.css';
+import Tabbar from './Tabbar.js';
+
+function App(props) {
+  return (
+    <div className="App">
+      
+      
+      <div className="content">
+      <Tabbar/>
+        {props.children}
+        
+      </div>
+      
+    </div>
+  );
+}
+
+export default App;
