@@ -8,7 +8,7 @@ import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import FileBase64 from 'react-file-base64';
 
 function Profile(){
-  const { userList } = useChatStateContext();
+  const { userList, imageDict} = useChatStateContext();
   const { authState, updateDisplayName, signOut } = useAuthStateContext();
   const { setUserImage, getUserImage } = useChatStateContext();
   const [name, setName] = useState(authState.user.displayName);
@@ -58,12 +58,12 @@ function Profile(){
       <div className='friends'>Friends</div>
       <div className='list'>
       {
-        userList.map((item) => {
+        userList.map((item,i) => {
           return (
             <Link to={`/chat/${item.key}`} key={item.key}>
               <div className="friendsflex">
                 <div className={`friendspicture ${item.position}`}>
-                  <Avatarprofile name={item.displayName}/>
+                <Avatarprofile name={item.displayName} base64Image={imageDict[item.key]}/>
                 </div>
                 <div className="friendsname">{item.displayName}</div>
               </div>
