@@ -1,6 +1,6 @@
 {
-  "short_name": "My App Class 06",
-  "name": "Create React App Sample",
+  "short_name": "Color Chat",
+  "name": "Colorful Chat",
   "icons": [
     {
       "src": "favicon.ico",
