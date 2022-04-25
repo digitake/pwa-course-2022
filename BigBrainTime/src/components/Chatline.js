@@ -1,7 +1,5 @@
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-import React from 'react'
-import ReactDOM from 'react-dom'
 
 function Chatline(props) {
   let text = props.text;
