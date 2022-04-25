@@ -1,19 +1,19 @@
 {
-  "short_name": "My App Class 06",
+  "short_name": "Chatter",
   "name": "Create React App Sample",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "appicon-01.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "logo192.png",
+      "src": "appicon192-01.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "logo512.png",
+      "src": "appicon-01.png",
       "type": "image/png",
       "sizes": "512x512"
     }

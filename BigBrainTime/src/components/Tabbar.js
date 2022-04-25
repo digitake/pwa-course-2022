@@ -14,9 +14,6 @@ function Tabbar () {
       <Link to="/profile" className="tabbutton">
         <img src="/icon-image/profile-01.png" className="tab-icon" />
       </Link>
-      <Link to="/add-new" className="tabbutton">
-        <img src="/icon-image/plus-01.png" className="tab-icon" />
-      </Link>
     </div>
   )
 }

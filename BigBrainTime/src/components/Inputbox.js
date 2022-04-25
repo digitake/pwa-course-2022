@@ -3,6 +3,13 @@ import { useState } from "react";
 function Inputbox (props) {
   const [value, setValue] = useState(props.value||"");
 
+  function handleKeyPress(event) {
+    if(event.key === 'Enter' && value !== ""){
+      props.onEnter(value);
+      setValue("");
+    }
+  }
+
   return (
     <div className="inputbox">
       <div><img src="/icon-image/plus2-01.png" className="icon" /></div>
@@ -22,7 +29,10 @@ function Inputbox (props) {
       <input 
         type="button" 
         value="Send" 
-        onClick={() => props.onClick(value)} 
+        onClick={() => {
+          props.onEnter(value);
+          setValue("");
+        }}
         className="button"
       />    
     </div>
