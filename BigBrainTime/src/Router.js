@@ -11,7 +11,7 @@ import FriendProfile from "./FriendProfile";
 import { useAuthStateContext, LoginComponent } from './context/FirebaseAuthContextProvider';
 import ChatStateProvider from "./context/FirebaseChatContextProvider";
   
-function Router() {
+/*function Router() {
   const { authState } = useAuthStateContext();
 
   if (authState && authState.state === "AUTHENTICATION_LOADING") {
@@ -35,6 +35,21 @@ function Router() {
   } else {
     return <LoginComponent />;
   }
+}*/
+
+function Router() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/chat" element={<Chat />}/>
+        <Route path="/privatechat/:uid" element={<PrivateChat />}/>
+        <Route path="/profile" element={<Profile />}/>
+        <Route path="/friend-list" element={<FriendList />}/>
+        <Route path="/" element={<FriendList />}/>
+		<Route path="/friend/:uid" element={<FriendProfile />}/>
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
 export default Router;

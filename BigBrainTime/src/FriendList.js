@@ -6,6 +6,8 @@ import Userlist from './components/Userlist';
 
 
 function FriendList(){
+  const { userList } = useChatStateContext();
+  
   const [friends, setFriends] = useState([
     {user: "user1", displayName: "ไอ้ปื้ด"},
     {user: "user2", displayName: "นางสาวสุดา"},

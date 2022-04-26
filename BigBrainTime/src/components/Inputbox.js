@@ -1,7 +1,9 @@
 import { useState } from "react";
+import Option from '../components/Option'
 
 function Inputbox (props) {
   const [value, setValue] = useState(props.value||"");
+  const [trayStatus, setTrayStatus] = useState("open");
 
   function handleKeyPress(event) {
     if(event.key === 'Enter' && value !== ""){
@@ -10,9 +12,15 @@ function Inputbox (props) {
     }
   }
 
+  function onButtonClicked() {
+    setTrayStatus(oldStatus => oldStatus === "open" ? "closed" : "open");
+  }
+
   return (
     <div className="inputbox">
-      <div><img src="/icon-image/plus2-01.png" className="icon" /></div>
+      <div className={Option +trayStatus}>
+        <img src="/icon-image/plus2-01.png" className="icon" onClick={onButtonClicked} />
+        </div>
       <label className="label1" htmlFor="inputmsg">
         {props.label}
       </label>
@@ -21,10 +29,12 @@ function Inputbox (props) {
         type="text"
         className="text"
         value={value}
+        autoComplete="off"
         onChange={e => {
           setValue(e.target.value);
           props.onChange && props.onChange(e.target.value);
         }}
+        onKeyPress={handleKeyPress}
       />
       <input 
         type="button" 
