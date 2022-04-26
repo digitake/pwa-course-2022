@@ -11,6 +11,7 @@ function PrivateChat() {
   const { getUserProfile, sendPrivateMsg, listenToPrivateChat } = useChatStateContext();
   const [ friendName, setFriendName ] = useState("");
   const [ chatData, setChatData ] = useState([]);
+  const { sendMsg, listenToChatroom, imageDict, userDict } = useChatStateContext();
 
   const onMsg = (msg) => {
     
@@ -18,7 +19,8 @@ function PrivateChat() {
       ...msg,
       key: msg.timestamp || Date.now(),
       displayName: friendName,
-      position: msg.user === uid ? "right" : "left"
+      image: imageDict[msg.user] || "",
+      position: msg.user === uid ? "left" : "right"
     };
     
     setChatData(oldChat => [mappedValue, ...oldChat]);
@@ -43,10 +45,11 @@ function PrivateChat() {
   return (
     <App>
       <div className="center">
-      <div className="chat">
+      <div className="chatbox ">
         <Chatbox data={chatData}/>
-        <Inputbox onEnter={x=>sendPrivateMsg(x,uid)}/>
+        
       </div>
+      <Inputbox onEnter={x=>sendPrivateMsg(x,uid)}/>
       </div>
     </App>
   );

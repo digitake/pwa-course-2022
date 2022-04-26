@@ -60,7 +60,7 @@ function Tabbar () {
                   <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDarkDropdownMenuLink">
                      <li>
                           <div align = "center"><h3>
-                            <button onClick={() => signOut()}>SignOut</button>
+                            <button class="btn btn-outline-danger" onClick={() => signOut()}>SignOut</button>
                             </h3>
                           </div>
                      </li>

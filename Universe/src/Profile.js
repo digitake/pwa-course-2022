@@ -35,19 +35,25 @@ function Profile() {
       <div className="Profile">
         <Avatar name={name} base64Image={base64Image}/>
         <label className="label1" htmlFor="displayname"/>
+        <hr/>
         <input 
           id="displayname"
+          
           type="text" 
           className="text" 
           value={name}
           onChange={e => setName(e.target.value)}
         />
+        <p/>
         <FileBase64
+          
           multiple={ false }
           onDone={ onDone } 
         />
-        <input type="button" value="Save" onClick={save}/>
-        <input type="button" onClick={() => signOut()} value="Sign-out"/>
+        <hr/>
+        <input type="button" class="btn btn-outline-success" value="Save" onClick={save}/>
+        <hr/>
+        <input type="button" class="btn btn-outline-danger" onClick={() => signOut()} value="Sign-out"/>
       </div>
     </App>
   );

@@ -3,13 +3,13 @@
   width: 100%;
   height: 100%;
   overflow: hidden;
-  display: flex;
-  flex-direction: column;
+  
 }
 
 .chatbox {
   flex: 12;
-  background-color: silver;
+  flex-direction: column;
+  display: flex;
 }
 
 .inputbox {
