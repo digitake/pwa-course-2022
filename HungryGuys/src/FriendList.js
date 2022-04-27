@@ -7,19 +7,20 @@ import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import { Link } from 'react-router-dom';
 
 function FriendList(){
-  const { userList } = useChatStateContext();
+  const { userList, imageDict } = useChatStateContext();
 
   return(
-    <App>
+    <div className="friend-list">
       <Tabbar/>
       <TabbarTop value={"Friends"}/>
-      <div className="friend-list">
+      <div className="list">
+      
       {
         userList.map((item) => {
           return (
             <Link to={`/privatechat/${item.key}`} key={item.key}>
               <div className={`friend-list-item ${item.position}`}>
-                <Avatar name={item.displayName}/>
+                <Avatar name={item.displayName} base64Image={imageDict[item.key]} />
                 <div className="urlColor">{item.displayName}</div>
               </div>
             </Link>
@@ -27,7 +28,7 @@ function FriendList(){
         })
       }
       </div>
-    </App>
+    </div>
   )
 }
 

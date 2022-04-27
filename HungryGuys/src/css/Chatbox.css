@@ -3,6 +3,8 @@
   background-color: #1E4E8A;
   color: white;
   overflow: auto;
+  padding-top: 75px;
+  font-family: Cursive;
 }
 
 .chatbox-item{
