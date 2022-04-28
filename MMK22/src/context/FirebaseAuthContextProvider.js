@@ -77,6 +77,13 @@ export default function AuthStateProvider({ children }) {
     displayName: displayName,
     photoURL: authState.user.photoURL
   })};
+
+  const updatePhotoURL = (url) => {
+    return authState.user.updateProfile({
+    displayName: authState.user.displayName,
+    photoURL: url
+  })};
+
   const updateEmailAddress = (email) => {authState.user.updateEmail(email)};
 
   const sendPasswordResetEmail = (email, callback, onError) => firebase.auth().sendPasswordResetEmail(email, callback, onError);
@@ -90,6 +97,7 @@ export default function AuthStateProvider({ children }) {
         signOut,
         signUpWithEmailAndPassword,
         signInWithEmailAndPassword,
+        updatePhotoURL,
         updateDisplayName,
         updateEmailAddress,
         sendPasswordResetEmail,

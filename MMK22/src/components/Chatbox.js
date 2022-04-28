@@ -10,6 +10,8 @@ function Chatbox (props) {
     myRef.current && myRef.current.scrollIntoView()  
   },[data])
 
+  
+
   return (
     <div className="chatbox">
       {

@@ -11,3 +11,10 @@
   width: 40px;
   height: 40px;
 }
+
+.avatar img{
+  width: 100px;
+  height: 100px;
+  object-fit: cover ;
+}
+
