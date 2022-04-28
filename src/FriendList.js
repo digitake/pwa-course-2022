@@ -11,7 +11,7 @@ function FriendList(){
   return(
     <App>
       <div className="friend-list">
-      <Titlebar/>      
+      <Titlebar value="Friends"/>      
       {
         userList.map((item) => {
           return (

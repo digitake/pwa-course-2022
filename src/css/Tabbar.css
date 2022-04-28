@@ -7,12 +7,14 @@
 }
 
 .tabbar .tabbutton {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   text-align: center;
-  font-size: 1.5em;
+  font-size: 1.35em;
   color: white;
+  align-items: center;
   margin: 0 5px;
-  padding: 10px;
+  padding: 1px;
   cursor: pointer;
   text-decoration: none;
   transition: background-color 1s;

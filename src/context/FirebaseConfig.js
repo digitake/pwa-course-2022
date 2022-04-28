@@ -1,15 +1,16 @@
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/database';
+
 const firebaseConfig = {
-  apiKey: "AIzaSyDOPJ9_X7MbrMXHkai922aLK2NVa7xbGjo",
-  authDomain: "gi472-pwa-course-2022.firebaseapp.com",
-  projectId: "gi472-pwa-course-2022",
-  storageBucket: "gi472-pwa-course-2022.appspot.com",
-  messagingSenderId: "967644458652",
-  appId: "1:967644458652:web:6f71ad83773786006b8759",
-  measurementId: "G-Z7Z74R200B",
-  databaseURL: "https://gi472-pwa-course-2022-default-rtdb.asia-southeast1.firebasedatabase.app"
+  apiKey: "AIzaSyBE3Covv_AB07IySCgUf-WfURT5ykjpu0Y",
+  authDomain: "redtalog.firebaseapp.com",
+  databaseURL: "https://redtalog-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "redtalog",
+  storageBucket: "redtalog.appspot.com",
+  messagingSenderId: "517911671411",
+  appId: "1:517911671411:web:1eacc9c7e5acb20309f006",
+  measurementId: "G-NJY5XQ22Q8"
 };
 
 firebase.initializeApp(firebaseConfig);

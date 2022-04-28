@@ -9,15 +9,22 @@
 }
 
 .chatbox-item.left{
+  font-size: 20px;
   text-align: left;
-  margin-left: 24px;
+  margin-right: 24px;
+  margin-top: 12px;
+  font-family: fantasy;
 }
 
 .chatbox-item.right{
+  font-size: 20px;
   text-align: right;
   margin-right: 24px;
+  margin-top: 12px;
+  font-family: fantasy;
 }
 
 .chatbox-item .avatar{
   display: inline-block;
+  margin-bottom: 10px;
 }
