@@ -20,4 +20,12 @@
   
   .tabbar .tabbutton:hover {
     background-color: #0d7e53;;
+
+
   }
+
+.tabbaricon {
+  height: 35px;
+  width: auto;
+}
+

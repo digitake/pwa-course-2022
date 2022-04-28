@@ -11,3 +11,11 @@
   .chatbox-item .avatar{
     display: inline-block;
   }
+
+  .chatbox{
+    height: 80vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: block;
+    max-height: 80vh;
+  }

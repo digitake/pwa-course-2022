@@ -3,6 +3,7 @@ import './SearchFriends.css';
 import App from './components/App';
 import Avatar from './components/Avatar';
 
+
 function SearchFriends(){
   const [friends, setFriends] = useState([
     {user: "user1", displayName: "Porlapat"},
@@ -17,6 +18,7 @@ function SearchFriends(){
     {user: "user10", displayName: "Owen"},
     {user: "user11", displayName: "Natchanon"},
     {user: "user12", displayName: "Jitwisut"},
+    
   ]);
 
   return(

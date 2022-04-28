@@ -6,22 +6,22 @@ import Inputbox from './components/Inputbox.js';
 import './Chat.css';
 
 function Chat() {
-  const [chatData, setChatData] = useState([
-    {user: "Larppawat ", msg: "อยู่ไหน???", position: "left"},
-    {user: "ME ", msg: "อยู่ห้อง มีอะไร??", position: "right"},
-    {user: "Larppawat  ", msg: "ไปหาอะไรกินกัน", position: "left"},
-    {user: "ME ", msg: "กินอะไรดี", position: "right"},
-    {user: "Larppawat  ", msg: "ชาบูมั้ย", position: "left"},
-    {user: "ME ", msg: "ได้ๆเจอกันที่มธ.", position: "right"},
-    {user: "Larppawat  ", msg: "Ok", position: "left"},
-  ]);
+  const [chatData, setChatData] = useState([]);
 
+  const [user, setUser] = useState("Me") 
+  const [position, setPosition] = useState("right")
+const send = (msg) => {
+  chatData.push({user: user, msg: msg, position: position})
+  user === "Me"? setUser("Larppawat"): setUser("Me")
+  position === "right"? setPosition("left"): setPosition("right")
+setChatData([...chatData])
+}
   return (
     <App>
       <div className="chat">
         <Userlist/>
         <Chatbox data={chatData}/>
-        <Inputbox/>
+        <Inputbox onClick = {send}/>
       </div>
     </App>
   );

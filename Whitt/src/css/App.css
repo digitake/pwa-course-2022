@@ -15,5 +15,13 @@
   .userlist {
     flex: 1;
     background-color: #6b6a6a;
+    display: inline-block;
+    text-align: center;
+    font-size: 2em;
+    color: white;
+    margin: 0 5px;
+    padding: 10px;
+    cursor: pointer;
+    text-decoration: none;
   }
   
