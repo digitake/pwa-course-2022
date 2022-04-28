@@ -32,7 +32,7 @@ function Inputbox (props) {
         value="Send" 
         onClick={() => {
           props.onEnter(value);
-          setValue("");
+          setValue("") 
         }}
         className="button"
       />    

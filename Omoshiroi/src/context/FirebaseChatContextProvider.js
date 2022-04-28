@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { createContext, useContext, useState, useEffect } from "react";
 import 'firebase/compat/auth';
 import 'firebase/compat/database';
@@ -13,40 +14,74 @@ const ChatStateContext = createContext({
 export default function ChatStateProvider({ children, self }) {
   const usersRef = firebase.database().ref('users');
   const chatroomsRef = firebase.database().ref('chatrooms');
+  const imagesRef = firebase.database().ref('images');
 
   const [userList, setUserList] = useState([]);
+  const [userDict, setUserDict] = useState({});
+  const [imageDict, setImageDict] = useState({});
   const [chatroomList, setChatroomList] = useState([]);
 
   const chat = msg => ({ msg: msg, user: self.uid, timestamp: firebase.database.ServerValue.TIMESTAMP });
+
+  const setImage = (imageId, base64Img) => {
+    const x = imagesRef.child(`${imageId}`)
+    x.set(base64Img);
+    return x;
+  };
+
+  const getImage = (imageId) => {
+    return imagesRef.child(`${imageId}`).once('value').then(snapshot => {
+      return snapshot.val();
+    })
+  };
   
   useEffect(() => {
     usersRef.on('child_added', snapshot => {
-      
       const excludeSelf = x=> x.key !== self.uid;
       setUserList(oldList => [...oldList.filter(excludeSelf), {
         ...snapshot.val(),
         key: snapshot.key
-      }]
-      );
+      }]);
+      setUserDict(oldDict => ({...oldDict, [snapshot.key]: snapshot.val()}));
+    });
+
+    imagesRef.on('child_added', snapshot => {
+      setImageDict(oldDict => ({...oldDict, [snapshot.key]: snapshot.val()}));
     });
 
     usersRef.on('child_removed', snapshot => {
       const userId = snapshot.key;
-      
-      const excludeSelf = x=> x.key !== userId;
-      setUserList(oldList => oldList.filter(excludeSelf));
+      const exclude = x=> x.key !== userId;
+
+      setUserList(oldList => oldList.filter(exclude));
+      setUserDict(oldDict => {
+        const newDict = {...oldDict};
+        delete newDict[userId];
+        return newDict;
+      });
     });
 
-    console.log("self checkin to firebase", self);
-    const x = usersRef.child(self.uid)
-    x.set({
+    imagesRef.on('child_removed', snapshot => {
+      setImageDict(oldDict => {
+        const newDict = {...oldDict};
+        delete newDict[snapshot.key];
+        return newDict;
+      });
+    });
+
+    imagesRef.on('child_changed', snapshot => {
+      setImageDict(oldDict => ({...oldDict, [snapshot.key]: snapshot.val()}));
+    });
+
+    const me = usersRef.child(self.uid)
+    me.set({
       displayName: self.displayName,
     })
-    x.onDisconnect().remove();
+    me.onDisconnect().remove();
 
     return () => {
-      usersRef.off('child_added');
-      usersRef.off('child_removed');
+      usersRef.off();
+      imagesRef.off()
     }
     // eslint-disable-next-line
   }, []);
@@ -58,13 +93,13 @@ export default function ChatStateProvider({ children, self }) {
   };
 
   const setUserImage = (uid, base64Img) => {
-    const x = usersRef.child(`images/${uid}`)
+    const x = imagesRef.child(`${uid}`)
     x.set(base64Img);
     return x;
   };
 
   const getUserImage = (uid) => {
-    return usersRef.child(`images/${uid}`).once('value').then(snapshot => {
+    return imagesRef.child(`${uid}`).once('value').then(snapshot => {
       return snapshot.val();
     })
   };
@@ -135,6 +170,8 @@ export default function ChatStateProvider({ children, self }) {
       value={{
         userList: userList,
         chatroomList: chatroomList,
+        imageDict: imageDict,
+        userDict: userDict,
         getUserProfile: getUserProfile,
         getPrivateChat: getPrivateChat,
         listenToPrivateChat: listenToPrivateChat,

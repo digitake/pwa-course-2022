@@ -1,7 +1,7 @@
 import App from './components/App.js';
 import { useState, useEffect } from "react";
 import './Profile.css';
-import Avatar from './components/AvatarSelf.js';
+import Avatar from './components/AvatarProfile.js';
 import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
 import { useChatStateContext } from './context/FirebaseChatContextProvider.js';
 import FileBase64 from 'react-file-base64';
@@ -33,23 +33,21 @@ function Profile() {
   return (
     <App>
       <div className="Profile">
-      <input 
-          id="displayname"
-          type="text" 
-          className="textName" 
-          value={name}
-          onChange={e => setName(e.target.value)}
-      />
-      <Avatar name={name} base64Image={base64Image}/>
-      <div className='Chang'>
-        <FileBase64
-          multiple={ false }
-          onDone={ onDone } 
-        />
-      </div>
-        <label className="label1" htmlFor="displayname"/>
-        <input type="button" className='buttonSave' value="Save" onClick={save}/>
-        <input type="button" className='buttonSignout' onClick={() => signOut()} value="Sign-out"/>
+        <div className='cir'></div>
+        <Avatar name={name} base64Image={base64Image}/>     
+          <input 
+            id="displayname"
+            type="text" 
+            className="text text-name-profile" 
+            value={name}
+            onChange={e => setName(e.target.value)}
+          />
+          <FileBase64
+            multiple={ false }
+            onDone={ onDone } 
+          />
+          <input type="button" value="Save" onClick={save}/> 
+          <input type="button" className='buttonSignout' onClick={() => signOut()} value="Sign-out"/>
       </div>
     </App>
   );

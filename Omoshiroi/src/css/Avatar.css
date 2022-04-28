@@ -4,7 +4,6 @@
   border-radius: 50%;
   border: solid 1px gray;
   overflow: hidden;
-  margin-left: 5px;
 }
 
 .avatar.small {
@@ -12,15 +11,22 @@
   height: 40px;
 }
 
-.avatarSelf {
-  width: 500px;
-  height: 500px;
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.ProfileAvatar{
+  width: 400px;
+  height: 400px;
   border-radius: 50%;
   border: groove 10px rgb(51, 255, 0);
   overflow: hidden;
+  position: relative;
 }
 
-.avatarSelf img {
+.ProfileAvatar img {
   width: 100%;
   height: 100%;
   object-fit: cover;

@@ -3,6 +3,7 @@ import App from './components/App';
 import Avatar from './components/Avatar';
 import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import { Link } from 'react-router-dom';
+import Titlebar from './components/Titlebar.js';
 
 function FriendList(){
   const { userList } = useChatStateContext();
@@ -10,12 +11,13 @@ function FriendList(){
   return(
     <App>
       <div className="friend-list">
+        <Titlebar value="Chat"/>    
       {
         userList.map((item) => {
           return (
             <Link to={`/privatechat/${item.key}`} key={item.key}>
               <div className={`friend-list-item ${item.position}`}>
-                <Avatar name={item.displayName}/>
+                <Avatar name={item.displayName} />
                 <div className='friendName'>{item.displayName}</div>
               </div>
             </Link>
