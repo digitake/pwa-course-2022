@@ -5,18 +5,12 @@ function Userlist () {
   const [trayStatus, setTrayStatus] = useState("open");
 
   function onButtonClicked() {
-    if (trayStatus === "closed")
-    {
-      setTrayStatus("open")
-    }else if (trayStatus === "open")
-    {
-      setTrayStatus("closed")
-    }
+    setTrayStatus(oldStatus => oldStatus === "open" ? "closed" : "open");
   }
 
   return (
     <div className={"userlist "+trayStatus}>
-      <div className="close-button" onClick={onButtonClicked}>-</div>
+      <div className="close-button" onClick={onButtonClicked}>x</div>
     </div>
   )
 }

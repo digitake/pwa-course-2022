@@ -9,32 +9,39 @@ import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
 
 function Chat() {
-  const { sendMsg, listenToChatroom } = useChatStateContext();
+  const { sendMsg, listenToChatroom, imageDict, userDict } = useChatStateContext();
   const { authState } = useAuthStateContext();
 
-  let [chatData, setChatData] = useState([
-    {user: "user1", msg: "Hello", position: "left"},
-    {user: "user2", msg: "Hi", position: "right"},
-    {user: "user1", msg: "How are you?", position: "left"},
-    {user: "user2", msg: "I'm fine, thank you. And you?", position: "right"},
-  ]);
+  const [chatData, setChatData] = useState([]);
 
-  const onMsg = (msg) => {
+
+  function onMsg(msg) {
+    setChatData(oldChat => [msg, ...oldChat]);
+  }
+
+  function transformChatData(item) {
+    let displayName = "ไม่ทราบชื่อ(Offline)";
+    if (item.user in userDict && userDict[item.user].displayName){
+      displayName = userDict[item.user].displayName;
+    } else if (item.user === authState.user.uid) {
+      displayName = authState.user.displayName;
+    }
     
-    const mappedValue = {
-      ...msg,
-      key: msg.timestamp || Date.now(),
-      position: msg.user === authState.user.uid ? "right" : "left"
-    };
-    
-    window.scrollTo(0,0);
-    setChatData(oldChat => [mappedValue, ...oldChat]);
+    return ({
+      ...item,
+      key: item.timestamp || Date.now(),
+      displayName: displayName,
+      image: imageDict[item.user] || "",
+      position: item.user === authState.user.uid ? "right" : "left"
+    });
   }
 
   useEffect(() => {
-    const unsubscribePrivateChat = listenToChatroom('mainhall', onMsg);
+    const unsubscribeChatroom = listenToChatroom('mainhall', onMsg);
 
-    return () => {unsubscribePrivateChat()}
+    return () => {
+      unsubscribeChatroom();
+    }
   }, []);
 
 
@@ -43,7 +50,7 @@ function Chat() {
       <Userlist />
       <div className="chat">
         <Titlebar value="Chat"/>        
-        <Chatbox data={chatData}/>
+        <Chatbox data={chatData.map(transformChatData).sort((a,b)=>a.timestamp - b.timestamp)}/>
         <Inputbox onEnter={x=>sendMsg(x,"mainhall")}/>
       </div>
     </App>
