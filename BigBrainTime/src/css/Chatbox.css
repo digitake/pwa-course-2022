@@ -1,13 +1,34 @@
+.chatbox {
+  flex: 1;
+  background-color: #9d9d9d;
+  overflow: auto;
+
+}
+
+.chatbox-item{
+  transition: top 1s opacity 1s display 1s width 1s height 1s;
+}
+
 .chatbox-item.left{
   text-align: left;
   margin-left: 24px;
+  border-bottom: 20px;
+  margin-top: 20px;
 }
 
 .chatbox-item.right{
   text-align: right;
   margin-right: 24px;
+  border-bottom: 20px;
+  margin-top: 20px;
 }
 
 .chatbox-item .avatar{
   display: inline-block;
+}
+
+.displayName{
+  font-size: 20px;
+  font-weight: bold;
+  color: #79b4b7;
 }

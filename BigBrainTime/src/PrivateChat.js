@@ -6,12 +6,14 @@ import Titlebar from './components/Titlebar.js';
 import './Chat.css';
 import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import { useParams } from "react-router-dom";
+import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
 
 function PrivateChat() {
   const { uid } = useParams();
-  const { getUserProfile, sendPrivateMsg, listenToPrivateChat } = useChatStateContext();
+  const { getUserProfile, sendPrivateMsg, listenToPrivateChat, imageDict, userDict } = useChatStateContext();
   const [ friendName, setFriendName ] = useState("");
   const [ chatData, setChatData ] = useState([]);
+  const { authState } = useAuthStateContext();
 
   const onMsg = (msg) => {
     
@@ -23,6 +25,23 @@ function PrivateChat() {
     };
     
     setChatData(oldChat => [mappedValue, ...oldChat]);
+  }
+
+  function transformChatData(item) {
+    let displayName = "ไม่ทราบชื่อ(Offline)";
+    if (item.user in userDict && userDict[item.user].displayName){
+      displayName = userDict[item.user].displayName;
+    } else if (item.user === authState.user.uid) {
+      displayName = authState.user.displayName;
+    }
+    
+    return ({
+      ...item,
+      key: item.timestamp || Date.now(),
+      displayName: displayName,
+      image: imageDict[item.user] || "",
+      position: item.user === authState.user.uid ? "right" : "left"
+    });
   }
 
   useEffect(() => {
@@ -45,7 +64,7 @@ function PrivateChat() {
     <App>
       <div className="chat">
         <Titlebar value={friendName}/>
-        <Chatbox data={chatData}/>
+        <Chatbox data={chatData.map(transformChatData).sort((a,b)=>a.timestamp - b.timestamp)}/>
         <Inputbox onEnter={x=>sendPrivateMsg(x,uid)}/>
       </div>
     </App>

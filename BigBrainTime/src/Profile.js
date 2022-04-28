@@ -7,13 +7,15 @@ import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import FileBase64 from 'react-file-base64';
 
 function Profile() {
-  const { authState, updateDisplayName, signOut } = useAuthStateContext();
+  const { authState, updateDisplayName, signOut, updateBday } = useAuthStateContext();
   const { setUserImage, getUserImage } = useChatStateContext();
   const [name, setName] = useState(authState.user.displayName);
   const [base64Image, setBase64Image] = useState("");
+  
+  //const[Bday,setDate] = useState(authState.user.displayBday);
 
-  let ID = "Magnosteen";
-  let BirthDay = "29/02/2000";
+  let ID = authState.user.uid;
+  let Birthday = "29/02/2002";
 
   useEffect(() =>{
     getUserImage(authState.user.uid).then(imgBase64 => {
@@ -26,6 +28,11 @@ function Profile() {
       authState.user.reload()
       setUserImage(authState.user.uid, base64Image);
     });
+    /*updateBday(Bday).then(_=>{
+      authState.user.reload()
+      setDate(authState.user.Bday,Bday);
+
+    });*/
   }
 
   function onDone(data) {
@@ -51,9 +58,6 @@ function Profile() {
           onDone={ onDone } 
         />
 
-        <input type="button" value="Save" onClick={save}/>
-        <input type="button" onClick={() => signOut()} value="Sign-out"/>
-
         </div>
 
         <div className="Info">
@@ -62,8 +66,15 @@ function Profile() {
           ID
           <div className='List'>{ID}</div>
           BirthDay
-          <div className='List'>{BirthDay}</div>
-        
+          <div className='List'>{Birthday}
+          <label className="label2" htmlFor="displayBday"/>
+          </div>
+        </div>
+
+        <div className="Button">
+          <input type="button" value="Save" onClick={save}/>
+          
+          <input type="button" onClick={() => signOut()} value="Sign-out"/>
         </div>
       </div>
     </App>
