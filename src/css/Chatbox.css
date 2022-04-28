@@ -1,6 +1,6 @@
 .chatbox {
   flex: 1;
-  background-color: silver;
+  background-color: #d9b490;
   overflow: auto;
 }
 
@@ -20,4 +20,21 @@
 
 .chatbox-item .avatar{
   display: inline-block;
+}
+.chatbox-item .username{
+  margin: 5px;
+  text-align: center;
+  background-color: #b08051;
+  color: white;
+  border-radius: 25px;
+  max-width: 80px;
+  min-height: 30px;
+}
+.chatbox-item .text{
+  text-align: center;
+  background-color: #eeeee4;
+  color: black;
+  border-radius: 25px;
+  max-width: 50%;
+  min-height: 30px;
 }

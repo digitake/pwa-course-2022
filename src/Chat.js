@@ -57,7 +57,7 @@ function Chat() {
 
   return (
     <App>
-      <Userlist />
+      {/*<Userlist />*/}
       <div className="chat">
         <Titlebar value="Chat"/>        
         <Chatbox data={chatData.map(transformChatData).sort((a,b)=>a.timestamp - b.timestamp)}/>

@@ -1,6 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
 import firebase from "./FirebaseConfig";
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
+import "../css/App.css";
 
 export const AUTHENTICATION_LOADING = "AUTHENTICATION_LOADING";
 export const AUTHENTICATED = "AUTHENTICATED";
@@ -117,9 +118,8 @@ const uiConfig = {
 
 export const LoginComponent = (callback) => {
   return (
-  <div>
-    <h1>GI472 PWA Chat App</h1>
-    <p>{"Please sign-in:"}</p>
+  <div className="App">
+    <div className="head">HeadAchChat Login</div>
     <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()}/>
   </div>
   )

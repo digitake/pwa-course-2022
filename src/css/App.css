@@ -1,5 +1,5 @@
 .App {
-  background-color: #ddffdd;
+  background-color: #eeeee4;
   width: 100%;
   height: 100%;;
   margin: auto;
@@ -15,5 +15,14 @@
   width: 100%;
   overflow: auto;
   display: flex;
+}
+
+.head{
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  background-color: #d9b490 ;
+  color: white;
+  text-align: center;
+  font-size: 35pt;
+  margin-bottom: 10%;
 }
 

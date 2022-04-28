@@ -17,7 +17,8 @@ function Profile() {
   return (
     <App>
       <div className="Profile">
-        <Avatar name={name}/>
+      <img src="logo512.png" width="192" height="192"/>
+        {/*<Avatar name={name}/>*/}
         <label className="label1" htmlFor="displayname"/>
         <input 
           id="displayname"
@@ -26,8 +27,8 @@ function Profile() {
           value={name}
           onChange={e => setName(e.target.value)}
         />
-        <input type="button" value="Save" onClick={save}/>
-        <input type="button" onClick={() => signOut()} value="Sign-out"/>
+        <input className="button" type="button" value="Save" onClick={save}/>
+        <input className="button signout" type="button" onClick={() => signOut()} value="Sign out"/>
       </div>
     </App>
   );

@@ -5,11 +5,11 @@ function Tabbar () {
   return (
     <div className="tabbar stick-bottom">
       <Link to="/friend-list" className="tabbutton">
-        Friend List
+        Onilne
       </Link>
-      <Link to="/chat" className="tabbutton">
+      {/*<Link to="/privatechat/:uid" className="tabbutton">
         Chat
-      </Link>
+  </Link>*/}
       <Link to="/profile" className="tabbutton">
         Profile
       </Link>

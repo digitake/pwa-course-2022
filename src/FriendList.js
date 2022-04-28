@@ -9,14 +9,15 @@ function FriendList(){
 
   return(
     <App>
-      <div className="friend-list">
+      <div className="friend-list"> 
+      <div className='friendhead'>Friends</div>
       {
         userList.map((item) => {
           return (
             <Link to={`/privatechat/${item.key}`} key={item.key}>
               <div className={`friend-list-item ${item.position}`}>
-                <Avatar name={item.displayName}/>
-                <div>{item.displayName}</div>
+                <Avatar className='friendavartar' name={item.displayName}/>
+                <div className='friendname'>{item.displayName}</div>
               </div>
             </Link>
           )
