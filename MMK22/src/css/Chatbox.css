@@ -1,6 +1,6 @@
 .chatbox {
   flex: 1;
-  background-color: silver;
+  background-color: #686666;
   overflow: auto;
 }
 
@@ -27,10 +27,11 @@
 }
 
 .chatbox-item-text {
+  border: 2px solid #292929;
   background-color: #F8CBA7;
   width: fit-content;
   height: fit-content;
-  padding: 8px;
+  padding: 10px;
   display: inline-block;
   margin-left: 10px;
   border-radius: 25px;
@@ -44,4 +45,9 @@
 
 .chatbox-item.right .chatbox-item-avatar-text-line{
   display: block;
+}
+
+.test  {
+  display: inline-flex;
+  align-items: center;
 }

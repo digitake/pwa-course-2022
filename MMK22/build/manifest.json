@@ -1,6 +1,6 @@
 {
-  "short_name": "My App Class 06",
-  "name": "Create React App Sample",
+  "short_name": "MMK22 chat",
+  "name": "MMK22 app",
   "icons": [
     {
       "src": "favicon.ico",
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#292929",
   "background_color": "#ffffff"
 }
