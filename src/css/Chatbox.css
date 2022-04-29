@@ -1,6 +1,6 @@
 .chatbox {
-  flex: 1;
-  background-color: silver;
+  flex: auto;
+  background-color:#acacac;
   overflow: auto;
 }
 
@@ -8,23 +8,28 @@
   transition: top 1s opacity 1s display 1s width 1s height 1s;
 }
 
+.chatbox-item-text{
+  color: aliceblue;
+  padding: 5px;
+  font-size: 25px;
+  border-radius: 100px;
+  word-break: break-all;
+}
+
 .chatbox-item.left{
   font-size: 20px;
   text-align: left;
-  margin-right: 24px;
-  margin-top: 12px;
-  font-family: fantasy;
+  margin: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .chatbox-item.right{
   font-size: 20px;
   text-align: right;
-  margin-right: 24px;
-  margin-top: 12px;
-  font-family: fantasy;
+  margin: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .chatbox-item .avatar{
-  display: inline-block;
-  margin-bottom: 10px;
+  display:inline-block;
 }

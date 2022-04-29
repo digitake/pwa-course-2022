@@ -4,15 +4,14 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-
   flex:4;
 }
 
 
 
 .inputbox {
-  background-color: gray;
-  display: flex;
+  display:flex;
+  background-color: #222222;
   height: 50px;
 }
 
@@ -26,9 +25,13 @@
   padding-left: 8px;
   padding-right: 8px;
   flex: 1;
+  margin: 10px;
+  border-radius: 100px;
+  background-color:white;
 }
 
 .inputbox .button {
-  font-size: 1em;
+  font-size: 1.25em;
   min-width: 40px;
+  margin: 10px;
 }

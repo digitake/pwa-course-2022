@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "../css/Inputbox.css"
 
 function Inputbox (props) {
   const [value, setValue] = useState(props.value||"");
@@ -26,6 +27,7 @@ function Inputbox (props) {
           props.onChange && props.onChange(e.target.value);
         }}
         onKeyPress={handleKeyPress}
+       
       />
       <input 
         type="button" 
