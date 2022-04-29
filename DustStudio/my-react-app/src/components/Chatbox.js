@@ -1,4 +1,4 @@
-import Avatar from "./Avatar";
+import {Avatar , Stack} from "@mui/material";
 import "../css/Chatbox.css";
 import { useRef, useEffect } from 'react';
 import Chatline from "./Chatline";
@@ -16,11 +16,13 @@ function Chatbox (props) {
       {
         data.map((item,i) => {
           return (<div ref={myRef} key={`${item.key}-${i}`} className={`chatbox-item ${item.position}`}>
-            <div>{item.displayName}</div>
-            <Avatar name={item.displayName}/>
+            <h4>{item.displayName}</h4>
+            <Stack direction="row" spacing={3} className="postHeader" alignItems = "center">
+            <Avatar sx={{ width: 56, height: 56 }}>{item.displayName}</Avatar>
             <div className="chatbox-item-text">
               <Chatline text={item.msg}/>
             </div>
+            </Stack>
           </div>)
         })
       }

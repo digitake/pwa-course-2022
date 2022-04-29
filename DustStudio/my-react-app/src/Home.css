@@ -1,16 +1,17 @@
-.column65 {
+.column75 {
     float: left;
-    width: 65%;
+    width: 75%;
     background-color: rgb(255, 215, 166);
   }
-.column35 {
+.column25 {
     float: left;
-    
-    width: 35%;
-    background-color: rgb(212, 117, 0);
+    width: 25%;
 
   }
   /* Clear floats after the columns */
+.row {
+  width: 100%;
+}
 .row:after {
     content: "";
     display: table;
@@ -33,12 +34,19 @@
   width: 50%;
 
 }
+.Avatar {
+  height: 150px;
+  width: 150px;
+}
 .a {
   margin: 90px;
 }
 .b {
   margin-left: 10px;
 }
-.title {
+.postName {
   margin-left: 40px;
+}
+.title {
+  padding: 20px;
 }

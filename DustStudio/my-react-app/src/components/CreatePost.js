@@ -29,7 +29,7 @@ function CreatePost() {
     await addDoc(postsCollectionRef, {
       title,
       image,
-      author: { name: authState.currentUser.displayName, id: authState.currentUser.uid },
+      author: { name: authState.user.displayName, id: authState.user.uid },
     });
   };
 
@@ -47,8 +47,8 @@ function CreatePost() {
   return (
     <div className="createPostPage">
       <div className="cpContainer">
-        <Stack direction="row" spacing={3}>
-          <Avatar className="inputGp">H</ Avatar>
+        <Stack direction="row" spacing={3} alignItems = "center">
+          <Avatar className="inputGp">{authState.user.displayName}</ Avatar>
           <TextField className="Post" theme = {theme} color="warning" label="Post" variant="filled" 
             placeholder="Title..."
             onChange={(event) => {
@@ -57,7 +57,7 @@ function CreatePost() {
           />
           <input ref = {fileRef} type="file" hidden onChange={addImage} accept="image/*" ></input>
           <IconButton variant="contained" theme = {theme} color="primary" onClick={()=>fileRef.current.click()}><img className="Icon" style={{height : 40 ,width: 40}} src = "SceneMemory_in.png"></img></IconButton>
-          <Button sx={{ width: 148, height: 38 }}  variant="contained" theme = {theme} color="primary" onClick={createPost} > Submit Post</Button>
+          <Button sx={{ width: 156, height: 38 }}  variant="contained" theme = {theme} color="primary" onClick={createPost} > Submit Post</Button>
         </Stack>
         <p >{image && (<img className="Image" style={{height : 100 ,width: 100}}src = {image}/>)}</p>
       </div>

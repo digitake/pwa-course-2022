@@ -8,6 +8,7 @@ function Avatar(props) {
       <img src={base64Image} alt={props.name}/>
     </div>
   );
+  
 }
 
 export default Avatar;

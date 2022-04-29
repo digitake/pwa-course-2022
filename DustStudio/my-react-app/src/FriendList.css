@@ -2,6 +2,16 @@
   display: flex;
   align-items: center;
   padding: 0.5rem;
-  border-bottom: 1px solid #e5e5e5;
   cursor: pointer;
+}
+.Avatar {
+  height: 50%;
+  width: 50%;
+}
+.Block {
+  margin: 10px;
+}
+.title {
+  padding: 20px;
+  background-color: rgb(255, 179, 92);
 }

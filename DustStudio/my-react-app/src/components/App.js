@@ -1,15 +1,16 @@
 import '../css/App.css';
-import Tabbar from './Tabbar.js';
+import TopNav from './TopNav';
 
 function App(props) {
   return (
     <div className="App">
+      <TopNav/>
       <div className="content">
         {props.children}
       </div>
-      <Tabbar/>
     </div>
   );
 }
+
 
 export default App;

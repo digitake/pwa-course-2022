@@ -1,6 +1,6 @@
 .chatbox {
   flex: 1;
-  background-color: silver;
+  background-color: rgb(255, 151, 65);
   overflow: auto;
 }
 
@@ -18,6 +18,16 @@
   margin-right: 24px;
 }
 
+.chatbox-item.right .postHeader {
+  flex-direction: row-reverse;
+}
+
 .chatbox-item .avatar{
   display: inline-block;
+}
+
+.chatbox-item-text {
+  background-color: bisque;
+  padding: 10px;
+  border-radius: 15px;
 }

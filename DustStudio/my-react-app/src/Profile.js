@@ -5,6 +5,7 @@ import Avatar from './components/Avatar.js';
 import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
 import { useChatStateContext } from './context/FirebaseChatContextProvider.js';
 import FileBase64 from 'react-file-base64';
+import { Button, TextField } from '@mui/material';
 
 
 function Profile() {
@@ -34,20 +35,25 @@ function Profile() {
     <App>
       <div className="Profile">
         <Avatar name={name} base64Image={base64Image}/>
+        <a></a>
         <label className="label1" htmlFor="displayname"/>
-        <input 
+        <TextField 
+          color="warning"
           id="displayname"
+          label="Display name."
           type="text" 
-          className="text" 
+          className="text"
+          size="small"
           value={name}
           onChange={e => setName(e.target.value)}
         />
         <FileBase64
           multiple={ false }
           onDone={ onDone } 
+          accept="image/*"
         />
-        <input type="button" value="Save" onClick={save}/>
-        <input type="button" onClick={() => signOut()} value="Sign-out"/>
+          <a></a>
+        <Button color="warning" variant="contained" type="button" onClick={save}>Save</Button>
       </div>
     </App>
   );

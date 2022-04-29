@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Button, TextField} from '@mui/material';
 
 function Inputbox (props) {
   const [value, setValue] = useState(props.value||"");
@@ -15,7 +16,7 @@ function Inputbox (props) {
       <label className="label1" htmlFor="inputmsg">
         {props.label}
       </label>
-      <input
+      <TextField
         id="inputmsg"
         type="text"
         className="text"
@@ -27,15 +28,14 @@ function Inputbox (props) {
         }}
         onKeyPress={handleKeyPress}
       />
-      <input 
-        type="button" 
-        value="Send" 
+      <Button
         onClick={() => {
           props.onEnter(value);
           setValue("");
         }}
         className="button"
-      />    
+        color="warning"
+      >Send</Button>    
     </div>
   )
 }

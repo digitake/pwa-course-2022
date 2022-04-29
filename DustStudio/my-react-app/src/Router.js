@@ -1,7 +1,7 @@
 import { BrowserRouter,Routes,Route } from 'react-router-dom';
 import Home from './Home.js'
 import Profile from './Profile';
-import FriendList from './FriendList';
+import Friends from './Friends';
 import Chat  from './Chat';
 import FriendProfile from './FriendProfile';
 import PrivateChat from './PrivateChat';
@@ -22,10 +22,10 @@ function Router()
           <BrowserRouter>
             <Routes>
               <Route path="/" element = {<Home/>}/>
-              <Route path="/chat" element={<Chat />}/>
+              <Route path="/group" element={<Chat />}/>
               <Route path="/privatechat/:uid" element={<PrivateChat />}/>
               <Route path="/profile" element={<Profile />}/>
-              <Route path="/friend-list" element={<FriendList />}/>
+              <Route path="/friends" element={<Friends />}/>
               <Route path="/friend/:uid" element={<FriendProfile />}/>
               <Route path="/" element={<Profile />}/>
             </Routes>

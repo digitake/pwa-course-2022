@@ -9,11 +9,11 @@
 .inputGp{
     margin: 10px;
     margin-left: 2%;
-    background-color: blanchedalmond;
     border-radius: 50px;
 }
 .cpContainer {
     width: 90%;
+    padding: 10px;
     margin: 10px;
     background-color: blanchedalmond;
     border-radius: 50px;
@@ -26,4 +26,5 @@
     margin-left: 5%;
     margin-right: auto;
     border-radius: 10px;
+    overflow: hidden;
 }

@@ -5,7 +5,10 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  background-color: #fafafa;
+  background-color: #ffdebf;
   padding: 0;
   margin: 0;
+}
+.Profile a{
+  margin: 25px;
 }
