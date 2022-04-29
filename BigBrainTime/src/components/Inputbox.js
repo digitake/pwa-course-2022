@@ -3,7 +3,16 @@ import Option from '../components/Option'
 
 function Inputbox (props) {
   const [value, setValue] = useState(props.value||"");
-  const [trayStatus, setTrayStatus] = useState("open");
+  const [trayStatus, setTrayStatus] = useState("close");
+
+  function onButtonClicked() {
+    if(trayStatus == "open"){
+      setTrayStatus("close");
+    }
+    if (trayStatus == "close"){
+      setTrayStatus("open");
+    }
+  }
 
   function handleKeyPress(event) {
     if(event.key === 'Enter' && value !== ""){
@@ -12,15 +21,10 @@ function Inputbox (props) {
     }
   }
 
-  function onButtonClicked() {
-    setTrayStatus(oldStatus => oldStatus === "open" ? "closed" : "open");
-  }
 
   return (
     <div className="inputbox">
-      <div className={Option +trayStatus}>
-        <img src="/icon-image/plus2-01.png" className="icon" onClick={onButtonClicked} />
-        </div>
+      <div><img src="/icon-image/plus2-01.png"className="icon" onClick={onButtonClicked} /></div>
       <label className="label1" htmlFor="inputmsg">
         {props.label}
       </label>

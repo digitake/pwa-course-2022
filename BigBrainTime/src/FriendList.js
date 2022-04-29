@@ -2,7 +2,6 @@ import { useState } from 'react';
 import './FriendList.css';
 import App from './components/App';
 import Avatar from './components/Avatar';
-//import Userlist from './components/Userlist';
 import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import { Link } from 'react-router-dom';
 import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
@@ -24,7 +23,6 @@ function FriendList(){
       key: item.timestamp || Date.now(),
       displayName: displayName,
       image: imageDict[item.user] || "",
-      position: item.user === authState.user.uid ? "right" : "left"
     });
   }
 

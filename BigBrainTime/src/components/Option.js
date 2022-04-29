@@ -4,9 +4,13 @@ import '../css/Option.css';
 function Option(){
     const [trayStatus, setTrayStatus] = useState("open");
 
-    /*function onButtonClicked() {
-        setTrayStatus(oldStatus => oldStatus === "open" ? "closed" : "open");
-      }*/
+    function onButtonClicked() {
+      if(trayStatus == "open"){
+        setTrayStatus("close");
+    }if (trayStatus == "close"){
+        setTrayStatus("open");
+    }
+    }
 
       return (
         <div className={"option "+trayStatus}>
