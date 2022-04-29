@@ -4,6 +4,7 @@ import Chatbox from './components/Chatbox.js';
 import Inputbox from './components/Inputbox.js';
 import Titlebar from './components/Titlebar.js';
 import './Chat.css';
+import Option from './components/Option.js';
 import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import { useParams } from "react-router-dom";
 import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
@@ -65,6 +66,7 @@ function PrivateChat() {
       <div className="chat">
         <Titlebar value={friendName}/>
         <Chatbox data={chatData.map(transformChatData).sort((a,b)=>a.timestamp - b.timestamp)}/>
+        <Option/>
         <Inputbox onEnter={x=>sendPrivateMsg(x,uid)}/>
       </div>
     </App>

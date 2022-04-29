@@ -3,6 +3,7 @@ import App from './components/App.js';
 import Chatbox from './components/Chatbox.js';
 import Titlebar from './components/Titlebar.js';
 import Inputbox from './components/Inputbox.js';
+import Option from './components/Option';
 import './Chat.css';
 import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
@@ -46,6 +47,7 @@ function Chat() {
       <div className="chat">
         <Titlebar value="Public Chat"/>
         <Chatbox data={chatData.map(transformChatData).sort((a,b)=>a.timestamp - b.timestamp)}/>
+        <Option/>
         <Inputbox onEnter={x=>sendMsg(x,"mainhall")}/>
       </div>
     </App>

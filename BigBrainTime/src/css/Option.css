@@ -1,0 +1,62 @@
+.option{
+position:relative;
+    width: 200px;
+    height: 200px;
+  top: 0px;
+  bottom: 0px;
+  background-color: #9d9d9d;
+  z-index: 100;
+  transition: background-color 2s width 2s left 2s;
+}
+
+.option.closed {
+    width: 0px;
+  }
+
+.option.open {
+    width: 200px;
+    height: 200px;
+    background-color:#9d9d9d;
+  }
+
+  .option .close-button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 14pt;
+    background-color: azure;
+    border: #79b4b7 1px solid;
+    border-radius: 50%;
+    float: right;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .option .close-button:hover {
+    background-color: #fefbf3;
+  }
+  
+  @media screen and (min-width: 768px) {
+    .option {
+      flex: 2;
+      position: relative;
+      background-color: #06668c;
+      width: unset;
+    }
+  
+    .option .close-button {
+      display: none;
+    }
+  }
+
+.option .icon{
+
+    width: 100px;
+    height: 100px;
+
+}
+.option .icon.closed{
+    display: none;
+}

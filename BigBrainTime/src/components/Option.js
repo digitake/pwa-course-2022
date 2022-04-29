@@ -5,15 +5,12 @@ function Option(){
     const [trayStatus, setTrayStatus] = useState("open");
 
     function onButtonClicked() {
-      if(trayStatus == "open"){
-        setTrayStatus("close");
-    }if (trayStatus == "close"){
-        setTrayStatus("open");
-    }
+      setTrayStatus(oldStatus => oldStatus === "open" ? "closed" : "open");
     }
 
       return (
         <div className={"option "+trayStatus}>
+          <div className="close-button" onClick={onButtonClicked}>x</div>
           <img src="/icon-image/pic-01.png" className="icon" />
           <img src="/icon-image/VDO-01.png" className="icon" />
         </div>
