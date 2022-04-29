@@ -9,10 +9,11 @@
 }
 
 .chatbox-item-text{
-  color: aliceblue;
-  padding: 5px;
+  background-color: rgb(247, 247, 247);
+  color: rgb(12, 12, 12);
+  padding: 10px;
   font-size: 25px;
-  border-radius: 100px;
+  border-radius: 10px;
   word-break: break-all;
 }
 

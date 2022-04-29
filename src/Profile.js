@@ -1,6 +1,7 @@
 import App from './components/App.js';
 import {useState} from "react";
 import './Profile.css';
+import Titlebar from './components/Titlebar.js';
 import Avatar from './components/Avatar.js';
 import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
 
@@ -16,7 +17,8 @@ function Profile() {
 
   return (
     <App>
-      <div className="Profile">
+       
+      <div className="Profile">       
         <Avatar name={name}/>
         <label className="label1" htmlFor="displayname"/>
         <input 

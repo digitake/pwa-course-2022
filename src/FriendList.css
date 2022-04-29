@@ -7,10 +7,22 @@
   display: flex;
   align-items: center;
   padding: 0.5rem;
-  border-bottom: 1px solid #e5e5e5;
+  font-size: 50px;
   cursor: pointer;
+  margin: 10px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 100px;
 }
 
 .friend-list-item-text{
   margin-left: 16px ;
+}
+
+.Header{
+  height: 50px;
+  background-color: #222222;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: rgb(214, 0, 0);
 }
