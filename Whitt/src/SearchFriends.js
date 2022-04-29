@@ -1,4 +1,35 @@
-import { useState } from 'react';
+import './SearchFriends.css';
+import App from './components/App';
+import Avatar from './components/Avatar';
+import { useChatStateContext } from './context/FirebaseChatContextProvider';
+import { Link } from 'react-router-dom';
+
+function SearchFriends(){
+  const { userList } = useChatStateContext();
+
+  return(
+    <App>
+      <div className="search-friends">
+      {
+        userList.map((item) => {
+          return (
+            <Link to={`/privatechat/${item.key}`} key={item.key}>
+              <div className={`search-friends-item ${item.position}`}>
+                <Avatar name={item.displayName}/>
+                <div>{item.displayName}</div>
+              </div>
+            </Link>
+          )
+        })
+      }
+      </div>
+    </App>
+  )
+}
+
+export default SearchFriends;
+
+{/*import { useState } from 'react';
 import './SearchFriends.css';
 import App from './components/App';
 import Avatar from './components/Avatar';
@@ -37,4 +68,4 @@ function SearchFriends(){
   )
 }
 
-export default SearchFriends;
+export default SearchFriends;*/}

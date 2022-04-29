@@ -2,6 +2,7 @@ import App from './components/App.js';
 import {useState} from "react";
 import './ProfileApp.css';
 import Avatar from './components/Avatar.js';
+import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
 
 function ProfileApp() {
   const [name, setName] = useState("Unknown");

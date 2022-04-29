@@ -1,18 +1,16 @@
 .chat {
     position: relative;
-    
+    width: 100%;
     height: 100%;
     overflow: hidden;
     display: flex;
     flex-direction: column;
-
-    flex:4;
   }
   
-  /*.chatbox {
+  .chatbox {
     flex: 12;
     background-color: silver;
-  }*/
+  }
   
   .inputbox {
     flex: 1;
@@ -36,5 +34,3 @@
     font-size: 1em;
     min-width: 40px;
   }
-
-  

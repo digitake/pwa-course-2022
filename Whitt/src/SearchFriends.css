@@ -1,3 +1,6 @@
+.search-friends {
+  flex:1
+}
 .search-friends-item {
     display: flex;
     align-items: center;

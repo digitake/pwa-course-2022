@@ -1,5 +1,7 @@
 import Avatar from "./Avatar";
 import "../css/Chatbox.css";
+import { useRef, useEffect } from 'react';
+import Chatline from "./Chatline";
 
 
 function Chatbox (props) {
