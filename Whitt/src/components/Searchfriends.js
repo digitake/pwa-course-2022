@@ -1,4 +1,4 @@
-import Avatar from "./Avatar";
+{/*import Avatar from "./Avatar";
 import "./css/SearchFriends.css";
 
 function SearchFriends (props) {
@@ -18,4 +18,4 @@ function SearchFriends (props) {
     )
 }
 
-export default SearchFriends;
+export default SearchFriends;*/}

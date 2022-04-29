@@ -3,10 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Router from './Router.js';
 import reportWebVitals from './reportWebVitals';
+import AuthStateProvider from './context/FirebaseAuthContextProvider';
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router />
+    <AuthStateProvider>
+      <Router />
+    </AuthStateProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

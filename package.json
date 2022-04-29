@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "firebase": "^9.7.0",
+    "react-file-base64": "^1.0.3",
+    "react-firebaseui": "^6.0.0"
+  }
+}

@@ -20,7 +20,7 @@ function Chat() {
   }
 
   function transformChatData(item) {
-    let displayName = "ไม่ทราบชื่อ(Offline)";
+    let displayName = "Unknown(Offline)";
     if (item.user in userDict && userDict[item.user].displayName){
       displayName = userDict[item.user].displayName;
     } else if (item.user === authState.user.uid) {
@@ -47,7 +47,7 @@ function Chat() {
 
   return (
     <App>
-      <Userlist />
+      
       <div className="chat">
         <Titlebar value="Chat"/>        
         <Chatbox data={chatData.map(transformChatData).sort((a,b)=>a.timestamp - b.timestamp)}/>

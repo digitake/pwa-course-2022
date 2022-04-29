@@ -3,7 +3,7 @@ import App from './components/App.js';
 import Chatbox from './components/Chatbox.js';
 import Inputbox from './components/Inputbox.js';
 import Titlebar from './components/Titlebar.js';
-import './Chat.css';
+import './PrivateChat.css';
 import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import { useParams } from "react-router-dom";
 
@@ -40,6 +40,9 @@ function PrivateChat() {
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [])
+
+   
+
 
   return (
     <App>

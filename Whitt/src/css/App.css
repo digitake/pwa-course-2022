@@ -9,6 +9,12 @@
   
   .App .content {
     flex: 1;
+    top: 0px;
+    bottom: 50px;
+    position: relative;
+    width: 100%;
+    overflow: auto;
+    display: flex;
   }
   
   
