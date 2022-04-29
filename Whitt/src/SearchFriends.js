@@ -5,7 +5,7 @@ import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import { Link } from 'react-router-dom';
 
 function SearchFriends(){
-  const { userList } = useChatStateContext();
+  const { userList,imageDict } = useChatStateContext();
 
   return(
     <App>
@@ -15,7 +15,7 @@ function SearchFriends(){
           return (
             <Link to={`/privatechat/${item.key}`} key={item.key}>
               <div className={`search-friends-item ${item.position}`}>
-                <Avatar name={item.displayName}/>
+              <Avatar name={item.displayName} base64Image={imageDict[item.key]} /> 
                 <div>{item.displayName}</div>
               </div>
             </Link>
@@ -28,6 +28,18 @@ function SearchFriends(){
 }
 
 export default SearchFriends;
+
+
+
+
+
+
+
+
+
+
+
+
 
 {/*import { useState } from 'react';
 import './SearchFriends.css';

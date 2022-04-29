@@ -1,22 +1,23 @@
-.chatbox-item.left{
-    text-align: left;
-    margin-left: 24px;
-  }
-  
-  .chatbox-item.right{
-    text-align: right;
-    margin-right: 24px;
-  }
-  
-  .chatbox-item .avatar{
-    display: inline-block;
-  }
+.chatbox {
+  flex: 1;
+  background-color: silver;
+   overflow: auto;
+}
 
-  .chatbox{
-    height: 80vh;
-    overflow-x: hidden;
-    overflow-y: scroll;
-    display: block;
-    max-height: 80vh;
-  }
+.chatbox-item{
+  transition: top 1s opacity 1s display 1s width 1s height 1s;
+}
   
+.chatbox-item.left{
+  text-align: left;
+  margin-left: 24px;
+}
+  
+.chatbox-item.right{
+  text-align: right;
+  margin-right: 24px;
+}
+  
+.chatbox-item .avatar{
+  display: inline-block;
+}

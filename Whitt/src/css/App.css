@@ -1,33 +1,18 @@
 .App {
-    background-color: #bbbbbb;
-    width: 100%;
-    height: 100%;;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-  }
+  background-color: #bbbbbb;
+  width: 100%;
+  height: 100%;;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
   
-  .App .content {
-    flex: 1;
-    top: 0px;
-    bottom: 50px;
-    position: relative;
-    width: 100%;
-    overflow: auto;
-    display: flex;
-  }
-  
-  
-  .userlist {
-    flex: 1;
-    background-color: #6b6a6a;
-    display: inline-block;
-    text-align: center;
-    font-size: 2em;
-    color: white;
-    margin: 0 5px;
-    padding: 10px;
-    cursor: pointer;
-    text-decoration: none;
-  }
-  
+.App .content {
+  flex: 1;
+  top: 0px;
+  bottom: 60px;
+  position: absolute;
+  width: 100%;
+  overflow: auto;
+  display: flex;
+}

@@ -20,7 +20,7 @@ function Chat() {
   }
 
   function transformChatData(item) {
-    let displayName = "Unknown(Offline)";
+    let displayName = "Disconnest";
     if (item.user in userDict && userDict[item.user].displayName){
       displayName = userDict[item.user].displayName;
     } else if (item.user === authState.user.uid) {
@@ -47,9 +47,8 @@ function Chat() {
 
   return (
     <App>
-      
       <div className="chat">
-        <Titlebar value="Chat"/>        
+        <Titlebar value="All Chat"/>        
         <Chatbox data={chatData.map(transformChatData).sort((a,b)=>a.timestamp - b.timestamp)}/>
         <Inputbox onEnter={x=>sendMsg(x,"mainhall")}/>
       </div>
@@ -58,30 +57,3 @@ function Chat() {
 }
 
 export default Chat;
-
-
-
-
-{/*function Chat() {
-  const [chatData, setChatData] = useState([]);
-
-  const [user, setUser] = useState("Me") 
-  const [position, setPosition] = useState("right")
-const send = (msg) => {
-  chatData.push({user: user, msg: msg, position: position})
-  user === "Me"? setUser("Larppawat"): setUser("Me")
-  position === "right"? setPosition("left"): setPosition("right")
-setChatData([...chatData])
-}
-  return (
-    <App>
-      <div className="chat">
-        <Userlist/>
-        <Chatbox data={chatData}/>
-        <Inputbox onClick = {send}/>
-      </div>
-    </App>
-  );
-}
-
-export default Chat;*/}

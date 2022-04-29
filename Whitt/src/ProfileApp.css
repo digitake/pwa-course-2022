@@ -3,16 +3,15 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  height: 40%;
+  height: 100%;
   background-color: gray;
   padding: 0;
   margin: 0;
-  
 }
 
 .Description{
   width: 100%;
-  height: 100px;
+  height: 100%;
 
 }
 
@@ -22,16 +21,17 @@
   align-items: center;
   width: 100%;
   height: 100%;
-  padding: 0 10vw;
+  padding: 0 5vw;
   margin: 0;
-  column-gap: 40px;
+  column-gap: 10px;
   max-width: 100%;
   box-sizing: border-box;
+  
 }
 
 .Photo{
-  width: 150px;
-  height: 300px;
+  width: 50px;
+  height: 250px;
   background-color: #797979;
   display: flex;
   flex-direction: row;
@@ -47,13 +47,13 @@
   flex-direction: row;
   align-items: center;
   justify-content: start;
-  height: 60%;
+  height: 10%;
   width: fit-content;
   padding: 0;
   margin: 0;
-  column-gap: 40px;
+  column-gap: 10px;
   overflow-x: scroll;
-  min-height: 330px;
+  min-height: 300px;
   max-width: 100%;
 }
 
