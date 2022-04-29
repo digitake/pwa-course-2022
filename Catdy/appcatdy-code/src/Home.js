@@ -16,7 +16,7 @@ function Home(){
             <div  className= "dog" >รูปของน้องสัตว์เลี้ยง </div>
             <img src ="http://www.felinepkd.com/wp-content/uploads/2018/09/1384861700-0003-o.jpg" height="300" width="500" ></img>
             <div className= "box"> "น้อง Lucky" เป็นน้องแมวพันธ์ุ เปอร์เซียดูแลง่าย  น้องมีความซนและขี้เล่น น้องจะทานอาหาร 3 เวลาต้องการที่จะหาคนรับฝากเลี้ยงน้องเป็นเวลา 3 วัน สอบถามเพิ่มเติมทางช่องข้อความเลยนะครับ </div>
-            <input type="button" value = "Confirm" onClick/>
+            <input type="button" value = "Confirm" onClick />
             <Link to="/chat" className="tabbutton"> Chat</Link>
             
         </App>
