@@ -6,14 +6,16 @@ import Titlebar from './components/Titlebar.js';
 import TabbarTop from './components/TabbarTop.js';
 import './Chat.css';
 import { useChatStateContext } from './context/FirebaseChatContextProvider';
+import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
 import { useParams } from "react-router-dom";
 import { Link } from 'react-router-dom';
 
 function PrivateChat() {
   const { uid } = useParams();
-  const { getUserProfile, sendPrivateMsg, listenToPrivateChat } = useChatStateContext();
+  const { getUserProfile, sendPrivateMsg, listenToPrivateChat, imageDict, userDict } = useChatStateContext();
   const [ friendName, setFriendName ] = useState("");
   const [ chatData, setChatData ] = useState([]);
+  const { authState } = useAuthStateContext();
 
   const onMsg = (msg) => {
     
@@ -21,10 +23,28 @@ function PrivateChat() {
       ...msg,
       key: msg.timestamp || Date.now(),
       displayName: friendName,
-      position: msg.user === uid ? "right" : "left"
+      position: msg.user === uid ? "right" : "left",
+      image: imageDict[msg.user]
     };
     
     setChatData(oldChat => [mappedValue, ...oldChat]);
+  }
+
+  function transformChatData(item) {
+    let displayName = "/Offline";
+    if (item.user in userDict && userDict[item.user].displayName){
+      displayName = userDict[item.user].displayName;
+    } else if (item.user === authState.user.uid) {
+      displayName = authState.user.displayName;
+    }
+    
+    return ({
+      ...item,
+      key: item.timestamp || Date.now(),
+      displayName: displayName,
+      image: imageDict[item.user] || "",
+      position: item.user === authState.user.uid ? "right" : "left"
+    });
   }
 
   useEffect(() => {
@@ -47,7 +67,7 @@ function PrivateChat() {
     <App>
       <div className="chat">
         <TabbarTop value={friendName}/>
-        <Chatbox data={chatData}/>
+        <Chatbox data={chatData.map(transformChatData).sort((a,b)=>a.timestamp - b.timestamp)}/>
         <Inputbox onEnter={x=>sendPrivateMsg(x,uid)}/>
       </div>
     </App>
@@ -55,4 +75,3 @@ function PrivateChat() {
 }
 
 export default PrivateChat;
-
