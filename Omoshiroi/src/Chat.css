@@ -35,5 +35,8 @@
 
 .button {
   background: skyblue;
-  border: solid rgb(113, 171, 194) 3px;
+}
+
+.button:hover{
+  background: rgb(111, 195, 228);;
 }

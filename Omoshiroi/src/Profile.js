@@ -33,7 +33,6 @@ function Profile() {
   return (
     <App>
       <div className="Profile">
-        <div className='cir'></div>
         <Avatar name={name} base64Image={base64Image}/>     
           <input 
             id="displayname"
@@ -42,12 +41,16 @@ function Profile() {
             value={name}
             onChange={e => setName(e.target.value)}
           />
+          <div className='Up-Save'>
           <FileBase64
             multiple={ false }
             onDone={ onDone } 
           />
-          <input type="button" value="Save" onClick={save}/> 
-          <input type="button" className='buttonSignout' onClick={() => signOut()} value="Sign-out"/>
+          <input type="button" className='buttonSave' onClick={save}/>
+          <div className='SAVETEXT'>SAVE</div>
+          </div>
+          <input type="button" className='buttonSignout' onClick={() => signOut()}/>
+          <div className='SIGNOUTTEXT'>Sign-out</div>
       </div>
     </App>
   );
