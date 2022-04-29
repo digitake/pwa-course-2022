@@ -21,3 +21,14 @@
   margin: 10px;
   border: solid 2.5px #1E4E8A;
 }
+
+.Button {
+  background: transparent;
+  border: solid white;
+  border-radius: 20px 20px;
+  font-family: cursive;
+  color: white;
+  cursor: pointer;
+  margin: 5px;
+  font-size: 15px;
+}
