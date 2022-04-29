@@ -83,6 +83,9 @@ export default function AuthStateProvider({ children }) {
   const sendEmailVerification = (callback, onError) => firebase.auth().sendEmailVerification(callback, onError);
   const userHasOnlyEmailProvider = () => firebase.auth().userHasOnlyEmailProvider();
 
+  
+
+
   return (
     <AuthStateContext.Provider
       value={{
@@ -107,7 +110,7 @@ export const useAuthStateContext = () => useContext(AuthStateContext);
 const uiConfig = {
   // Popup signin flow rather than redirect flow.
   signInFlow: 'popup',
-  signInSuccessUrl: '/profile',
+  signInSuccessUrl: '/friend-list',
   signInOptions: [
     firebase.auth.EmailAuthProvider.PROVIDER_ID,
   ],

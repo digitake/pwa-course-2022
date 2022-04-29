@@ -45,7 +45,7 @@ function PrivateChat() {
   return (
     <App>
       <div className="center">
-      <div className="chatbox ">
+      <div className="chat ">
         <Chatbox data={chatData}/>
         
       </div>

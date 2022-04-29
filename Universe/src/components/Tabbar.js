@@ -1,6 +1,7 @@
 import '../css/Tabbar.css';
 import { Link } from 'react-router-dom';
 import { useAuthStateContext } from '../context/FirebaseAuthContextProvider';
+import  'firebase/compat/database';
 
 
 
@@ -8,7 +9,8 @@ import { useAuthStateContext } from '../context/FirebaseAuthContextProvider';
 
 function Tabbar () {
 
-  const { signOut } = useAuthStateContext();
+  const { signOut,showDisplayName } = useAuthStateContext();
+  
 
   return (
     <div className="tabbar">
@@ -32,7 +34,6 @@ function Tabbar () {
 
                 <p></p>
                 
-               <h2> <div align = "center" className="colorgray" > Name (Display) </div> </h2>
               
                 <div></div>
                     <Link to="/friend-list" className="tabbutton">
