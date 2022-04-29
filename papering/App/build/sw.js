@@ -1,4 +1,4 @@
-const VERSION = 3;
+const VERSION = 6;
 
 self.addEventListener('install', function(event){
     console.log("[SW] installing server worker version " + VERSION);

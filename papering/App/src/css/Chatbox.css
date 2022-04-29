@@ -2,10 +2,13 @@
   flex: 1;
   background-color: #feefec;
   overflow: auto;
+  color: #e07674;
 }
 
 .chatbox-item{
-  transition: top 1s opacity 1s display 1s width 1s height 1s;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  transition: top 1s;
 }
 
 .chatbox-item.left{
@@ -22,7 +25,53 @@
   display: inline-block;
 }
 
-.chatbox-item .user{
+.chatbox-item-user.left{
   display: flex;
   flex-direction: row;
+  font-size: 20px;
+}
+
+.chatbox-item-user.right{
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 20px;
+}
+
+.chatbox-item-user .text{
+  display: flex;
+  flex-direction: column;
+  padding-top: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.chatbox-item .username{
+  color: #c15853;
+  font-weight: bold;
+}
+
+.chatbox-item-text.left{
+  font-size: 18px;
+  background-color: #ffb284;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-bottom-right-radius: 25px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+.chatbox-item-text.right{
+  font-size: 18px;
+  background-color: #e79796;
+  color: white;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-bottom-left-radius: 25px;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
 }

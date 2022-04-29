@@ -21,8 +21,9 @@
 }
 
 .name{
-  height: 20px;
-  font-size: 15px;
+  margin: 10px;
+  height: 30px;
+  font-size: 20px;
   padding: 0px 20px;
   flex: 1;
   border-radius: 25px;

@@ -15,6 +15,7 @@
 ::-webkit-scrollbar-track {
   background: #feefec;
   height: 70%;
+  transition: background-color 0.5s;
 }
 
 /* Handle */
@@ -23,6 +24,7 @@
   border-radius: 10px;
   border: 5px solid rgba(0, 0, 0, 0);
   background-clip: padding-box;
+  transition: background-color 0.5s;
 }
 
 /* Handle on hover */
@@ -30,4 +32,5 @@
   background-color: #e79796;
   border: 6px solid rgba(0, 0, 0, 0);
   background-clip: padding-box;
+  transition: background-color 0.5s;
 }

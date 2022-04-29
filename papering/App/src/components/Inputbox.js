@@ -5,7 +5,7 @@ function Inputbox (props) {
   const [value, setValue] = useState(props.value||"");
 
   function handleKeyPress(event) {
-    if(event.key === 'Enter' && value !== ""){
+    if(event.key === 'Enter' && value.replace(/ /g, "").length){
       props.onEnter(value);
       setValue("");
     }
@@ -23,6 +23,7 @@ function Inputbox (props) {
         value={value}
         autoComplete="off"
         onChange={e => {
+            e.preventDefault();
           setValue(e.target.value);
           props.onChange && props.onChange(e.target.value);
         }}
@@ -32,8 +33,10 @@ function Inputbox (props) {
         type="button" 
         value=">" 
         onClick={() => {
-          props.onEnter(value);
-          setValue("");
+            if(value.replace(/ /g, "").length){
+                props.onEnter(value);
+                setValue("");
+            }
         }}
         className="button"
       />

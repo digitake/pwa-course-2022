@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import Topbar from "./components/Topbar";
 
 function FriendList() {
-  const { userList, imageDict, userDict } = useChatStateContext();
+  const { userList, imageDict } = useChatStateContext();
 
   return (
     <App>

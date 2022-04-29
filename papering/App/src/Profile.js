@@ -4,7 +4,7 @@ import "./Profile.css";
 import Avatar from "./components/Avatar.js";
 import { useAuthStateContext } from "./context/FirebaseAuthContextProvider";
 import { useChatStateContext } from "./context/FirebaseChatContextProvider.js";
-import FileBase64 from "react-file-base64";
+import FileBase64 from "./components/ImageUpload.js";
 import Topbar from "./components/Topbar";
 
 function Profile() {
