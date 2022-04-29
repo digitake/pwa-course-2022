@@ -8,7 +8,8 @@ const firebaseConfig = {
   storageBucket: "pwa-course-2022-7e363.appspot.com",
   messagingSenderId: "1059156620326",
   appId: "1:1059156620326:web:f94dc505f36976a23962e7",
-  measurementId: "G-WGS9ZJ67L2"
+  measurementId: "G-WGS9ZJ67L2",
+  databaseURL: "https://pwa-course-2022-7e363-default-rtdb.asia-southeast1.firebasedatabase.app/"
 };
 
 firebase.initializeApp(firebaseConfig);
