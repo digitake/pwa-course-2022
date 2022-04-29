@@ -1,0 +1,8 @@
+.titlebar {
+  height: 50px;
+  background-color: #2c49bb;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  color: aliceblue;
+}

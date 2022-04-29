@@ -1,11 +1,11 @@
 .Profile {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-content: top;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   height: 100%;
-  background-color: #ffd3be;
+  background-color: #fafafa;
   padding: 0;
   margin: 0;
 }
