@@ -3,13 +3,15 @@ import './FriendList.css';
 import Avatar from './components/Avatar';
 import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import { Link } from 'react-router-dom';
+import Nav from './components/Nav';
+import Titlebar from './components/Titlebar';
 
 function FriendList(){
   const { userList } = useChatStateContext();
 
   return(
     <div className="friend-list">
-    <h2>Friends List</h2>
+    <Titlebar value="Friend List"/>  
     {
       userList.map((item) => {
         return (
@@ -22,6 +24,7 @@ function FriendList(){
         )
       })
     }
+    <Nav/>
     </div>
   )
 }

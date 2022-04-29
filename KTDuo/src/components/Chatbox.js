@@ -1,7 +1,6 @@
 import Avatar from "./Avatar";
 import "../css/Chatbox.css";
 import { useRef, useEffect } from 'react';
-import { Link } from "react-router-dom";
 import Chatline from "./Chatline";
 
 function Chatbox (props) {
@@ -17,13 +16,8 @@ function Chatbox (props) {
       {
         data.map((item,i) => {
           return (<div ref={myRef} key={`${item.key}-${i}`} className={`chatbox-item ${item.position}`}>
-            {/* <div className="chatbox-name-text">{item.displayName}</div>
-            <Avatar name={item.displayName}/>
-            <div className="chatbox-item-text">
-              <Chatline text={item.msg}/>
-            </div> */}
-            <div>{item.displayName}</div>
-            <Avatar name={item.displayName}/>
+            <div className="name">{item.displayName}</div>
+            <Avatar name={item.displayName} base64Image={item.image}/>
             <div className="chatbox-item-text">
               <Chatline text={item.msg}/>
             </div>

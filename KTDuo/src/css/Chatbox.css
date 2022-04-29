@@ -23,9 +23,11 @@
   padding: 5px 20px;
   border-radius: 15px;
   background-color: white;
+
 }
 
 .chatbox-item.left{
+  
   padding: 20px;
   text-align: left;
   background-color: #b5a5c0;
@@ -34,6 +36,7 @@
 }
 
 .chatbox-item.right{
+  
   padding: 20px;
   background-color: #f3aaa9;
   text-align: right;
@@ -45,6 +48,7 @@
   display: inline-block;
 }
 
-
+@media screen and (max-width: 480px) {
+}
 
 

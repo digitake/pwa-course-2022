@@ -1,7 +1,7 @@
 .chat {
   position: relative;
   width: 100%;
-  height: auto;
+  height: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -14,11 +14,6 @@
   display: flex;
   padding: 20px 100px;
   margin-bottom: 10px;
-  justify-content: center;
-}
-
-input#inputmsg {
-  margin-bottom: 70px;
 }
 
 .inputbox .label1 {
@@ -36,10 +31,4 @@ input#inputmsg {
 .inputbox .button {
   font-size: 1em;
   min-width: 40px;
-}
-
-@media screen and (max-width: 480px) {
-  input#inputmsg {
-    margin-bottom: 70px;
-}
 }
