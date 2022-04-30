@@ -28,8 +28,8 @@ function Profile() {
           value={name}
           onChange={e => setName(e.target.value)}
         />
-        <input type="button" value="Save" onClick={save}/>
-        <input type="button" onClick={() => signOut()} value="Sign-out"/>
+        <input type="button" value="Save" onClick={save} className="Button"/>
+        <input type="button" onClick={() => signOut()} value="Sign-out" className="Button"/>
       </div>
     </App>
   );
