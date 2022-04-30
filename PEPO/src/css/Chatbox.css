@@ -1,7 +1,9 @@
 .chatbox {
   flex: 1;
   background-color: rgb(253, 197, 192);
-  overflow: auto;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .chatbox-item{

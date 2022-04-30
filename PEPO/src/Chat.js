@@ -9,23 +9,11 @@ import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
 
 function Chat() {
-  const { userList, sendMsg, listenToChatroom } = useChatStateContext();
+  const { sendMsg, listenToChatroom, imageDict, userDict } = useChatStateContext();
   const { authState } = useAuthStateContext();
 
   const [chatData, setChatData] = useState([]);
-  const [usersDict, setUsersDict] = useState({});
 
-  function userListToDict(userList) {
-    return userList.reduce((dict, item) => {
-      dict[item.key] = item;
-      return dict;
-    }, {});
-  }
-
-  useEffect(() => {
-    const x = userListToDict(userList);
-    setUsersDict(_=>x);
-  },[userList])
 
   function onMsg(msg) {
     setChatData(oldChat => [msg, ...oldChat]);
@@ -33,15 +21,17 @@ function Chat() {
 
   function transformChatData(item) {
     let displayName = "(Offline)";
-    if (item.user in usersDict && usersDict[item.user].displayName){
-      displayName = usersDict[item.user].displayName;
+    if (item.user in userDict && userDict[item.user].displayName){
+      displayName = userDict[item.user].displayName;
     } else if (item.user === authState.user.uid) {
       displayName = authState.user.displayName;
     }
+    
     return ({
       ...item,
       key: item.timestamp || Date.now(),
       displayName: displayName,
+      image: imageDict[item.user] || "",
       position: item.user === authState.user.uid ? "right" : "left"
     });
   }

@@ -4,8 +4,7 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
-
-  flex:4;
+  flex:1;
 }
 
 
