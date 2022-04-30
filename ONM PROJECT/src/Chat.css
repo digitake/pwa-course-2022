@@ -1,0 +1,67 @@
+.chat {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  flex:4;
+}
+
+
+
+.inputbox {
+  background-color: #deb5f7;
+  display: flex;
+  height: 50px;
+}
+
+.inputbox .label1 {
+  font-size: 1.5em;
+  text-align: right;
+}
+
+.inputbox .inputname {
+  font-family: 'Helvetica';
+  font-size: 1.5em;
+  text-align: right;
+}
+
+/* Inputbox in Private Chat Page */
+.inputbox .text {
+  font-size: 1em;
+  padding-left: 15px;
+  padding-right: 8px;
+  flex: 1;
+  border-radius: 50px;
+  width: auto;
+  height: 36px;
+  border: 0px;
+  margin: auto;
+  margin-left: 10px;
+}
+
+/* Send Button in Private Chat Page */
+.inputbox .button {
+  font-size: 1em;
+  font-family: sans-serif;
+  font-weight: bold;
+  position: relative;
+  margin-top: 5px;
+  margin-left: 5px;
+  margin-right: 5px;
+  width: 50px;
+  height: 40px;
+  border-radius: 50px;
+  border: 0px;
+
+}
+
+.inputbox .input-textboxt-align{
+  background: #fff;
+  width: 340px;
+  height: 50;
+  border: none;
+  outline: none;
+  padding: 0 25px;
+  border-radius: 25px 0 0 25px;
+}
