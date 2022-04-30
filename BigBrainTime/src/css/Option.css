@@ -7,6 +7,7 @@ position:relative;
   background-color: #9d9d9d;
   z-index: 100;
   transition: background-color 2s width 2s left 2s;
+  border-radius: 10px;
 }
 
 .option.closed {
