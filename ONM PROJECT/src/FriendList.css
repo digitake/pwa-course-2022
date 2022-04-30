@@ -1,0 +1,21 @@
+.friend-list {
+  flex:1 
+}
+
+.friend-list-item {
+  position: bottom;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  /* border-bottom: 2px solid yellow; */
+  cursor: pointer;
+}
+
+.friend-list-text-align{
+  font-size: 1em;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.friend-list-bg{
+  background-color: rgb(247, 247, 199);
+}
