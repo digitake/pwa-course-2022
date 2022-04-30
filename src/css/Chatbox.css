@@ -1,8 +1,20 @@
 .chatbox {
+  flex-direction: column;
+  display: flex;
   flex: 1;
-  background-color: silver;
+  background-color: #d9b490;
   overflow: auto;
 }
+
+.privatechatbox {
+  scroll-behavior: auto;
+  flex-direction: column-reverse;
+  display: flex;
+  flex: 1;
+  background-color: #d9b490;
+  overflow: auto;
+}
+
 
 .chatbox-item{
   transition: top 1s opacity 1s display 1s width 1s height 1s;
@@ -10,14 +22,27 @@
 
 .chatbox-item.left{
   text-align: left;
-  margin-left: 24px;
 }
 
 .chatbox-item.right{
   text-align: right;
-  margin-right: 24px;
 }
 
 .chatbox-item .avatar{
   display: inline-block;
+}
+
+.bg{
+  background-color: #eeeee4;
+  border-radius: 25px;
+  min-height: 100px;
+  padding: 20px;
+  align-items: center;
+  margin: 5px;
+}
+.chatbox-item-text{
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 1em;
+  color: black;
+ 
 }

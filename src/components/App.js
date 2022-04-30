@@ -1,6 +1,7 @@
 import '../css/App.css';
 import Tabbar from './Tabbar.js';
-
+import React from 'react'
+import ReactDOM from 'react-dom'
 function App(props) {
   return (
     <div className="App">

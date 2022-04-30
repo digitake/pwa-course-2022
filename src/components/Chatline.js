@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 function Chatline(props) {
   let text = props.text;
@@ -27,9 +29,28 @@ function Chatline(props) {
         .then(data => setElement(data.gender));
     }
     else if (text.startsWith("/randomfact")) {
+      fetch("https://uselessfacts.jsph.pl/random.json?language=en")
+      .then(res => res.json())
+      .then(data => setElement(data.text + " source:" + data.source));
       // ex10-01 here: Implement randomfact using fetch & promise
       // https://uselessfacts.jsph.pl/random.json?language=en
 
+    }
+    else if (text.startsWith("/nationalize")) {
+      const [, name] = text.split(" ");
+      fetch("https://api.nationalize.io/?name=" + name)
+        .then(res => res.json())
+        .then(data => setElement(data.country));
+    }
+    else if (text.startsWith("/randomdog")) {
+      fetch("https://dog.ceo/api/breeds/image/random")
+        .then(res => res.json())
+        .then(data => setElement(data.message));
+    }
+    else if (text.startsWith("/whatdo")) {
+      fetch("https://www.boredapi.com/api/activity")
+        .then(res => res.json())
+        .then(data => setElement("You should " + data.activity));
     }
   };
 

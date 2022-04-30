@@ -1,5 +1,4 @@
 import Avatar from "./Avatar";
-import username from "./Tabbar"
 import "../css/Chatbox.css";
 import { useRef, useEffect } from 'react';
 import Chatline from "./Chatline";
@@ -14,7 +13,7 @@ function Chatbox (props) {
   },[data])
 
   return (
-    <div className="chatbox">
+    <div className="privatechatbox">
       {
         data.map((item,i) => {
           return (<div ref={myRef} key={`${item.key}-${i}`} className={`chatbox-item ${item.position}`}>
