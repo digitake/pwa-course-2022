@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 function Tabbar () {
   return (
     <div className="tabbar stick-bottom">
-      <Link to="/friend" className="tabbutton">
+      <Link to="/friend-list" className="tabbutton">
         Friend List
       </Link>
       <Link to="/chat" className="tabbutton">

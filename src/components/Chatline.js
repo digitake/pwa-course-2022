@@ -26,7 +26,7 @@ function Chatline(props) {
         .then(res => res.json())
         .then(data => setElement(data.gender));
     }
-
+   
   };
 
   useEffect(() => {

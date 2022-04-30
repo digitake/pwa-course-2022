@@ -9,7 +9,7 @@ const firebaseConfig = {
   messagingSenderId: "967644458652",
   appId: "1:967644458652:web:6f71ad83773786006b8759",
   measurementId: "G-Z7Z74R200B",
-  databaseURL: "https://gi472-pwa-course-2022-default-rtdb.asia-southeast1.firebasedatabase.app"
+  databaseURL: "https://pwa-229k-default-rtdb.asia-southeast1.firebasedatabase.app/"
 };
 
 firebase.initializeApp(firebaseConfig);

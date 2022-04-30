@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import App from './App.js';
+import App from './components/App.js';
 import Chatbox from './components/Chatbox.js';
 import Inputbox from './components/Inputbox.js';
 import Titlebar from './components/Titlebar.js';
-import './css/Chat.css';
+import './Chat.css';
 import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import { useParams } from "react-router-dom";
 

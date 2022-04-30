@@ -1,5 +1,5 @@
-import './App.css';
-import Tabbar from './components/Tabbar.js';
+import '../css/App.css';
+import Tabbar from './Tabbar.js';
 
 function App(props) {
   return (

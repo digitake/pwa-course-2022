@@ -1,10 +1,10 @@
 import { useEffect, useState } from 'react';
-import App from './App.js';
+import App from './components/App.js';
 import Chatbox from './components/Chatbox.js';
 import Titlebar from './components/Titlebar.js';
 import Userlist from './components/Userlist.js';
 import Inputbox from './components/Inputbox.js';
-import './css/Chat.css';
+import './Chat.css';
 import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
 

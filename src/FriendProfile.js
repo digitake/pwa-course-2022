@@ -1,4 +1,4 @@
-import App from './App.js';
+import App from './components/App.js';
 import { useState, useEffect} from "react";
 import './Profile.css';
 import Avatar from './components/Avatar.js';
