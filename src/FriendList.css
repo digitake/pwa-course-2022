@@ -1,11 +1,9 @@
 .friend-list {
   background-color: #d9b490;
   flex:1
-  
 }
 
 .friend-list-item {
-  
   font-size: 20pt;
   color: white;
   display: flex;
@@ -22,7 +20,6 @@
   font-size: 40pt;
   text-align: center;
 }
-
 
 .friendname{
   font-family: 'IBM Plex Sans Thai', sans-serif;

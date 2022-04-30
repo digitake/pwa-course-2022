@@ -1,5 +1,6 @@
 import '../css/Titlebar.css';
-
+import React from 'react'
+import ReactDOM from 'react-dom'
 function Titlebar ({value}) {
   return (
     <div className="titlebar">
@@ -7,5 +8,4 @@ function Titlebar ({value}) {
     </div>
   )
 }
-
 export default Titlebar;

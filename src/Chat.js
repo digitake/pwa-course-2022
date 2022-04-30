@@ -7,7 +7,8 @@ import Inputbox from './components/Inputbox.js';
 import './Chat.css';
 import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
-
+import React from 'react'
+import ReactDOM from 'react-dom'
 function Chat() {
   const { userList, sendMsg, listenToChatroom } = useChatStateContext();
   const { authState } = useAuthStateContext();
@@ -32,7 +33,7 @@ function Chat() {
   }
 
   function transformChatData(item) {
-    let displayName = "ไม่ทราบชื่อ(Offline)";
+    let displayName = "This Person offline";
     if (item.user in usersDict && usersDict[item.user].displayName){
       displayName = usersDict[item.user].displayName;
     } else if (item.user === authState.user.uid) {

@@ -1,4 +1,6 @@
 .titlebar {
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 35pt;
   height: 50px;
   background-color: #b08051;
   display: flex;

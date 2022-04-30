@@ -4,8 +4,12 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  scroll-behavior: auto;
 
   flex:4;
+}
+.privatechat{
+  flex-direction: column;
 }
 
 .inputbox {
@@ -20,6 +24,7 @@
 }
 
 .inputbox .text {
+  margin:5px;
   border-radius: 25px;
   border: none;
   outline: none;
@@ -27,6 +32,7 @@
   font-size: 1em;
   padding-left: 8px;
   padding-right: 8px;
+  max-height: 60px;
   flex: 1;
 }
 

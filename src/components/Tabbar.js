@@ -1,15 +1,16 @@
 import '../css/Tabbar.css';
 import { Link } from 'react-router-dom';
-
+import React from 'react'
+import ReactDOM from 'react-dom'
 function Tabbar () {
   return (
     <div className="tabbar stick-bottom">
       <Link to="/friend-list" className="tabbutton">
-        Onilne
+        Online
+  </Link>
+      <Link to="/chat" className="tabbutton">
+        ห้องระบายรวม
       </Link>
-      {/*<Link to="/privatechat/:uid" className="tabbutton">
-        Chat
-  </Link>*/}
       <Link to="/profile" className="tabbutton">
         Profile
       </Link>

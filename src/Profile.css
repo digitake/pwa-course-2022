@@ -30,6 +30,7 @@
 
 .text{
   font-family: 'IBM Plex Sans Thai', sans-serif;
+  padding: 5px 5px;
   outline: none;
   margin: 10px;
   border: none;
@@ -38,3 +39,22 @@
   min-width: 100px;
   min-height: 40px;
 }
+
+.profilepic{
+  width: 50px;
+  height: 50px;
+  background-color: White;
+  border-radius: 25px;
+}
+
+.quote{
+  padding: 20px 0;
+  text-align: center;
+  font-family: 'IBM Plex Sans Thai', sans-serif;
+  font-size: 1em;
+  height: 20px;
+  width: 50%;
+  border-radius: 25px;
+  background-color: white;
+}
+
