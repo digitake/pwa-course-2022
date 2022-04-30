@@ -1,4 +1,7 @@
 {
   "projects": {
-  }
+    "default": "subchatapp",
+    "test": "subchatapp2"
+  },
+  "targets": {}
 }

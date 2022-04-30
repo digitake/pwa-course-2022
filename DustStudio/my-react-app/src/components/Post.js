@@ -37,7 +37,7 @@ function Post(){
                             <a className="b"></a>
                             <Avatar>{post.author.name}</Avatar>
                             <h2>{post.author.name}</h2>
-                            <p>{JSON.stringify(new Date(post.timestamp))}</p>
+                            <p>{new Date(post.timestamp).toString()}</p>
                             <div className="deletePost">
                                     {post.author.id === authState.user.uid && (
                                     <IconButton onClick={() => {deletePost(post.id);}}><Delete></Delete></IconButton>
