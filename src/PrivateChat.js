@@ -1,59 +1,57 @@
-import { useState, useEffect } from 'react';
-import { Link } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import App from './components/App.js';
+import Chatbox from './components/Privatechatbox.js';
+import Inputbox from './components/Inputbox.js';
+import Titlebar from './components/Titlebar.js';
+import './Chat.css';
+import { useChatStateContext } from './context/FirebaseChatContextProvider';
+import { useParams } from "react-router-dom";
 import React from 'react'
 import ReactDOM from 'react-dom'
 
-function Chatline(props) {
-  let text = props.text;
+function PrivateChat() {
+  const { uid } = useParams();
+  const { getUserProfile, sendPrivateMsg, listenToPrivateChat } = useChatStateContext();
+  const [ friendName, setFriendName ] = useState("");
+  const [ chatData, setChatData ] = useState([]);
 
-  const [element, setElement] = useState(text);
-
-  function transform(text) {
-    if (text.startsWith("/link")) {
-      setElement(<Link to={text}>{text}</Link>);
-    }
-    else if (text.startsWith("/embed")) {
-      const html = text.split(" ").slice(1).join(" ");
-      setElement(<div dangerouslySetInnerHTML={{ __html: html }}></div>);
-    }
-    else if (text.startsWith("/age")) {
-      const [, name] = text.split(" ");
-      fetch("https://api.agify.io/?name=" + name)
-        .then(res => res.json())
-        .then(data => setElement(data.age));
-    }
-    else if (text.startsWith("/gender")) {
-      const [, name] = text.split(" ");
-      fetch("https://api.genderize.io/?name=" + name)
-        .then(res => res.json())
-        .then(data => setElement(data.gender));
-    }
-    else if (text.startsWith("/randomfact")) {
-      fetch("https://uselessfacts.jsph.pl/random.json?language=en")
-      .then(res => res.json())
-      .then(data => setElement(data.text + " source:" + data.source));
-
-    }
-    else if (text.startsWith("/nationalize")) {
-      const [, name] = text.split(" ");
-      fetch("https://api.nationalize.io/?name=" + name)
-        .then(res => res.json())
-        .then(data => setElement(data.country));
-    }
-    else if (text.startsWith("/randomdog")) {
-      fetch("https://dog.ceo/api/breeds/image/random")
-        .then(res => res.json())
-        .then(data => setElement(data.message));
-    }
-  };
+  const onMsg = (msg) => {
+    
+    const mappedValue = {
+      ...msg,
+      key: msg.timestamp || Date.now(),
+      displayName: friendName,
+      position: msg.user === uid ? "left" : "right"
+    };
+    
+    setChatData(oldChat => [mappedValue, ...oldChat]);
+  }
 
   useEffect(() => {
-    transform(text);
-  }, []);
+    getUserProfile(uid)
+    .then(friend => {
+      friend && setFriendName(friend.displayName);
+      return friend;
+    })
+
+    const unsubscribePrivateChat = listenToPrivateChat(uid, onMsg);
+
+    return () => {unsubscribePrivateChat()}
+  }, [uid]);
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [])
 
   return (
-    element
-  )
+    <App>
+      <div className="chat friend-list-text-align">
+        <Titlebar value={friendName}/>
+        <Chatbox data={chatData}/>
+        <Inputbox onEnter={x=>sendPrivateMsg(x,uid)}/>
+      </div>
+    </App>
+  );
 }
 
-export default Chatline;
+export default PrivateChat;
