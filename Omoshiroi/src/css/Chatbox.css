@@ -4,36 +4,53 @@
   overflow: auto;
 }
 
-.chatbox-item {
-  transition: top 10s opacity 10s display 10s width 10s height 10s;
+.chatbox-item{
+  transition: top 1s opacity 1s display 1s width 1s height 1s;
+  margin-bottom: 10px;
 }
 
-.chatbox-item.left {
-  text-align: right;
-  margin-left: 24px;
-}
-
-.chatbox-item.right {
+.chatbox-item.left{
   text-align: left;
+  margin-left: 15px;
+  border-top: solid rgba(0, 0, 0, 0.233) 1px;
+  width: fit-content;
+  padding-left: 10px;
+  padding-right: 5px;
+}
+
+.chatbox-item.right{
+  text-align: right;
   margin-right: 24px;
 }
 
-.chatbox-item.left .avatar{
+.chatbox-item.left > .test > .chatbox-item-text{
+  background-color: rgb(53, 255, 70);
+}
+
+.chatbox-item.right .avatar{
   display: none;
 }
 
-
-.chatbox-item .avatar {
+.chatbox-item .avatar{
   display: inline-block;
-  
 }
 
 .chatbox-item-text {
-  background-color: rgb(190, 190, 190);
+  background-color: rgb(155, 227, 255);
   width: fit-content;
   height: fit-content;
   padding: 15px;
   display: inline-block;
   border-radius: 5px;
   margin: 5px 5px;
+}
+
+.test  {
+  display: inline-flex;
+  align-items: center;
+}
+
+.name-chat {
+  font-size: 20px;
+  color: rgb(77, 77, 77);
 }

@@ -4,8 +4,11 @@
   overflow: hidden;
   display: flex;
   flex-direction: column;
+
   flex:4;
 }
+
+
 
 .inputbox {
   background-color: gray;
@@ -28,4 +31,12 @@
 .inputbox .button {
   font-size: 1em;
   min-width: 40px;
+}
+
+.button {
+  background: skyblue;
+}
+
+.button:hover{
+  background: rgb(111, 195, 228);;
 }

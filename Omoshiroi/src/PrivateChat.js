@@ -19,10 +19,10 @@ function PrivateChat() {
       ...msg,
       key: msg.timestamp || Date.now(),
       displayName: friendName,
-      position: msg.user === uid ? "right" : "left"
+      position: msg.user === uid ? "left" : "right"
     };
     
-    setChatData(oldChat => [mappedValue, ...oldChat]);
+    setChatData(oldChat => [...oldChat, mappedValue]);
   }
 
   useEffect(() => {

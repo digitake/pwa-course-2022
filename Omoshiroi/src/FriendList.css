@@ -8,16 +8,29 @@
   align-items: center;
   padding: 0.5rem;
   cursor: pointer;
-  background-color: rgba(133, 133, 133, 0.295);
-  margin-bottom: 5px;
+  background-color: rgba(109, 250, 255, 0.295);
+  margin-top: 5px;
   margin-left: 5px;
   margin-right: 5px;
   border-radius: 100px;
   border-right: 10px solid rgb(66, 66, 66);
   border-bottom: 10px solid rgb(66, 66, 66);
+  border-top: 2px solid rgb(66, 66, 66);
+  border-left: 1px solid rgb(66, 66, 66);
 }
 
-.friendName
+.friend-list-item:hover{
+  background-color: rgba(109, 250, 255, 0.5);
+}
+
+.friend-list-item:active{
+  background-color: rgba(109, 250, 255, 0.8);
+}
+
+a .friendName
 {
   margin-left: 10px;
+  font-size: 36px;
+  color: black;
+  text-decoration: none;
 }

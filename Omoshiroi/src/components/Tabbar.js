@@ -5,13 +5,13 @@ function Tabbar () {
   return (
     <div className="tabbar stick-bottom">
       <Link to="/friend-list" className="tabbutton">
-        <div className='img'>Friend List</div>
+        Friend List
       </Link>
-      {/* <Link to="/chat" className="tabbutton">
+      <Link to="/chat" className="tabbutton">
         Chat
-      </Link> */}
+      </Link>
       <Link to="/profile" className="tabbutton">
-        <div className='img'>Profile</div>
+        Profile
       </Link>
     </div>
   )

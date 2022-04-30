@@ -10,6 +10,13 @@ function Inputbox (props) {
     }
   }
 
+  function clickSend(event) {
+    if(value !== ""){
+      props.onEnter(value);
+      setValue("");
+    }
+  }
+
   return (
     <div className="inputbox">
       <label className="label1" htmlFor="inputmsg">
@@ -30,10 +37,7 @@ function Inputbox (props) {
       <input 
         type="button" 
         value="Send" 
-        onClick={() => {
-          props.onEnter(value);
-          setValue("");
-        }}
+        onClick={clickSend}
         className="button"
       />    
     </div>
