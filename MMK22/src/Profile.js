@@ -7,6 +7,7 @@ import FileBase64 from 'react-file-base64';
 import { useChatStateContext } from './context/FirebaseChatContextProvider.js';
 
 
+
 //class Profile extends React.Component {
 function Profile() {
   const { authState, updateDisplayName, signOut } = useAuthStateContext();
@@ -45,11 +46,11 @@ function Profile() {
           value={name}
           onChange={e => setName(e.target.value)}
         />
+        
         <FileBase64
         multiple={ false }
         onDone={ onDone } 
         />
-        
         <input type="button" value="Save" onClick={save}/>
         <input type="button" onClick={() => signOut()} value="Sign-out"/>
       </div>
