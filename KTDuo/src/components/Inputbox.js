@@ -36,6 +36,7 @@ function Inputbox (props) {
         }}
         className="button"
       />    
+      
     </div>
   )
 }

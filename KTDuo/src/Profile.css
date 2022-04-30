@@ -4,9 +4,9 @@
   align-items: center;
   justify-content: center;
   width: 100%;
+  height: auto;
   background-color: #fce9e9;
   padding: 0;
-  margin: 10px 0;
 }
 
 .label1{
@@ -37,4 +37,20 @@ input[type=button]{
 input[type=button]:hover{
   cursor: pointer;
   background-color: #dd6e6b;
+}
+
+.custom-file-upload {
+  background-color: #f2a8a6;
+  border: 0px;
+  border-radius: 7px;
+  display: inline-block;
+  padding: 2px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 480px) {
+  .Profile{
+    margin: 0;
+    padding: 0;
+  }
 }

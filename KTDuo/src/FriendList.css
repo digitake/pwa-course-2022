@@ -1,6 +1,7 @@
 .friend-list{
   background-color: #f7cac9;
   padding: 10px;
+  margin: 0;
 }
 
 
@@ -25,3 +26,13 @@ img{
   width: 100px;
   height: 100px;
 }
+
+@media screen and (max-width: 480px) {
+  .friend-list{
+    display: block;
+  }
+}
+
+
+
+

@@ -33,6 +33,8 @@ h2{
   transition: background-color 1s;
 }
 
-.tabbar .tabbutton:hover {
-  background-color: #9c88aa;
+@media screen and (max-width: 480px) {
+  .tabbar{
+    display: none;
+  }
 }
