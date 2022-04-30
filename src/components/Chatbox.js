@@ -13,19 +13,27 @@ function Chatbox (props) {
 
   return (
     <div className="chatbox">
-      {
-        data.map((item,i) => {
-          return (<div ref={myRef} key={`${item.key}-${i}`} className={`chatbox-item ${item.position}`}>
-            <div>{item.displayName}</div>
-            <Avatar name={item.displayName}/>
-            <div className="chatbox-item-text">
-              <Chatline text={item.msg}/>
+      {data.map((item, i) => {
+        return (
+          <div
+            ref={myRef}
+            key={`${item.key}-${i}`}
+            className={`chatbox-item ${item.position}`}
+          >
+            <div className={`chatbox-item-user ${item.position}`}>
+              <Avatar name={item.displayName} base64Image={item.image} />
+              <div className="text">
+                <div className="username">{item.displayName}</div>
+                <div className={`chatbox-item-text ${item.position}`}>
+                  <Chatline text={item.msg} />
+                </div>
+              </div>
             </div>
-          </div>)
-        })
-      }
+          </div>
+        );
+      })}
     </div>
-  )
+  );
 }
 
 export default Chatbox;

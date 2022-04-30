@@ -1,36 +1,67 @@
 .chatbox {
-  flex: auto;
-  background-color:#acacac;
+  flex: 1;
+  background-color: #acacac;
   overflow: auto;
+  color: #949494;
 }
 
 .chatbox-item{
-  transition: top 1s opacity 1s display 1s width 1s height 1s;
-}
-
-.chatbox-item-text{
-  background-color: rgb(247, 247, 247);
-  color: rgb(12, 12, 12);
-  padding: 10px;
-  font-size: 25px;
-  border-radius: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   word-break: break-all;
 }
 
 .chatbox-item.left{
-  font-size: 20px;
   text-align: left;
   margin: 10px;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .chatbox-item.right{
-  font-size: 20px;
   text-align: right;
   margin: 10px;
+}
+
+.chatbox-item-user.left{
+  display: flex;
+  flex-direction: row;
+  font-size: 30px;
+}
+
+.chatbox-item-user.right{
+  display: flex;
+  flex-direction: row-reverse;
+  font-size: 30px;
+}
+
+.chatbox-item-user .text{
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.chatbox-item-text.left{
+  font-size: 35px;
+  background-color: #ffffff;
+  color:rgb(24, 24, 24);
+  padding: 10px;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.chatbox-item-text.right{
+  font-size: 35px;
+  background-color: #ffffff;
+  color: rgb(24, 24, 24);
+  padding: 10px;
+  border-radius: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.chatbox-item .username{
+  color: #3a3a3a;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .chatbox-item .avatar{
-  display:inline-block;
+  display: inline-block;
 }
