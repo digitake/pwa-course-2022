@@ -118,7 +118,7 @@ const uiConfig = {
 export const LoginComponent = (callback) => {
   return (
   <div>
-    <h1>GI472 PWA Chat App</h1>
+    <h1>Papering</h1>
     <p>{"Please sign-in:"}</p>
     <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={firebase.auth()}/>
   </div>

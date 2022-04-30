@@ -1,0 +1,25 @@
+.imageupload{
+    color:blue;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    min-width: 40px;
+    padding: 2px 20px;
+    background-color: #e89b99;
+    border: none;
+    border-radius: 25px;
+    margin: 5px 5px 5px 5px; 
+    transition: 0.25s;
+}
+
+.custom-file-upload:hover{
+    background-color: #f5cec7;
+    color: white;
+}

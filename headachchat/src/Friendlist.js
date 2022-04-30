@@ -1,27 +1,17 @@
-import './FriendList.css';
-import { useChatStateContext } from './context/FirebaseChatContextProvider';
-import { Link } from 'react-router-dom';
-import { Avatar } from '@mui/material';
+import './Friendlist.css';
+import './Component/Label.css'
 
-function FriendList(){
-  const { userList } = useChatStateContext();
+function Friendlist() {
+  return (
+   <div className='Chat'>
+     
+     <h1 className='label head'>รายชื่อออนไลน์</h1>
+     <div className='label body'>User</div>
+     
 
-  return(
-      <div className="friend-list">
-        <Avatar/>
-      {
-        userList.map((item) => {
-          return (
-            <Link to={`/privatechat/${item.key}`} key={item.key}>
-              <div className={`friend-list-item ${item.position}`}>
-                <div>{item.displayName}</div>
-              </div>
-            </Link>
-          )
-        })
-      }
-      </div>
-  )
+   </div>
+  );
 }
 
-export default FriendList;
+export default Friendlist;
+

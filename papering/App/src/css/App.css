@@ -5,27 +5,21 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  flex: auto;
+  overflow: hidden;
+  position: relative;
 }
 
 .App .content {
-<<<<<<< HEAD:papering/App/src/css/App.css
-=======
-  flex: auto; 
-  width: auto;
-  height: auto;
-  
-}
-
-
-.userlist {
->>>>>>> bf2ee1319d8815555e2c589ac0e4fd385254ea56:noobcode/src/css/App.css
   flex: 1;
   top: 0px;
-  bottom: 77px;
+  bottom: 50px;
   position: absolute;
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
   display: flex;
 }
 
+.userlist {
+  flex: 1;
+  background-color: #e79796;
+}

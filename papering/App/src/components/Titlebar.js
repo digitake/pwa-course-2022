@@ -3,7 +3,7 @@ import '../css/Titlebar.css';
 function Titlebar ({value}) {
   return (
     <div className="titlebar">
-      {value}
+      <div className="text">{value}</div>
     </div>
   )
 }

@@ -1,65 +1,50 @@
 .friend-list {
-  width: 100%;
   flex:1;
+  text-decoration:none;
+  overflow: hidden;
 }
 
 .friend-list-item {
-  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem;
+  border-bottom: 1px solid #e5e5e5;
+  cursor: pointer;
+  text-decoration:none;
+  font-weight: bold;
+  font-family: sans-serif;
+  border-bottom-left-radius: 50px;
+  line-height: 40px;
+  border-bottom: 3px solid #fae0dc;
+  cursor: pointer;
+}
+
+.friend-list .list{
   display: flex;
   flex-direction: column;
-  color:#c35e59;
+}
+
+.friend-list .username{
+  margin-left: 10px;
   font-weight: bold;
-  font-family: sans-serif;
-  align-items: flex-start;
-  line-height: 40px;
-  border-bottom: 3px solid #fae0dc;
-  border-bottom-left-radius: 50px;
-  cursor: pointer;
+  font-size: 20px;
+  color: #bc4b46;
+  text-decoration:none;
 }
 
-.friend-list-single{
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  border-bottom: 3px solid #fae0dc;
-  border-bottom-left-radius: 50px;
-  vertical-align: center;
-  align-items: center;
-  text-align: center;
-  margin-bottom: 10px;
-  margin-top: 10px;
-}
-
-.friend-name-space {
-  padding: 10px;
-  justify-items: stretch;
-  justify-content: center;
-  text-justify: inter-word;
-}
-.friend-status {
-  color:#eca9a7;
-  font-family: sans-serif;
-  font-weight: lighter;
-}
-
-.group-name-space {
-  padding: 10px;
-}
-
-.friend-time{
-  color:#eca9a7;
-  font-family: sans-serif;
-  font-weight: lighter;
-}
-
-.group-list-item {
-  display: flex;
-  color:#c35e59;
+.friend-list .username{
+  margin-left: 10px;
   font-weight: bold;
-  font-family: sans-serif;
-  align-items: center;
-  line-height: 40px;
-  padding: 0.5rem;
-  border-bottom: 3px solid #fae0dc;
-  cursor: pointer;
+  font-size: 20px;
+  color: #bc4b46;
+  text-decoration:none!important;
+  transition: 0.5s;
+}
+
+.friend-list .username:hover{
+  color: #e89a99;
+}
+
+a {
+  text-decoration: none;
 }

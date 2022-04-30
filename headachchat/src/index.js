@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-<<<<<<< HEAD:headachchat/src/index.js
 import App from './App';
 import Chat from './Chat'
 import Login from './Login'
@@ -11,17 +10,6 @@ import reportWebVitals from './reportWebVitals';
 ReactDOM.render(
   <React.StrictMode>
     <Chat/>
-=======
-import Router from './Router';
-import reportWebVitals from './reportWebVitals';
-import AuthStateProvider from './context/FirebaseAuthContextProvider';
-
-ReactDOM.render(
-  <React.StrictMode>
-    <AuthStateProvider>
-      <Router />
-    </AuthStateProvider>
->>>>>>> 6cda98e408edb661e3fabcc8a82f166da4bdfd69:2T/src/index.js
   </React.StrictMode>,
   document.getElementById('root')
 );

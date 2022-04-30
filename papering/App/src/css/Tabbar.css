@@ -1,40 +1,39 @@
 .tabbar {
-  height: 77px;
+  height: 60px;
   background-color: #f5cec7;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  margin: auto;
 }
 
 .tabbar .tabbutton {
-  display: flex;
-  flex-direction: column;
+  display: inline-block;
   font-family: sans-serif;
   text-align: center;
-  align-items: center;
-  font-size: 1em;
-  color: #c15954;
+  font-size: 1.5em;
+  color: #c15853;
   margin: 0.5px;
   padding: 10px;
   cursor: pointer;
   text-decoration: none;
   transition: background-color 1s;
+  transition: color 0.5s;
 }
 
 .tabbar .tabbutton:hover {
-  color: aliceblue;
-  filter: grayscale(255) brightness(255);
+  color: #ffffff;
 }
 
 .tabbar.stick-bottom {
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   width: 100%;
 }
 
 .tabbar.stick-top {
-  position: absolute;
-  top: 0px;
+  position: fixed;
+  bottom: 0;
   width: 100%;
 }
 
@@ -52,7 +51,16 @@
   flex-direction: column;
 }
 
-.tabbar .tab-icon {
-  width: 26px;
-  height: 26px;
+.tabbar .button{
+  width: 60px;
+  margin: auto;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.5s;
+}
+
+.tabbar .button:hover{
+  background-color: #c15853;
 }

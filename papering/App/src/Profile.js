@@ -1,41 +1,70 @@
-import App from './components/App.js';
-import {useState} from "react";
-import './Profile.css';
-import Avatar from './components/Avatar.js';
-import {useAuthStateContext} from './context/FirebaseAuthContextProvider';
+import App from "./components/App.js";
+import { useState, useEffect } from "react";
+import "./Profile.css";
+import Avatar from "./components/Avatar.js";
+import { useAuthStateContext } from "./context/FirebaseAuthContextProvider";
+import { useChatStateContext } from "./context/FirebaseChatContextProvider.js";
+import FileBase64 from "./components/ImageUpload.js";
 import Topbar from "./components/Topbar";
 
 function Profile() {
-    const {authState, updateDisplayName, signOut} = useAuthStateContext();
-    const [name, setName] = useState(authState.user.displayName);
+  const { authState, updateDisplayName, signOut } = useAuthStateContext();
+  const { setUserImage, getUserImage } = useChatStateContext();
+  const [name, setName] = useState(authState.user.displayName);
+  const [base64Image, setBase64Image] = useState("");
 
-    function save() {
-        updateDisplayName(name)
-            .then(_ => {
-                authState.user.reload()
-            })
-    }
+  useEffect(() => {
+    getUserImage(authState.user.uid).then((imgBase64) => {
+      setBase64Image(imgBase64);
+    });
+  }, []);
 
-    return (
-        <App>
-            <div className="Forcefull">
-                <Topbar title="Profile"/>
-                <div className="Profile">
-                    <Avatar name={name}/>
-                    <label className="label1" htmlFor="displayname"/>
-                    <input
-                        id="displayname"
-                        type="text"
-                        className="text"
-                        value={name}
-                        onChange={e => setName(e.target.value)}
-                    />
-                    <input type="button" value="Save" onClick={save}/>
-                    <input type="button" onClick={() => signOut()} value="Sign-out"/>
-                </div>
-            </div>
-        </App>
-    );
+  function save() {
+    updateDisplayName(name).then((_) => {
+      authState.user.reload();
+      setUserImage(authState.user.uid, base64Image);
+    });
+  }
+
+  function onDone(data) {
+    setBase64Image(data.base64);
+  }
+
+  return (
+    <App>
+      <div className="Profile list">
+        <Topbar title="Profile" />
+        <div className="Profile">
+          <Avatar name={name} base64Image={base64Image} />
+          <label className="label1" htmlFor="displayname" />
+          <div>
+            <input
+              id="displayname"
+              type="text"
+              className="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+            />
+          </div>
+          <FileBase64 multiple={false} onDone={onDone} className="button" />
+          <div>
+            <input
+              type="button"
+              value="Save"
+              onClick={save}
+              className="button"
+            />
+            <input
+              type="button"
+              onClick={() => signOut()}
+              value="Sign-out"
+              className="button"
+            />
+          </div>
+        </div>
+      </div>
+    </App>
+  );
 }
 
 export default Profile;

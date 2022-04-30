@@ -1,6 +1,5 @@
 import '../css/App.css';
 import Tabbar from './Tabbar.js';
-import Userlist from './Userlist.js';
 
 function App(props) {
   return (
@@ -8,7 +7,7 @@ function App(props) {
       <div className="content">
         {props.children}
       </div>
-      <Userlist />
+      <Tabbar/>
     </div>
   );
 }

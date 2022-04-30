@@ -10,7 +10,6 @@ import FriendList from "./FriendList";
 import FriendProfile from "./FriendProfile";
 import { useAuthStateContext, LoginComponent } from './context/FirebaseAuthContextProvider';
 import ChatStateProvider from "./context/FirebaseChatContextProvider";
-import TestState from "./TestState";
   
 function Router() {
   const { authState } = useAuthStateContext();
