@@ -19,7 +19,7 @@ function PrivateChat() {
       ...msg,
       key: msg.timestamp || Date.now(),
       displayName: friendName,
-      position: msg.user === uid ? "right" : "left"
+      position: msg.user === uid ? "left" : "right"
     };
     
     setChatData(oldChat => [mappedValue, ...oldChat]);
@@ -43,10 +43,10 @@ function PrivateChat() {
 
   return (
     <App>
-      <div className="chat">
+      <div className="chat">      
         <Titlebar value={friendName}/>
-        <Chatbox data={chatData}/>
         <Inputbox onEnter={x=>sendPrivateMsg(x,uid)}/>
+        <Chatbox data={chatData}/>    
       </div>
     </App>
   );
