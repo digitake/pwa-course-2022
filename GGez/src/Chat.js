@@ -2,16 +2,13 @@ import { useEffect, useState } from 'react';
 import App from './components/App.js';
 import Chatbox from './components/Chatbox.js';
 import Titlebar from './components/Titlebar.js';
-import Userlist from './components/Userlist.js';
 import Inputbox from './components/Inputbox.js';
-import './Chat.css';
 import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
 
 function Chat() {
-  const { userList, sendMsg, listenToChatroom } = useChatStateContext();
+  const { userList, sendMsg, listenToChatroom, imageDict} = useChatStateContext();
   const { authState } = useAuthStateContext();
-
   const [chatData, setChatData] = useState([]);
   const [usersDict, setUsersDict] = useState({});
 
@@ -42,6 +39,7 @@ function Chat() {
       ...item,
       key: item.timestamp || Date.now(),
       displayName: displayName,
+      Image: imageDict[item.user] || "",
       position: item.user === authState.user.uid ? "right" : "left"
     });
   }
@@ -57,8 +55,7 @@ function Chat() {
 
   return (
     <App>
-      <Userlist />
-      <div className="chat">
+      <div className="maincontainer">
         <Titlebar value="Chat"/>        
         <Chatbox data={chatData.map(transformChatData).sort((a,b)=>a.timestamp - b.timestamp)}/>
         <Inputbox onEnter={x=>sendMsg(x,"mainhall")}/>
@@ -67,4 +64,4 @@ function Chat() {
   );
 }
 
-export default Chat;
+export default Chat; 

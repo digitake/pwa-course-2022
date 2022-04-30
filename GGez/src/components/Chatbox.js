@@ -12,19 +12,24 @@ function Chatbox (props) {
   },[data])
 
   return (
-    <div className="chatbox">
-      {
+    
+      <div className="mychatbox">
+        {
         data.map((item,i) => {
-          return (<div ref={myRef} key={`${item.key}-${i}`} className={`chatbox-item ${item.position}`}>
-            <div>{item.displayName}</div>
+          return (<div className="msgContainer clearfix"><div ref={myRef} key={`${item.key}-${i}`} className={`${item.position}`}>
             <Avatar name={item.displayName}/>
-            <div className="chatbox-item-text">
-              <Chatline text={item.msg}/>
+            <div className="msg">
+            <div className="dpname">{item.displayName}</div>
+              <div className="chatbox-item-text">
+                <Chatline text={item.msg}/>
+              </div>
             </div>
-          </div>)
+          </div></div>)
         })
-      }
-    </div>
+        }
+        </div>
+      
+    
   )
 }
 

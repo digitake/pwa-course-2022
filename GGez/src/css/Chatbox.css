@@ -1,23 +1,50 @@
-.chatbox {
-  flex: 1;
+.pchatbox {
+  /* flex: 1; */
   background-color: silver;
   overflow: auto;
+  clear:both;
+}
+.chatbox-item{
+  transition: top 1s opacity 1s display 1s width 1s height 1s; 
 }
 
-.chatbox-item{
-  transition: top 1s opacity 1s display 1s width 1s height 1s;
-}
 
 .chatbox-item.left{
-  text-align: left;
-  margin-left: 24px;
+  float:left;
+  padding-left: 24px;
 }
 
 .chatbox-item.right{
-  text-align: right;
-  margin-right: 24px;
+  float:right;
+  padding-right: 24px;
 }
 
-.chatbox-item .avatar{
-  display: inline-block;
+.chatbox-item.left .avatar{
+  float:left;
 }
+.chatbox-item.right .avatar{
+  float:right;
+}
+
+.chatbox-item.left .bubble{
+  float:left;
+  border-radius:8px;
+  margin-left:16px;
+  padding:8px;
+}
+.chatbox-item.right .bubble{
+  float:right;
+  border-radius:8px;
+  margin-right:16px;
+  padding:8px;
+  color:#ffffff;
+  background:#017BFF;
+}
+.dpname{
+  display: block;
+  font-weight:bold;
+}
+
+
+
+

@@ -11,31 +11,25 @@ function Inputbox (props) {
   }
 
   return (
-    <div className="inputbox">
-      <label className="label1" htmlFor="inputmsg">
-        {props.label}
-      </label>
-      <input
-        id="inputmsg"
-        type="text"
-        className="text"
-        value={value}
+    <div className="chatInput">
+      <div className="finput">
+      
+      <div class="formgroup mgb0">
+          <input type="text" className="inputText" value={value}
         autoComplete="off"
         onChange={e => {
           setValue(e.target.value);
           props.onChange && props.onChange(e.target.value);
         }}
-        onKeyPress={handleKeyPress}
-      />
-      <input 
-        type="button" 
-        value="Send" 
-        onClick={() => {
+        onKeyPress={handleKeyPress}/>
+      </div>
+      </div>
+      <div className="fsubmit"> 
+      <button class="smbform" type="button" value="Send" onClick={() => {
           props.onEnter(value);
           setValue("");
-        }}
-        className="button"
-      />    
+        }}><i class="fa fa-send"></i></button>
+      </div>
     </div>
   )
 }
