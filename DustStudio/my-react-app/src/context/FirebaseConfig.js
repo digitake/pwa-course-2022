@@ -5,14 +5,14 @@ import { getFirestore } from "firebase/firestore"
 
 
 const firebaseConfig = {
-  apiKey: "AIzaSyA5pE-undz7JJtAb98MlJ1TvcR48kVxPMU",
-  authDomain: "subchatapp.firebaseapp.com",
-  projectId: "subchatapp",
-  storageBucket: "subchatapp.appspot.com",
-  messagingSenderId: "452856763161",
-  appId: "1:452856763161:web:1c1b45dca468ca5339eb88",
-  measurementId: "G-4BKQF68SP3",
-  databaseURL: "https://subchatapp-default-rtdb.asia-southeast1.firebasedatabase.app/"
+  apiKey: "AIzaSyCoa4k85o9huOxyJtlaht0qTqcQ7nuC6gw",
+  authDomain: "subchatapp2.firebaseapp.com",
+  databaseURL: "https://subchatapp2-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "subchatapp2",
+  storageBucket: "subchatapp2.appspot.com",
+  messagingSenderId: "1022955081594",
+  appId: "1:1022955081594:web:249adf6af09288e6eed0c3",
+  measurementId: "G-6FR6Z909XT"
 };
 
 

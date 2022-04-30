@@ -1,6 +1,6 @@
 import "../css/CreatePost.css"
 import React, { useRef, useState } from "react";
-import { addDoc, collection } from "firebase/firestore";
+import { addDoc, collection, serverTimestamp } from "firebase/firestore";
 import { db } from "../context/FirebaseConfig";
 import { Button, IconButton , TextField , Avatar , Stack} from '@mui/material';
 import { createTheme } from '@mui/material/styles';
@@ -30,6 +30,7 @@ function CreatePost() {
       title,
       image,
       author: { name: authState.user.displayName, id: authState.user.uid },
+      timestamp: Date.now()
     });
   };
 
