@@ -4,7 +4,7 @@ import { useState } from "react";
 function Inputbox (props) {
   const [value, setValue] = useState(props.value||"");
   const [trayStatus, setTrayStatus] = useState("open");
-
+ 
   function handleKeyPress(event) {
     if(event.key === 'Enter' && value !== ""){
       props.onEnter(value);
