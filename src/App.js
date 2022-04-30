@@ -1,14 +1,13 @@
 import './App.css';
-import { Chatbox } from'./components/Chatbox.js';
-import { Userlist } from'./components/Userlist.js';
-import { Inputbox } from'./components/Inputbox.js';
+import Tabbar from './components/Tabbar.js';
 
-function App() {
+function App(props) {
   return (
     <div className="App">
-      <Userlist/>
-      <Chatbox/>
-      <Inputbox/>
+      <div className="content">
+        {props.children}
+      </div>
+      <Tabbar/>
     </div>
   );
 }

@@ -1,53 +1,34 @@
-.App {
-    background-color: #ddffdd;
-    width: 100%;
-    height: 100%;;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-  }
+.chat {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 
-.Name{
-    background-color: aquamarine;
-    text-align: center;
-    flex: 1;
+  flex:4;
 }
 
-.Chathistory{
-    background-color: rgb(253, 218, 218);
-    text-align: center;
-    flex: 12;
-}
 
-.Userchat1{
-    background-color: rgb(253, 218, 218);
-    text-align: left;
-}
-
-.Userchat2{
-    background-color: rgb(253, 218, 218);
-    text-align: right;
-}
 
 .inputbox {
-    flex: 1;
-    background-color: gray;
-    display: flex;
-  }
-  
-  .inputbox .label1 {
-    font-size: 1.5em;
-    text-align: right;
-  }
-  
-  .inputbox .text {
-    font-size: 1em;
-    padding-left: 8px;
-    padding-right: 8px;
-    flex: 1;
-  }
-  
-  .inputbox .button {
-    font-size: 1em;
-    min-width: 40px;
-  }
+  background-color: gray;
+  display: flex;
+  height: 50px;
+}
+
+.inputbox .label1 {
+  font-size: 1.5em;
+  text-align: right;
+}
+
+.inputbox .text {
+  font-size: 1em;
+  padding-left: 8px;
+  padding-right: 8px;
+  flex: 1;
+}
+
+.inputbox .button {
+  font-size: 1em;
+  min-width: 40px;
+}
