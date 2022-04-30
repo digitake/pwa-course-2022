@@ -37,7 +37,7 @@ function Inputbox (props) {
           setValue("");
         }}
         className="button"
-      />    
+      />
     </div>
   )
 }

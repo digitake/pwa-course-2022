@@ -22,8 +22,8 @@ function Chatbox (props) {
           >
             <div className={`chatbox-item-user ${item.position}`}>
               <Avatar name={item.displayName}/>
-              <div className="text">
-                <div className="username">{item.displayName}</div>
+              <div className="txt">
+                <div className="User">{item.displayName}</div>
                 <div className={`chatbox-item-text ${item.position}`}>
                   <Chatline text={item.msg} />
                 </div>

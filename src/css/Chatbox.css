@@ -33,10 +33,11 @@
   font-size: 30px;
 }
 
-.chatbox-item-user .text{
+.chatbox-item-user .txt{
   display: flex;
   flex-direction: column;
   padding: 10px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .chatbox-item-text.left{
@@ -45,7 +46,6 @@
   color:rgb(24, 24, 24);
   padding: 10px;
   border-radius: 10px;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .chatbox-item-text.right{
@@ -54,12 +54,11 @@
   color: rgb(24, 24, 24);
   padding: 10px;
   border-radius: 10px;
-  font-family: Arial, Helvetica, sans-serif;
+  
 }
 
-.chatbox-item .username{
+.chatbox-item .User{
   color: #3a3a3a;
-  font-family: Arial, Helvetica, sans-serif;
 }
 
 .chatbox-item .avatar{
