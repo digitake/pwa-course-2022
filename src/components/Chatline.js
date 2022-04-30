@@ -47,6 +47,11 @@ function Chatline(props) {
         .then(res => res.json())
         .then(data => setElement(data.message));
     }
+    else if (text.startsWith("/whatdo")) {
+      fetch("https://www.boredapi.com/api/activity")
+        .then(res => res.json())
+        .then(data => setElement("You should " + data.activity));
+    }
   };
 
   useEffect(() => {
