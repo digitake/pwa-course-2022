@@ -9,7 +9,7 @@ import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
 
 function Chat() {
-  const { userList, sendMsg, listenToChatroom } = useChatStateContext();
+  const { userList, sendMsg, listenToChatroom, imageDict } = useChatStateContext();
   const { authState } = useAuthStateContext();
 
   const [chatData, setChatData] = useState([]);
@@ -42,6 +42,7 @@ function Chat() {
       ...item,
       key: item.timestamp || Date.now(),
       displayName: displayName,
+      Image: imageDict[item.user] || "",
       position: item.user === authState.user.uid ? "right" : "left"
     });
   }
