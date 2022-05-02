@@ -30,13 +30,13 @@ function Chatline(props) {
       fetch("https://uselessfacts.jsph.pl/random.json?language=en")
        .then(res => res.json())
        .then(data => setElement(data.text));
-    }
-    // else if(text.startsWith("/findcapitalcity")) {
-    //   const[, name] = text.split(" ");
-    //   fetch("https://restcountries.com/v2/name/" + name)
-    //    .then(res => res.json())
-    //    .then(data => setElement(data.capital))
-    // }
+     }
+    //  else if(text.startsWith("/findcapitalcity")) {
+    //    const[, name] = text.split(" ");
+    //    fetch("https://restcountries.com/v2/name/" + name)
+    //     .then(res => res.json())
+    //     .then(data => setElement(data.capital));
+    //  }
     else if (text.startsWith("/nationalize")) {
       const [, name] = text.split(" ");
       fetch("https://api.nationalize.io/?name=" + name)
