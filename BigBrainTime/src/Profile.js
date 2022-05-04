@@ -12,7 +12,6 @@ function Profile() {
   const [name, setName] = useState(authState.user.displayName);
   const [base64Image, setBase64Image] = useState("");
   
-  //const[Bday,setDate] = useState(authState.user.displayBday);
 
   let ID = authState.user.uid;
   let Birthday = "29/02/2002";
@@ -28,11 +27,6 @@ function Profile() {
       authState.user.reload()
       setUserImage(authState.user.uid, base64Image);
     });
-    /*updateBday(Bday).then(_=>{
-      authState.user.reload()
-      setDate(authState.user.Bday,Bday);
-
-    });*/
   }
 
   function onDone(data) {

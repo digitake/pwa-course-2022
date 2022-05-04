@@ -35,19 +35,4 @@ function Router() {
   }
 }
 
-/*function Router() {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/chat" element={<Chat />}/>
-        <Route path="/privatechat/:uid" element={<PrivateChat />}/>
-        <Route path="/profile" element={<Profile />}/>
-        <Route path="/friend-list" element={<FriendList />}/>
-        <Route path="/" element={<FriendList />}/>
-		<Route path="/friend/:uid" element={<FriendProfile />}/>
-      </Routes>
-    </BrowserRouter>
-  );
-}*/
-
 export default Router;
