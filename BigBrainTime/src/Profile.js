@@ -60,6 +60,12 @@ function Profile() {
 
         </div>
 
+        <div className="Button">
+          <input type="button" value="Save" onClick={save}/>
+          
+          <input type="button" onClick={() => signOut()} value="Sign-out"/>
+        </div>
+
         <div className="Info">
           Name
           <div className='List'>{name}</div>
@@ -71,11 +77,7 @@ function Profile() {
           </div>
         </div>
 
-        <div className="Button">
-          <input type="button" value="Save" onClick={save}/>
-          
-          <input type="button" onClick={() => signOut()} value="Sign-out"/>
-        </div>
+        
       </div>
     </App>
   );

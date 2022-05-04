@@ -1,23 +1,25 @@
 .option{
-position:relative;
-    width: 200px;
-    height: 200px;
-  top: 0px;
-  bottom: 0px;
-  background-color: #9d9d9d;
-  z-index: 100;
-  transition: background-color 2s width 2s left 2s;
+  margin:auto;
+  position:absolute;
+    width: 100px;
+    height: 100px;
+  left: 10px;
+  bottom: 150px;
+  background-color: #e3d786;
   border-radius: 10px;
+  
 }
 
 .option.closed {
-    width: 0px;
+  transition: background-color 2s width 2s left 2s;
+display: none;
   }
 
 .option.open {
     width: 200px;
     height: 200px;
     background-color:#9d9d9d;
+    transition: background-color 2s width 2s left 2s;
   }
 
   .option .close-button {
@@ -38,26 +40,19 @@ position:relative;
   .option .close-button:hover {
     background-color: #fefbf3;
   }
-  
-  @media screen and (min-width: 768px) {
-    .option {
-      flex: 2;
-      position: relative;
-      background-color: #06668c;
-      width: unset;
-    }
+
   
     .option .close-button {
       display: none;
     }
-  }
+  
 
-.option .icon{
+.option.icon.open{
 
-    width: 100px;
-    height: 100px;
+    width: 20px;
+    height: 20px;
 
 }
-.option .icon.closed{
+.option.icon.closed{
     display: none;
 }

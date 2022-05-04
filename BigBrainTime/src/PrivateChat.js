@@ -66,7 +66,6 @@ function PrivateChat() {
       <div className="chat">
         <Titlebar value={friendName}/>
         <Chatbox data={chatData.map(transformChatData).sort((a,b)=>a.timestamp - b.timestamp)}/>
-        <Option/>
         <Inputbox onEnter={x=>sendPrivateMsg(x,uid)}/>
       </div>
     </App>

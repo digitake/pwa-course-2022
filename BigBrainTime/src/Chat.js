@@ -47,7 +47,6 @@ function Chat() {
       <div className="chat">
         <Titlebar value="Public Chat"/>
         <Chatbox data={chatData.map(transformChatData).sort((a,b)=>a.timestamp - b.timestamp)}/>
-        <Option/>
         <Inputbox onEnter={x=>sendMsg(x,"mainhall")}/>
       </div>
     </App>
