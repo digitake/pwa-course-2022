@@ -4,7 +4,7 @@ import 'firebase/compat/database';
 const firebaseConfig = {
   apiKey: "AIzaSyBfcGF63KNvF8wPXVV_zxv4NnkLBbscIGU",
   authDomain: "pwa-229k.firebaseapp.com",
-  databaseURL: "https://pwa-229k-default-rtdb.asia-southeast1.firebasedatabase.app",
+  databaseURL: "https://pwa-229k-default-rtdb.asia-southeast1.firebasedatabase.app/",
   projectId: "pwa-229k",
   storageBucket: "pwa-229k.appspot.com",
   messagingSenderId: "210441919022",
