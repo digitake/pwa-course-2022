@@ -1,6 +1,6 @@
 .chatbox {
     flex: 1;
-    background-color: silver;
+    background-color: rgb(44, 44, 44);
     overflow: auto;
   }
   
@@ -17,7 +17,30 @@
     text-align: right;
     margin-right: 24px;
   }
-  
+
+  .chatbox-item-uid{
+    font-style: oblique;
+    font-size: large;
+    
+    color: aliceblue;
+    margin: 10px;
+  }
+
   .chatbox-item .avatar{
     display: inline-block;
   }
+
+  .chatbox-item-text {
+    text-transform: capitalize;
+    font-style: italic;
+    background-color: rgb(255, 219, 121);
+    width: fit-content;
+    height: fit-content;
+    margin-bottom: 12px;
+    line-height: 24px;
+    padding: 10px 20px;
+    border-radius: 25px;
+    display: inline-block;
+  }
+
+  
