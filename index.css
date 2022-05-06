@@ -1,0 +1,8 @@
+body {
+  background-color: rgb(4, 250, 16);
+}
+
+.box {
+  border: 2px solid silver;
+  background-color: lavender;
+}
