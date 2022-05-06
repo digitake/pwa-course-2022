@@ -9,13 +9,13 @@ import {FaUserFriends} from 'react-icons/fa'
 function Nav () {
   return (
     <div className="nav">
-      <Link to="/profile" className="tabbutton">
+      <Link to="/profile" >
         <RiHomeHeartLine/>
       </Link>
-      <Link to="/chat" className="tabbutton">
+      <Link to="/chat" >
         <HiOutlineUserGroup/>
       </Link>
-      <Link to="/friend-list" className="tabbutton">
+      <Link to="/friend-list" >
         <FaUserFriends/>
       </Link>
     </div>
