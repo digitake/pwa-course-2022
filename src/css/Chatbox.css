@@ -32,7 +32,6 @@
 
   .chatbox-item-text {
     text-transform: capitalize;
-    font-style: italic;
     background-color: rgb(255, 219, 121);
     width: fit-content;
     height: fit-content;
