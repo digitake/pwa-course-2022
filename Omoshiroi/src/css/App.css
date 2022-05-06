@@ -17,3 +17,8 @@
   display: flex;
 }
 
+@media screen and (min-width: 769px) {
+  .App .content {
+    bottom: 0px;
+  }
+}

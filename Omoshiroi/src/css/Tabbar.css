@@ -47,3 +47,9 @@
   height: 100%;
   flex-direction: column;
 }
+
+@media screen and (min-width: 769px) {
+  .tabbar {
+    display: none;
+  }
+}
