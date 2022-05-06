@@ -2,6 +2,7 @@ import App from './components/App.js';
 import { useState, useEffect } from "react";
 import './Profile.css';
 import Avatar from './components/AvatarProfile.js';
+import Userlist from './components/TabbarLeft.js';
 import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
 import { useChatStateContext } from './context/FirebaseChatContextProvider.js';
 import FileBase64 from 'react-file-base64';
@@ -32,6 +33,7 @@ function Profile() {
 
   return (
     <App>
+      <Userlist/>
       <div className="Profile">
         <Avatar name={name} base64Image={base64Image}/>     
           <input 
@@ -47,10 +49,10 @@ function Profile() {
             onDone={ onDone } 
           />
           <input type="button" className='buttonSave' onClick={save}/>
-          <div className='SAVETEXT'>SAVE</div>
+          <div className='Save-Text'>SAVE</div>
           </div>
           <input type="button" className='buttonSignout' onClick={() => signOut()}/>
-          <div className='SIGNOUTTEXT'>Sign-out</div>
+          <div className='Signout-Text'>Sign-out</div> 
       </div>
     </App>
   );

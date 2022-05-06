@@ -8,6 +8,7 @@
   background-image: url('https://wallpaperaccess.com/full/1971765.jpg');
   background-position: center;
   background-size: cover;
+  flex: 20;
 }
 
 .text-name-profile {
@@ -20,34 +21,40 @@
   width: auto;
 }
 
-.buttonSignout {
-  position: absolute;
-  top: 10px;
-  right: 15px;
-  background: rgb(230, 230, 230);
-  width: 50px;
-  height: 30px;
-  background-image: url('./Image/Sign-out.png');
-  background-size: cover;
-  background-position: center;
-}
-
-.buttonSave {
-  background: rgb(230, 230, 230);
-  width: 50px;
-  height: 30px;
-  background-image: url('./Image/Save.png');
-  background-size: cover;
-  background-position: center;
-}
-
 .Up-Save {
   margin-top: 10px;
   display: flex;
   align-items: center;
 }
 
-.SAVETEXT{
+.buttonSignout {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  width: 50px;
+  height: 30px;
+  background-image: url('./Image/Sign-out.png');
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+.buttonSignout:hover{
+  border: solid 2px yellow;
+}
+
+.buttonSave {
+  width: 50px;
+  height: 30px;
+  background-image: url('./Image/Save.png');
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+}
+.buttonSave:hover{
+  border: solid 2px yellow;
+}
+
+.Save-Text{
   margin-left: 5px;
   font-size: 18px;
   color: rgb(255, 255, 255);
@@ -55,7 +62,7 @@
   border-radius: 10%;
 }
 
-.SIGNOUTTEXT{
+.Signout-Text{
   position: absolute;
   top: 40px;
   right: 10px;

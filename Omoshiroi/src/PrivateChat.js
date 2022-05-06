@@ -3,6 +3,7 @@ import App from './components/App.js';
 import Chatbox from './components/Chatbox.js';
 import Inputbox from './components/Inputbox.js';
 import Titlebar from './components/Titlebar.js';
+import Userlist from './components/TabbarLeft.js';
 import './Chat.css';
 import { useChatStateContext } from './context/FirebaseChatContextProvider';
 import { useParams } from "react-router-dom";
@@ -43,6 +44,7 @@ function PrivateChat() {
 
   return (
     <App>
+      <Userlist/>
       <div className="chat">
         <Titlebar value={friendName}/>
         <Chatbox data={chatData}/>
