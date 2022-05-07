@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 function Tabbar () {
   return (
-    <div className="tabbar">
+    <div className="tabbar stick-right">
       <Link to="/friend-list" className="tabbutton">
         Friend List
       </Link>
@@ -12,7 +12,7 @@ function Tabbar () {
       </Link>
       <Link to="/profile" className="tabbutton">
         Profile
-      </Link>  
+      </Link>
     </div>
   )
 }

@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
-import firebase  from "./FirebaseConfig.js";
+import firebase from "./FirebaseConfig";
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 
 export const AUTHENTICATION_LOADING = "AUTHENTICATION_LOADING";

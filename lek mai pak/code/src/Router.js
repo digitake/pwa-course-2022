@@ -1,13 +1,13 @@
 import {
-    BrowserRouter,
-    Routes,
-    Route
-  } from "react-router-dom";
-  import Chat from "./Chat";
-  import Profile from "./Profile";
-  import FriendList from "./FriendList";
-  import FriendProfile from "./FriendProfile";
-  import PrivateChat from "./PrivateChat";
+  BrowserRouter,
+  Routes,
+  Route
+} from "react-router-dom";
+import Chat from "./Chat";
+import PrivateChat from "./PrivateChat";
+import Profile from "./Profile";
+import FriendList from "./FriendList";
+import FriendProfile from "./FriendProfile";
 import { useAuthStateContext, LoginComponent } from './context/FirebaseAuthContextProvider';
 import ChatStateProvider from "./context/FirebaseChatContextProvider";
   
@@ -36,5 +36,5 @@ function Router() {
     return <LoginComponent />;
   }
 }
-  
-  export default Router;
+
+export default Router;

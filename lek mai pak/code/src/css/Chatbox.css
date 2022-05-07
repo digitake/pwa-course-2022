@@ -1,6 +1,6 @@
 .chatbox {
   flex: 1;
-  background-color: #DAC6A3;
+  background-color: silver;
   overflow: auto;
 }
 
@@ -10,12 +10,12 @@
 
 .chatbox-item.left{
   text-align: left;
-  margin-left: 24px;
+  margin-left: 5px;
 }
 
 .chatbox-item.right{
   text-align: right;
-  margin-right: 24px;
+  margin-right: 140px;
 }
 
 .chatbox-item .avatar{
