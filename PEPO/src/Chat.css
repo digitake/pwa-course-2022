@@ -31,3 +31,19 @@
   font-size: 1em;
   min-width: 40px;
 }
+
+.drawer {
+  margin: auto;
+  left: 50px;
+  right: 50px;
+  height: 300px;
+  position: absolute;
+  bottom: 0px;
+  background-color: rgb(174, 49, 237);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.drawer.hide{
+  display: none;
+}

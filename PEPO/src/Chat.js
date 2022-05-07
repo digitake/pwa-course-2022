@@ -13,6 +13,8 @@ function Chat() {
   const { authState } = useAuthStateContext();
 
   const [chatData, setChatData] = useState([]);
+  
+  const [drawerStatus, setDrawerStatus] = useState("hide")
 
 
   function onMsg(msg) {
