@@ -4,8 +4,6 @@ import './Profile.css';
 import Avatar from './components/Avatar.js';
 import { useAuthStateContext } from './context/FirebaseAuthContextProvider';
 import { useChatStateContext } from './context/FirebaseChatContextProvider.js';
-import FriendList from './FriendList.js';
-import Tabbar from './components/Tabbar.js';
 import FileBase64 from 'react-file-base64';
 import Nav from './components/Nav.js';
 
@@ -19,7 +17,7 @@ function Profile() {
     getUserImage(authState.user.uid).then(imgBase64 => {
       setBase64Image(imgBase64);
     })
-  }, [authState.user.uid, getUserImage]);
+  }, []);
 
   function save() {
     updateDisplayName(name).then(_=>{
@@ -44,17 +42,17 @@ function Profile() {
           value={name}
           onChange={e => setName(e.target.value)}
         />
-
         <div className='custom-file-upload'>
         <FileBase64
           multiple={ false }
           onDone={ onDone } 
         />
         </div>
-      
         <input type="button" value="Save" onClick={save}/>
         <input type="button" onClick={() => signOut()} value="Sign-out"/>
+
       </div>
+      
       <Nav/>
     </App>
   );
