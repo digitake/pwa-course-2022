@@ -12,7 +12,7 @@
 .inputbox {
   background-color: gray;
   display: flex;
-  height: 60px;
+  height: 40px;
 }
 
 .inputbox .label1 {
@@ -20,13 +20,17 @@
   text-align: right;
 }
 
+/* Input Text in Chat  */
 .inputbox .text {
-  font-size: 3em;
-  padding-left: 8px;
-  padding-right: 8px;
+  margin: 3px;
+  font-size: 1em;
+  padding-left: 10px;
+  padding-right: 10px;
   flex: 1;
+  border-radius: 50px;
 }
 
+/* ปุ่ม Send หน้าแชท */
 .inputbox .button {
   font-size: 1em;
   min-width: 40px;

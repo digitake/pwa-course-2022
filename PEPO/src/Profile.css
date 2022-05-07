@@ -9,3 +9,13 @@
   padding: 0;
   margin: 0;
 }
+
+.button1 {
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 10px;
+  background: transparent;
+  color: #000;
+  position: relative;
+  margin: 10px;
+}

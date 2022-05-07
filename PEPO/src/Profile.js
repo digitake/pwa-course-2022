@@ -46,8 +46,8 @@ function Profile() {
           multiple={ false }
           onDone={ onDone } 
         />
-        <input type="button" value="Save" onClick={save}/>
-        <input type="button" onClick={() => signOut()} value="Sign-out"/>
+        <input type="button" className='button1' value="Save" onClick={save}/>
+        <input type="button" className='button1' onClick={() => signOut()} value="Sign-out"/>
       </div>
     </App>
   );
